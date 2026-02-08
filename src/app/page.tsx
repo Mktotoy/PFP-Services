@@ -76,12 +76,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" style={{ background: '#e0f2f1' }}>
-        <div className="container">
-          <ServiceZoneCheck />
-        </div>
-      </section>
-
       <section className="section" style={{ background: 'var(--primary)', color: 'white' }}>
         <div className="container text-center">
           <h2 style={{ color: 'white', marginBottom: '2rem', fontSize: '2rem' }}>Particuliers, Professionnels & Collectivités</h2>

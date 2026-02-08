@@ -5,6 +5,7 @@ A pest control and chimney services business website for PFP Services, serving t
 
 ## Recent Changes
 - 2026-02-08: Imported project into Replit environment. Configured Next.js to run on port 5000, allowed all dev origins, and set up deployment config.
+- 2026-02-08: Removed the "ServiceZoneCheck" block from the homepage.
 
 ## Project Architecture
 - **Framework**: Next.js 16 (App Router) with Turbopack
