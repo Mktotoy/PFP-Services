@@ -1,0 +1,85 @@
+.hero {
+    position: relative;
+    /* Modern clean gradient since I don't have the image yet, but mimicking the dark look */
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    color: var(--white);
+    padding: 8rem 0;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Simulate the image background from the user screenshot if possible, or just a placeholder pattern */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(1, 91, 0, 0.45) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 2;
+}
+
+.container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.content {
+    max-width: 900px;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-md);
+    color: var(--white);
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.highlight {
+    color: var(--success);
+    /* Or a bright green similar to the button context */
+    color: #4ade80;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.9;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .hero {
+        padding: 4rem 0;
+        min-height: auto;
+    }
+}

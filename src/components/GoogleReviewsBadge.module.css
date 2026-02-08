@@ -1,0 +1,49 @@
+.container {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: var(--spacing-sm);
+    border: 1px solid var(--gray-200);
+    color: var(--gray-800) !important;
+}
+
+.container:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.gLogo {
+    background: linear-gradient(45deg, #4285F4, #34A853, #FBBC05, #EA4335);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.stars {
+    color: #FBBC05;
+    /* Google Star Color */
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.text {
+    font-size: 0.8rem;
+    color: var(--gray-800);
+}

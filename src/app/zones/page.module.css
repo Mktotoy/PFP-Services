@@ -1,0 +1,101 @@
+.main {
+    min-height: 100vh;
+    background-color: var(--gray-50);
+}
+
+.hero {
+    background: var(--primary);
+    color: var(--white);
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--white);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.cardHeader {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    padding: var(--spacing-md);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.deptCode {
+    font-size: 1.5rem;
+    font-weight: 800;
+    opacity: 0.5;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.card h2 {
+    color: var(--white);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.cities {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.city {
+    background: var(--gray-100);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--gray-800);
+    border: 1px solid var(--gray-200);
+}
+
+.callToAction {
+    text-align: center;
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+}

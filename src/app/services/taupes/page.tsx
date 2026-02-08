@@ -1,0 +1,148 @@
+import { Metadata } from 'next';
+import Link from 'next/link';
+import styles from './page.module.css';
+
+export const metadata: Metadata = {
+    title: "Anti-Taupes & Taupiers 77 | Dératisation & Piégeage Mécanique",
+    description: "Service professionnel de chasseur de taupes (taupier) en Seine-et-Marne. Piégeage traditionnel mécanique sans poison. Intervention rapide.",
+};
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Service",
+            "serviceType": "Détaupisation / Taupier",
+            "provider": { "@id": "https://deratisation-77.com/#organization" },
+            "areaServed": {
+                "@type": "AdministrativeArea",
+                "name": "Seine-et-Marne"
+            },
+            "description": "Piégeage traditionnel et mécanique des taupes (taupier). Méthode écologique sans poison pour préserver votre jardin."
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Pourquoi j'ai des taupes dans mon jardin ?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "La présence de taupes indique souvent une terre riche et saine, pleine de vers de terre dont elles se nourrissent. Elles ne sont pas attirées par les légumes mais peuvent abîmer les racines en creusant."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "La méthode mécanique est-elle dangereuse pour mes animaux ?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Non, les pièges (type Putange) sont enterrés directement dans les galeries. Il n'y a aucun poison ni produit chimique accessible en surface pour vos chiens ou chats."
+                    }
+                }
+            ]
+        }
+    ]
+};
+
+export default function TaupesPage() {
+    return (
+        <main className={styles.main}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <section className={styles.hero}>
+                <div className="container">
+                    <h1 className={styles.title}>Détaupisation & Chasseur de Taupes</h1>
+                    <p className={styles.subtitle}>
+                        NOUS VOUS AIDONS À VOUS DÉBARRASSER DES TAUPES<br />
+                        Intervention rapide et écologique à partir de <strong>155€</strong>.
+                    </p>
+                    <div className={styles.heroActions}>
+                        <a href="tel:0629953262" className="btn btn-primary">Appeler le Taupier : 06 29 95 32 62</a>
+                        <Link href="/contact" className="btn btn-secondary">Devis Gratuit</Link>
+                    </div>
+                </div>
+            </section>
+
+            <section className="container section">
+                <div className={styles.grid}>
+                    <div className={styles.content}>
+                        <h2 className={styles.heading}>Les Taupes</h2>
+                        <p>
+                            Petits mammifères à l'odorat surdéveloppé, les taupes vivent à environ 20 cm de profondeur et se reproduisent tous les ans (4 à 6 naissances).
+                        </p>
+                        <p>
+                            Sa taille varie de 10 à 15 cm pour un poids de 80 à 150 g. Sa tête est allongée avec un museau pointu et des yeux minuscules.
+                        </p>
+                        <p>
+                            Sa vision est quasi nulle mais son ouïe est très fine et elle a un odorat très puissant qui lui permet de repérer ses proies dans la terre.
+                        </p>
+
+                        <img
+                            src="/images/services/taupes/taupe-main.png"
+                            alt="Une taupe sortant de terre"
+                            className={styles.contentImage}
+                            style={{ borderRadius: 'var(--radius-md)', width: '100%', maxWidth: '600px', height: 'auto', display: 'block', margin: '30px auto' }}
+                        />
+
+                        <h2 className={styles.heading}>Les Nuisances</h2>
+                        <p>
+                            Ennemies des jardiniers, elles peuvent très rapidement causer de nombreux dégâts.
+                        </p>
+                        <ul className={styles.checkList} style={{ marginTop: '20px' }}>
+                            <li>
+                                En fabriquant des galeries dans votre terrain, elles permettent à d'autres nuisibles de venir leur tenir compagnie (campagnols, rats taupiers, etc...).
+                            </li>
+                            <li>
+                                Les monticules de terre visibles (taupinières) ne sont que la partie haute de l'iceberg car les galeries qu'elles confectionnent peuvent surtout fragiliser l'infrastructure de votre extérieur.
+                            </li>
+                            <li>
+                                Les galeries peuvent mesurer jusqu'à <strong>1000 m²</strong> de surface sous-terraine.
+                            </li>
+                        </ul>
+
+                        <img
+                            src="/images/services/taupes/taupiniere.png"
+                            alt="Jardin envahi de taupinières"
+                            className={styles.contentImage}
+                            style={{ borderRadius: 'var(--radius-md)', width: '100%', height: 'auto', display: 'block', marginTop: '30px' }}
+                        />
+                    </div>
+
+                    <div className={styles.sidebar}>
+                        <div className={styles.techniqueBox}>
+                            <h3>Nos Techniques d'Intervention</h3>
+                            <p>
+                                Nous intervenons rapidement afin de limiter les dégâts dans votre jardin.
+                            </p>
+                            <div style={{ margin: '20px 0', textAlign: 'center' }}>
+                                <img src="/images/services/taupes/piege-taupe.png" alt="Piège mécanique taupe" style={{ maxWidth: '100%', borderRadius: 'var(--radius-sm)' }} />
+                            </div>
+                            <p>
+                                Notre <strong>taupier expert</strong> travaille avec des <strong>pièges mécaniques</strong> (type Putange) qui consistent à neutraliser rapidement les taupes directement au sein de leurs galeries.
+                            </p>
+                            <p style={{ marginTop: '10px', fontSize: '0.9rem', fontStyle: 'italic' }}>
+                                Cette méthode est écologique (sans poison) et évite de polluer les sols ou de mettre en danger vos animaux domestiques.
+                            </p>
+                        </div>
+
+                        <div className={styles.pricingBox}>
+                            <h3>Tarifs Détaupisation</h3>
+                            <p className={styles.price}>À partir de 155€*</p>
+                            <p className={styles.priceNote}>*Suivant l’infestation et la surface à traiter.</p>
+
+                            <p style={{ marginTop: '15px' }}>
+                                Le tarif dépend du degré d’infestation et de la surface du terrain à traiter.
+                            </p>
+
+                            <Link href="/contact" className="btn btn-secondary" style={{ width: '100%', marginTop: '1rem' }}>
+                                Obtenir un devis exact
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    );
+}
