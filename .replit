@@ -1,4 +1,4 @@
-modules = ["nodejs-22", "python-3.11"]
+modules = ["nodejs-20", "web", "bash"]
 
 [workflows]
 runButton = "Project"
@@ -17,21 +17,25 @@ name = "dev-server"
 author = "agent"
 
 [workflows.workflow.metadata]
-outputType = "console"
+outputType = "webview"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "npm run dev"
-waitForPort = 3000
+waitForPort = 5000
 
 [deployment]
-build = ["sh", "-c", "npm run build"]
-run = ["npm", "start"]
-deploymentTarget = "cloudrun"
+build = ["npm", "run", "build"]
+run = ["npm", "run", "start"]
+deploymentTarget = "autoscale"
 
 [[ports]]
 localPort = 3000
 externalPort = 3000
+
+[[ports]]
+localPort = 5000
+externalPort = 80
 
 [agent]
 expertMode = true
