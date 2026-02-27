@@ -41,6 +41,14 @@
     .grid {
         grid-template-columns: 1fr;
     }
+
+    .hero {
+        padding: 3rem var(--spacing-md);
+    }
+
+    .title {
+        font-size: 2rem;
+    }
 }
 
 .heading {

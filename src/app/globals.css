@@ -73,6 +73,11 @@ a {
   transition: all 0.2s ease;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 h1,
 h2,
 h3,
@@ -148,5 +153,13 @@ h6 {
 @media (max-width: 768px) {
   body {
     padding-bottom: 70px;
+  }
+
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .section {
+    padding: var(--spacing-md) 0;
   }
 }

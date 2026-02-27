@@ -46,6 +46,10 @@
     .title {
         font-size: 2rem;
     }
+
+    .hero {
+        padding: 3rem var(--spacing-md);
+    }
 }
 
 .content {

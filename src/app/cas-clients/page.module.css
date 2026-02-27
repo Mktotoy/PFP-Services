@@ -217,8 +217,15 @@
     font-weight: 600;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
+    .hero {
+        padding: var(--spacing-md);
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
     .grid {
         grid-template-columns: 1fr;
     }

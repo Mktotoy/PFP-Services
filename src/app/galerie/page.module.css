@@ -139,16 +139,21 @@
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding: 3rem var(--spacing-md);
+    }
+
     .title {
         font-size: 2rem;
     }
 
     .galleryGrid {
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        grid-template-columns: 1fr;
     }
 
     .filterContainer {
         gap: 8px;
+        padding: var(--spacing-md) 0;
     }
 
     .filterBtn {

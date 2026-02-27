@@ -36,6 +36,14 @@
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
     }
+
+    .hero {
+        padding: var(--spacing-md);
+    }
+
+    .title {
+        font-size: 2rem;
+    }
 }
 
 .content {
