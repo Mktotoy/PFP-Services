@@ -21,8 +21,6 @@ export const metadata: Metadata = {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import FloatingCallButton from "@/components/FloatingCallButton";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,7 +36,6 @@ export default function RootLayout({
         </div>
         <StickyMobileBar />
         <Footer />
-        <FloatingCallButton />
         <KonamiEasterEgg />
       </body>
     </html>

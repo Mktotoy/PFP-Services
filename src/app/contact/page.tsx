@@ -10,7 +10,7 @@ export default function ContactPage() {
                 Contactez PFP Services
             </h1>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--spacing-lg)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--spacing-lg)' }}>
                 <div>
                     <h2 style={{ marginBottom: 'var(--spacing-md)' }}>Nos Coordonnées</h2>
                     <p style={{ marginBottom: 'var(--spacing-sm)' }}>

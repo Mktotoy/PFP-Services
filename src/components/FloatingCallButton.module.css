@@ -47,11 +47,14 @@
     }
 }
 
-/* On desktop, we might want to hide it if the header phone number is sufficient, 
-   but user requested it specifically. We can keep it or make it smaller. */
 @media (min-width: 769px) {
     .floatBtn {
         display: none;
-        /* Hide on desktop as header has the number */
+    }
+}
+
+@media (max-width: 768px) {
+    .floatBtn {
+        display: none;
     }
 }

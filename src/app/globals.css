@@ -144,3 +144,9 @@ h6 {
 .text-primary {
   color: var(--primary);
 }
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 70px;
+  }
+}
