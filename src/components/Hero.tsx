@@ -27,7 +27,7 @@ export default function Hero() {
                 setCurrentIndex((prev) => (prev + 1) % services.length);
                 setIsAnimating(false);
             }, 400);
-        }, 3000);
+        }, 2000);
 
         return () => clearInterval(interval);
     }, []);
