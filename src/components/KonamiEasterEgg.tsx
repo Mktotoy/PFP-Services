@@ -61,7 +61,7 @@ export default function KonamiEasterEgg() {
     const [footprints, setFootprints] = useState<Footprint[]>([]);
 
     // Animation Refs
-    const requestRef = useRef<number>();
+    const requestRef = useRef<number | undefined>(undefined);
     const lastTimeRef = useRef<number>(0);
     const lastFootprintTime = useRef<number>(0);
 
