@@ -10,6 +10,13 @@ const nextConfig: NextConfig = {
       { source: "/nuisibles/rats-souris", destination: "/services/rongeurs", permanent: true },
       { source: "/nuisibles/guepes-frelons", destination: "/services/guepes-frelons", permanent: true },
       { source: "/nuisibles", destination: "/services", permanent: true },
+      { source: "/rongeurs", destination: "/services/rongeurs", permanent: true },
+      { source: "/guepes-frelons", destination: "/services/guepes-frelons", permanent: true },
+      { source: "/ramonage", destination: "/services/ramonage", permanent: true },
+      { source: "/demoussage", destination: "/services/demoussage", permanent: true },
+      { source: "/chenilles", destination: "/services/chenilles", permanent: true },
+      { source: "/cafards", destination: "/services/cafards", permanent: true },
+      { source: "/taupes", destination: "/services/taupes", permanent: true },
     ];
   },
 };
