@@ -11,28 +11,29 @@ export default function Header() {
 
                 <nav className={styles.nav}>
                     <div className={styles.dropdownParent}>
-                        <Link href="/nettoyage-toiture" className={styles.link}>
-                            Toiture <span style={{ fontSize: '0.7em', marginLeft: '4px' }}>▼</span>
+                        <Link href="/services" className={styles.link}>
+                            Entretien Toiture <span style={{ fontSize: '0.7em', marginLeft: '4px' }}>▼</span>
                         </Link>
                         <div className={styles.dropdownMenu}>
-                            <Link href="/nettoyage-toiture/demoussage" className={styles.dropdownItem}>Démoussage</Link>
-                            <Link href="/nettoyage-toiture/hydrofuge" className={styles.dropdownItem}>Hydrofuge</Link>
-                            <Link href="/nettoyage-toiture" className={styles.dropdownItem} style={{ fontWeight: '700' }}>Expertise Toiture</Link>
+                            <Link href="/services/demoussage" className={styles.dropdownItem}>Démoussage</Link>
+                            <Link href="/services/ramonage" className={styles.dropdownItem}>Ramonage</Link>
                         </div>
                     </div>
 
                     <div className={styles.dropdownParent}>
-                        <Link href="/nuisibles" className={styles.link}>
+                        <Link href="/services" className={styles.link}>
                             Nuisibles <span style={{ fontSize: '0.7em', marginLeft: '4px' }}>▼</span>
                         </Link>
                         <div className={styles.dropdownMenu}>
-                            <Link href="/nuisibles/rats-souris" className={styles.dropdownItem}>Rats & Souris</Link>
-                            <Link href="/nuisibles/guepes-frelons" className={styles.dropdownItem}>Guêpes & Frelons</Link>
-                            <Link href="/nuisibles" className={styles.dropdownItem} style={{ fontWeight: '700' }}>Expertise Nuisibles</Link>
+                            <Link href="/services/rongeurs" className={styles.dropdownItem}>Rongeurs</Link>
+                            <Link href="/services/guepes-frelons" className={styles.dropdownItem}>Guêpes & Frelons</Link>
+                            <Link href="/services/cafards" className={styles.dropdownItem}>Cafards</Link>
+                            <Link href="/services/chenilles" className={styles.dropdownItem}>Chenilles</Link>
+                            <Link href="/services/taupes" className={styles.dropdownItem}>Taupes</Link>
                         </div>
                     </div>
 
-                    <Link href="/zones" className={styles.link}>Zones d'Intervention</Link>
+                    <Link href="/zones" className={styles.link}>Zones d&apos;Intervention</Link>
                     <Link href="/realisations" className={styles.link}>Réalisations</Link>
                 </nav>
 

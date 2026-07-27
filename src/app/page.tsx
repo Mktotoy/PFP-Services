@@ -31,7 +31,7 @@ export default function Home() {
                     <li><strong>Traitement curatif</strong> anti-fongique haute efficacité.</li>
                     <li><strong>Protection Hydrofuge</strong> pour une étanchéité renforcée.</li>
                 </ul>
-                <Link href="/nettoyage-toiture" className="btn btn-primary">Voir notre expertise Toiture</Link>
+                <Link href="/services" className="btn btn-primary">Voir notre expertise Toiture</Link>
             </div>
             <div className={styles.visualContent}>
                 <BeforeAfter 
@@ -50,12 +50,13 @@ export default function Home() {
             Nos types d'interventions
           </h2>
           <div className={styles.grid}>
-            <ServiceCard title="Nettoyage Toiture" slug="/nettoyage-toiture/demoussage" image="/images/services/demoussage/toiture-nettoyage.jpg" />
-            <ServiceCard title="Hydrofuge Toiture" slug="/nettoyage-toiture/hydrofuge" image="/images/services/demoussage/toiture-nettoyage.jpg" />
-            <ServiceCard title="Guêpes / Frelons" slug="/nuisibles/guepes-frelons" image="/images/services/guepes-frelons/frelons-arbre.jpg" />
-            <ServiceCard title="Rats / Souris" slug="/nuisibles/rats-souris" image="/images/services/rongeurs/rongeurs-infestation.jpg" />
-            <ServiceCard title="Désinsectisation" slug="/nuisibles" image="/images/services/rongeurs/rongeurs-pieges.jpg" />
+            <ServiceCard title="Démoussage Toiture" slug="/services/demoussage" image="/images/services/demoussage/toiture-nettoyage.jpg" />
             <ServiceCard title="Ramonage" slug="/services/ramonage" image="/images/services/ramonage/ramonage-poele-allume.jpg" />
+            <ServiceCard title="Rongeurs" slug="/services/rongeurs" image="/images/services/rongeurs/rongeurs-infestation.jpg" />
+            <ServiceCard title="Guêpes / Frelons" slug="/services/guepes-frelons" image="/images/services/guepes-frelons/frelons-arbre.jpg" />
+            <ServiceCard title="Cafards" slug="/services/cafards" image="/images/services/rongeurs/rongeurs-pieges.jpg" />
+            <ServiceCard title="Chenilles Processionnaires" slug="/services/chenilles" image="/images/services/chenilles/chenilles-intervention.jpg" />
+            <ServiceCard title="Taupes" slug="/services/taupes" image="/images/services/taupes/taupiniere.png" />
           </div>
         </div>
       </section>

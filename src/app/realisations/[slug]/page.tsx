@@ -76,7 +76,7 @@ export default async function RealisationDetailPage({ params }: PageProps) {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                             {study.category === 'Toiture' && (
                                 <>
-                                    <Link href="/nettoyage-toiture/hydrofuge" className="btn btn-primary" style={{ fontSize: '0.9rem' }}>
+                                    <Link href="/services/demoussage" className="btn btn-primary" style={{ fontSize: '0.9rem' }}>
                                         Nos Solutions Hydrofuge
                                     </Link>
                                     <Link href="/zones/77-seine-et-marne" className="btn btn-outline" style={{ fontSize: '0.9rem' }}>
@@ -86,7 +86,7 @@ export default async function RealisationDetailPage({ params }: PageProps) {
                             )}
                             {study.category === 'Insectes' && (
                                 <>
-                                    <Link href="/nuisibles/guepes-frelons" className="btn btn-primary" style={{ fontSize: '0.9rem' }}>
+                                    <Link href="/services/guepes-frelons" className="btn btn-primary" style={{ fontSize: '0.9rem' }}>
                                         Destruction de Nids
                                     </Link>
                                     <Link href="/zones/77-seine-et-marne" className="btn btn-outline" style={{ fontSize: '0.9rem' }}>

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import styles from '../../nettoyage-toiture/page.module.css';
+import styles from '../_shared.module.css';
 import { LocalBusinessSchema } from '@/components/seo/JsonLd';
 import ServiceCard from '@/components/ServiceCard';
 

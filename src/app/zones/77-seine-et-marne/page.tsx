@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import styles from '../../nettoyage-toiture/page.module.css';
+import styles from '../_shared.module.css';
 import { LocalBusinessSchema } from '@/components/seo/JsonLd';
 import ServiceCard from '@/components/ServiceCard';
 
@@ -58,9 +58,9 @@ export default function Zone77Page() {
             <section className="container section">
                 <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Nos Services en Seine-et-Marne</h2>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
-                    <ServiceCard title="Démoussage Toiture" slug="/nettoyage-toiture" image="/images/services/demoussage/toiture-nettoyage.jpg" />
-                    <ServiceCard title="Dératisation" slug="/nuisibles/rats-souris" image="/images/services/rongeurs/rongeurs-infestation.jpg" />
-                    <ServiceCard title="Nids de Guêpes" slug="/nuisibles/guepes-frelons" image="/images/services/guepes-frelons/frelons-arbre.jpg" />
+                    <ServiceCard title="Démoussage Toiture" slug="/services/demoussage" image="/images/services/demoussage/toiture-nettoyage.jpg" />
+                    <ServiceCard title="Dératisation" slug="/services/rongeurs" image="/images/services/rongeurs/rongeurs-infestation.jpg" />
+                    <ServiceCard title="Nids de Guêpes" slug="/services/guepes-frelons" image="/images/services/guepes-frelons/frelons-arbre.jpg" />
                 </div>
             </section>
         </main>

@@ -64,10 +64,10 @@ export default function Hero() {
                         <strong>PFP Services</strong> : l'expertise au service de votre habitat et de votre santé.
                     </p>
                     <div className={styles.actions}>
-                        <Link href="/nettoyage-toiture" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
+                        <Link href="/services" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
                             Nos Services Toiture
                         </Link>
-                        <Link href="/nuisibles" className="btn btn-outline" style={{ padding: '1rem 2rem', fontSize: '1.1rem', marginLeft: '1rem', color: 'white', border: '2px solid white' }}>
+                        <Link href="/services" className="btn btn-outline" style={{ padding: '1rem 2rem', fontSize: '1.1rem', marginLeft: '1rem', color: 'white', border: '2px solid white' }}>
                             Nos Services Nuisibles
                         </Link>
                     </div>
