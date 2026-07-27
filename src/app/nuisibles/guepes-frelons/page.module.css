@@ -4,8 +4,8 @@
 }
 
 .hero {
-    background: #f59e0b;
-    color: #000;
+    background: var(--primary-dark);
+    color: var(--white);
     padding: 5rem 0;
     text-align: center;
 }

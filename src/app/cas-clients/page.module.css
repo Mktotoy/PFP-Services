@@ -19,7 +19,7 @@
     color: var(--white);
     padding: var(--spacing-xxl) 0;
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/team/about.jpg');
+    background-image: linear-gradient(rgba(0, 42, 0, 0.75), rgba(0, 42, 0, 0.75)), url('/images/team/about.jpg');
     background-size: cover;
     background-position: center;
 }
