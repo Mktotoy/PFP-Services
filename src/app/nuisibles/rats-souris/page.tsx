@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import styles from '../nettoyage-toiture/page.module.css';
+import styles from './page.module.css';
 import { LocalBusinessSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
