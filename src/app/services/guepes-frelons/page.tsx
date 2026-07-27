@@ -92,10 +92,11 @@ export default function GuepesFrelonsPage() {
                         <div className={styles.insectCard}>
                             <h3>Le Frelon Européen</h3>
                             <p>
-                                Plus gros, corps jaune et roux. Moins agressif que l'asiatique, il peut tout de même représenter un danger s'il est proche de l'habitation.
-                                Utile à l'écosystème, nous privilégions la dissuasion ou le déplacement si possible, sinon l'élimination en cas de danger immédiat.
+                                Facilement identifiable par sa taille et son bruit de vol, il fait trois fois la taille d'une abeille classique.
+                                C'est un insecte carnivore qui mange principalement des mouches et qui est donc bénéfique pour l'environnement.
+                                Comme le nid de frelons asiatiques, son nid est construit d'écorces et de résineux, sauf que l'entrée se trouve sous le nid.
+                                Il peut tout de même représenter un danger s'il est proche de l'habitation : n'hésitez pas à nous contacter pour vous en débarrasser.
                             </p>
-                            {/* Pas d'image spécifique Frelon Européen téléchargée, on laisse sans ou générique */}
                         </div>
 
                         <div className={styles.insectCard}>
@@ -110,10 +111,11 @@ export default function GuepesFrelonsPage() {
                         <div className={styles.beeBox}>
                             <h3>🐝 Abeilles & Bourdons : Espèces Protégées</h3>
                             <p>
-                                <strong>Attention :</strong> Les abeilles et bourdons sont essentiels à notre biodiversité et protégés.
+                                <strong>Attention :</strong> Les abeilles et les bourdons ne sont pas considérés comme des nuisibles et sont même essentiels à l'environnement.
+                                Ils mangent du nectar et collectent du pollen pour nourrir leurs compagnons.
                                 <br />
-                                En tant qu'anciens apiculteurs et adhérents au <strong><a href="https://www.apiculture77.fr/gdsa/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>GDSA 77</a></strong>, nous ne détruisons PAS les nids d'abeilles.
-                                <strong>Nous récupérons les essaims</strong> pour les réinstaller en ruche.
+                                En tant qu'anciens apiculteurs et adhérents au <strong><a href="https://www.apiculture77.fr/gdsa/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>GDSA 77</a></strong>, entièrement dédiés à la protection de cette espèce, nous avons conçu un rucher à Samoreau (77).
+                                <strong>Nous récupérons les essaims</strong> gratuitement dans la plupart des cas, avec tout le matériel nécessaire (ruchettes, enfumoir, cadres de ruches...), pour les réinstaller en ruche.
                             </p>
                         </div>
 
@@ -122,6 +124,9 @@ export default function GuepesFrelonsPage() {
                     <div className={styles.sidebar}>
                         <div className={styles.techniqueBox}>
                             <h3>Nos Techniques d'Intervention</h3>
+                            <p style={{ marginBottom: '10px' }}>
+                                Spécialisés dans le traitement des hyménoptères (frelons, guêpes, bourdons), nous intervenons dans tous les milieux, dans un délai de <strong>48 heures</strong>. Référencés au FREDON Île-de-France et certifiés biocides, nous utilisons des produits comme le pyrèthre naturel.
+                            </p>
                             <ul className={styles.checkList}>
                                 <li>
                                     <strong>Poudrage sous pression :</strong> Idéal pour les nids sous toiture ou dans les murs. Le produit est injecté au coeur du nid.

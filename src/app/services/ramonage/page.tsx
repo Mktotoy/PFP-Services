@@ -89,23 +89,34 @@ export default function RamonagePage() {
 
                         <h2 className={styles.heading} style={{ marginTop: '2rem' }}>Législation & Assurances</h2>
                         <p>
-                            Un certificat de ramonage vous sera délivré à la fin de la prestation.
-                            En cas de sinistre, ce document servira de preuve auprès de votre assurance.
-                            L'absence d'entretien peut entraîner une amende de 450€ et le refus de prise en charge par l'assureur.
+                            Un ramonage efficace vous permet d'obtenir un meilleur tirage en période de chauffe, mais évite surtout
+                            l'intoxication au monoxyde de carbone, <strong>responsable chaque année de 90 décès et 5 000 intoxications</strong>.
+                        </p>
+                        <p>
+                            Bien entendu, il prévient les risques d'incendies qui ne sont pas pris en charge par votre assurance dès lors
+                            que vous êtes en défaut d'entretien. Une <strong>amende de troisième classe d'un montant de 450 euros</strong> peut
+                            également vous être attribuée.
+                        </p>
+                        <p>
+                            À la fin de la prestation, nous vous délivrerons un certificat en bonne et due forme.
                         </p>
 
                         <div className={styles.faqBox}>
                             <h3>Questions Fréquentes</h3>
                             <details>
-                                <summary>Quelle est la meilleure période ?</summary>
-                                <p>Le printemps est idéal (fin de chauffe). L'été est aussi possible. Évitez d'attendre l'automne où les délais sont plus longs.</p>
+                                <summary>Quelle est la meilleure période de l'année pour ramoner ma cheminée ?</summary>
+                                <p>Le printemps est la période préférée pour le nettoyage de son conduit, car la période de chauffage est généralement juste terminée. Son installation peut également être maintenue en été. En revanche, il est conseillé de ne pas attendre l'automne, car les ramoneurs sont davantage sollicités en raison du retour du froid.</p>
+                            </details>
+                            <details>
+                                <summary>Ai-je un justificatif à remettre à mon assurance ?</summary>
+                                <p>Oui, en cas de sinistre, ce certificat de ramonage peut servir d'attestation pour votre compagnie d'assurance. Seuls les ramoneurs qualifiés sont autorisés à délivrer des certificats de ramonage.</p>
                             </details>
                             <details>
                                 <summary>Comment préparer votre venue ?</summary>
                                 <ul style={{ paddingLeft: '20px', marginTop: '10px' }}>
-                                    <li>Éteindre le feu 24h avant.</li>
-                                    <li>Vider les cendres.</li>
-                                    <li>Dégager l'accès autour du foyer/poêle.</li>
+                                    <li>Retirez toutes les cendres, les bûches et les agrafes du foyer.</li>
+                                    <li>Évitez d'allumer un feu au moins 1 jour (24h) avant le passage du ramoneur.</li>
+                                    <li>Dégagez l'accès autour du générateur pour permettre l'intervention.</li>
                                 </ul>
                             </details>
                         </div>
