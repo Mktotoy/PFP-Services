@@ -8,66 +8,52 @@ export interface Review {
 
 export const googleReviews: Review[] = [
     {
-        author: "Sophie Dupont",
+        author: "Tony ZoulX",
         rating: 5,
-        text: "Intervention très rapide pour un nid de guêpes sous toiture. Le technicien était pro et rassurant. Je recommande !",
-        date: "Il y a 2 semaines",
+        text: "Intervention de qualité sur un nid primaire de frelon asiatique. Je recommande sans hésiter.",
+        date: "Il y a 2 mois",
         category: 'nuisibles'
     },
     {
-        author: "Marc Lemoine",
+        author: "Emmanuel Henon",
         rating: 5,
-        text: "Efficace contre les souris qui avaient envahi mon garage. Plus aucun bruit après le premier passage. Merci PFP Services.",
-        date: "Il y a 1 mois",
-        category: 'nuisibles'
-    },
-    {
-        author: "Isabelle G.",
-        rating: 5,
-        text: "J'ai fait appel à eux pour un ramonage. Travail propre, soigné et certificat remis immédiatement. Au top.",
-        date: "Il y a 3 mois",
-        category: 'ramonage'
-    },
-    {
-        author: "Restaurant Le Gourmet",
-        rating: 5,
-        text: "Nous travaillons avec PFP Services pour notre plan de sanitation (cafards/rongeurs). Sérieux et discret. Parfait pour les pros.",
-        date: "Il y a 4 mois",
-        category: 'nuisibles'
-    },
-    {
-        author: "Thomas B.",
-        rating: 4,
-        text: "Bon service, prix correct. Intervenu le lendemain de mon appel pour des fourmis.",
-        date: "Il y a 6 mois",
-        category: 'nuisibles'
-    },
-    {
-        author: "Jean-Pierre Cassegrain",
-        rating: 5,
-        text: "Démoussage de ma toiture à Barbizon. Travail soigné, les tuiles sont comme neuves. Le traitement hydrofuge a un super effet perlant.",
+        text: "Travail de qualité, nettoyage de toiture parfaitement réalisé. Je recommande sans hésiter ! Notre toiture est comme neuve. Merci.",
         date: "Il y a 2 mois",
         category: 'toiture'
     },
     {
-        author: "Marie-Claire R.",
+        author: "Léna Guelaud",
         rating: 5,
-        text: "Élimination d'un nid de frelons asiatiques dans mon jardin. Intervention hyper rapide et efficace. Je recommande vivement.",
-        date: "Il y a 3 semaines",
+        text: "Entreprise très sérieuse, travail soigné, devis respecté et très bon rapport qualité prix. En prime gentillesse et bonne humeur de l'équipe. Je recommande à 100%.",
+        date: "Il y a 3 mois",
         category: 'nuisibles'
     },
     {
-        author: "Laurent V.",
+        author: "Nathalie Camus",
         rating: 5,
-        text: "Ramonage annuel impeccable. Le technicien protège bien les lieux, pas une poussière après son passage. Très professionnel.",
-        date: "Il y a 1 mois",
+        text: "Ramonage, intervention et nettoyage de toiture.",
+        date: "Il y a 4 mois",
         category: 'ramonage'
     },
     {
-        author: "Famille Gauthier",
+        author: "Eric PP",
         rating: 5,
-        text: "Nettoyage complet de notre toiture en tuiles. On voyait plus la couleur avec la mousse, maintenant c'est magnifique. Merci Alex !",
-        date: "Il y a 5 mois",
-        category: 'toiture'
+        text: "Exécution rapide et efficace avec toute l'expertise souhaitée. Une chance de connaître des professionnels tels que PFP. Merci.",
+        date: "Il y a 9 mois",
+        category: 'nuisibles'
+    },
+    {
+        author: "simon bayly",
+        rating: 5,
+        text: "Super réactif et excellent travail. Très content avec le travail.",
+        date: "Il y a 10 mois",
+        category: 'nuisibles'
+    },
+    {
+        author: "de Cabrol Philippe",
+        rating: 5,
+        text: "Très bonne prestation. Intervention rapide et efficace. Je recommande.",
+        date: "Il y a 11 mois",
+        category: 'nuisibles'
     }
 ];
