@@ -55,7 +55,7 @@ export const LocalBusinessSchema = ({
     schema.address = {
       "@type": "PostalAddress",
       streetAddress: "22 Rue de la Salle",
-      addressLocality: "Cély",
+      addressLocality: "Cély-en-Bière",
       postalCode: "77930",
       addressRegion: region,
       addressCountry: "FR",

@@ -1,3 +1,12 @@
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 355: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 2108: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 2108: warning: setlocale: LC_COLLATE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 355: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 3442: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 3442: warning: setlocale: LC_COLLATE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 355: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 3442: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 3442: warning: setlocale: LC_COLLATE: cannot change locale (fr_FR.UTF-8): No such file or directory
 import { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './page.module.css';
@@ -17,11 +26,11 @@ const jsonLd = {
                 "@type": "LocalBusiness",
                 "name": "PFP Services",
                 "telephone": "06 29 95 32 62",
-                "image": "https://deratisation-77.com/logo.png",
+                "image": "https://pfp-services.fr/images/logos/logo.png",
                 "address": {
                     "@type": "PostalAddress",
                     "streetAddress": "22 Rue de la Salle",
-                    "addressLocality": "Cély",
+                    "addressLocality": "Cély-en-Bière",
                     "postalCode": "77930",
                     "addressCountry": "FR"
                 },
@@ -69,10 +78,6 @@ const jsonLd = {
 export default function CafardsPage() {
     return (
         <main className={styles.main}>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

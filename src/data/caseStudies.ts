@@ -52,16 +52,17 @@ export const caseStudies: CaseStudy[] = [
         id: '3',
         slug: 'deratisation-fontainebleau-souris-immeuble',
         title: 'Traitement anti-rongeurs dans un immeuble à Fontainebleau',
-        category: 'Insectes',
+        category: 'Rongeurs',
         location: 'Fontainebleau (77)',
         date: 'Novembre 2024',
         summary: 'Mise en place d\'un plan de lutte contre les souris dans les parties communes.',
         challenge: 'Plusieurs appartements se plaignaient de bruits dans les cloisons et de câbles électriques rongés dans les gaines techniques.',
         solution: 'Diagnostic complet des points d\'entrée et pose de postes d\'appâtage sécurisés avec raticide professionnel. Rebouclage des trous à la paille de fer.',
         result: 'Infestation stoppée en 10 jours. Un contrat annuel a été signé avec le syndic pour la prévention.',
-        mainImage: '/images/services/ramonage/ramonage-bistre-1.jpg', // Placeholder
+        mainImage: '/images/services/rongeurs/rongeurs-infestation.jpg',
         gallery: [
-            '/images/services/ramonage/ramonage-bistre-1.jpg'
+            '/images/services/rongeurs/rongeurs-infestation.jpg',
+            '/images/services/rongeurs/rongeurs-pieges.jpg'
         ]
     }
 ];

@@ -5,8 +5,15 @@ export const mainCities = [
     "Brie-Comte-Robert", "Montereau-Fault-Yonne", "Nemours"
 ];
 
+// Departements couverts, alignes sur les pages /zones (77, 91, 89, 45 + Fontainebleau)
+const COVERED_DEPARTMENTS: Record<string, string> = {
+    "77": "Seine-et-Marne (77)",
+    "91": "Essonne (91)",
+    "89": "Yonne (89)",
+    "45": "Loiret (45)",
+};
+
 // Function to check if a zip code is covered
-// PFP Services covers all of 77 and borders of 91/94 close to Cély check
 export function checkServiceArea(zipCode: string): { covered: boolean; city?: string } {
     const cleanZip = zipCode.trim();
 
@@ -16,22 +23,10 @@ export function checkServiceArea(zipCode: string): { covered: boolean; city?: st
     }
 
     const dept = cleanZip.substring(0, 2);
+    const label = COVERED_DEPARTMENTS[dept];
 
-    // Primary Zone: 77 (Seine-et-Marne) - Fully Covered
-    if (dept === "77") {
-        return { covered: true, city: "Seine-et-Marne (77)" };
-    }
-
-    // Border Zones (Mock logic for now, can be refined)
-    // Cély-en-Bière is near 91 (Milly-la-Forêt)
-    const specificAllowed = [
-        "91490", // Milly-la-Forêt
-        "91090", // Lisses
-        "91100", // Corbeil
-    ];
-
-    if (specificAllowed.includes(cleanZip)) {
-        return { covered: true, city: "Zone Limitrophe" };
+    if (label) {
+        return { covered: true, city: label };
     }
 
     return { covered: false };

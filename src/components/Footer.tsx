@@ -44,7 +44,7 @@ export default function Footer() {
                     <div className={styles.column}>
                         <h3>Contact</h3>
                         <ul className={styles.contactInfo}>
-                            <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><MapPin size={16} /> 22 Rue de la Salle, 77930 Cély</li>
+                            <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><MapPin size={16} /> 22 Rue de la Salle, 77930 Cély-en-Bière</li>
                             <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Phone size={16} /> <a href="tel:0629953262">06 29 95 32 62</a></li>
                             <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Mail size={16} /> <a href="mailto:contact@pfp-services.fr">contact@pfp-services.fr</a></li>
                         </ul>

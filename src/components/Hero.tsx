@@ -58,7 +58,7 @@ export default function Hero() {
                             {services[currentIndex]}
                         </span>
                         <br />
-                        dans le 77, 91 & Sud Ile-de-France
+                        en Seine-et-Marne et départements limitrophes
                     </h1>
                     <p className={styles.subtitle}>
                         Démoussage de toiture, Hydrofuge & Dératisation professionnelle.<br />

@@ -1,3 +1,12 @@
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 355: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 2108: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 2108: warning: setlocale: LC_COLLATE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 355: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 3442: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 3442: warning: setlocale: LC_COLLATE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 355: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 3442: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
+/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 3442: warning: setlocale: LC_COLLATE: cannot change locale (fr_FR.UTF-8): No such file or directory
 import { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './page.module.css';
@@ -13,7 +22,7 @@ const jsonLd = {
         {
             "@type": "Service",
             "serviceType": "Démoussage de Toiture",
-            "provider": { "@id": "https://deratisation-77.com/#organization" },
+            "provider": { "@id": "https://pfp-services.fr/#organization" },
             "areaServed": {
                 "@type": "AdministrativeArea",
                 "name": "Seine-et-Marne"
@@ -128,6 +137,16 @@ export default function DemoussagePage() {
                         <p>
                             Cette opération est essentielle si vous souhaitez <strong>espacer les interventions</strong> et améliorer la résistance de vos matériaux face au gel, à la pluie ou à la pollution.
                         </p>
+
+                        <h2 className={styles.heading}>Gouttières, Façades & Panneaux Photovoltaïques</h2>
+                        <p>
+                            En complément du démoussage de toiture, nous intervenons sur l'ensemble de l'enveloppe de votre bâtiment :
+                        </p>
+                        <ul className={styles.list}>
+                            <li><strong>Gouttières</strong> : nettoyage toutes hauteurs et tous diamètres avec inspection caméra. Aspiration professionnelle des feuilles, branches, terre et débris, sans appui d'échelle sur la gouttière pour une sécurité maximale.</li>
+                            <li><strong>Panneaux photovoltaïques</strong> : nettoyage à la brosse professionnelle dédiée, à l'eau déminéralisée avec rinçage, pour préserver le rendement des panneaux.</li>
+                            <li><strong>Façades</strong> : traitement professionnel contre les algues rouges, algues vertes et traces noires.</li>
+                        </ul>
 
                         <div className={styles.faqSection}>
                             <h2 className={styles.heading} style={{ fontSize: '1.5rem', marginTop: 0 }}>Questions Fréquentes</h2>
