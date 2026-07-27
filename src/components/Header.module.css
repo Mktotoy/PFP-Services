@@ -1,13 +1,12 @@
 .header {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background-color: var(--primary-dark);
     padding: var(--spacing-sm) 0;
     box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
     z-index: 1000;
     transition: all 0.3s ease;
-    border-bottom: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--primary);
 }
 
 .container {
@@ -25,14 +24,14 @@
 .logoMain {
     font-size: 1.8rem;
     font-weight: 800;
-    color: var(--primary);
+    color: var(--white);
     letter-spacing: -1px;
 }
 
 .logoSub {
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--gray-800);
+    color: var(--white);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -46,7 +45,7 @@
 .link {
     font-weight: 600;
     font-size: 0.8rem;
-    color: var(--gray-800);
+    color: var(--white);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     padding: 10px 0;
@@ -55,7 +54,7 @@
 }
 
 .link:hover {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 /* Dropdown Styles */
@@ -127,7 +126,7 @@
 
 .phoneLink {
     font-weight: 700;
-    color: var(--primary);
+    color: var(--white);
     display: flex;
     align-items: center;
     gap: 0.5rem;

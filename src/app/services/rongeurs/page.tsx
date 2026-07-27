@@ -75,12 +75,10 @@ export default function RongeursPage() {
                     <div className={styles.content}>
                         <h2 className={styles.heading}>Les Rongeurs</h2>
                         <p>
-                            Qu'il s'agisse de <strong>mulots</strong>, de <strong>souris</strong> ou de <strong>rats d’égouts</strong>, ces nuisibles vivent communément dans des lieux humides ou cachés.
-                            Ils creusent des galeries dans les sous-sols, les égouts ou les abords immédiats des habitations.
+                            Qu'il s'agisse de souris ou de rats, ils vivent généralement dans des endroits humides. Ils creusent des passages dans les souterrains, les égouts et les abords immédiats des habitations.
                         </p>
                         <p>
-                            Le rat préfère souvent les parties hautes des bâtiments (charpentes) ou les espaces entre planchers et plafonds.
-                            La souris, quant à elle, peut nicher partout : faux-plafonds, doubles cloisons, tiroirs, greniers...
+                            Les rats ont tendance à vivre dans les parties supérieures des bâtiments telles que les charpentes ou les plafonds des maisons/appartements. Cependant, le rat peut nicher n'importe où. Il se glisse aisément dans des faux plafonds, des doubles cloisons, dans des tiroirs, dans les combles, etc…
                         </p>
 
                         <img
@@ -90,16 +88,20 @@ export default function RongeursPage() {
                             style={{ borderRadius: 'var(--radius-md)', width: '100%', height: 'auto', display: 'block' }}
                         />
 
-                        <h2 className={styles.heading}>Les Nuisances & Dangers</h2>
+                        <h2 className={styles.heading}>Les Nuisances</h2>
                         <p>
-                            Une infestation de rongeurs n'est pas à prendre à la légère. Ils <strong>consomment et souillent</strong> ce qu’ils ne mangent pas
-                            et s’attaquent aux matériaux isolants, câbles, gaines et fils électriques.
+                            Ces nuisibles peuvent ronger des câbles, des raccords de gaz, des fils électriques provoquant ainsi des pannes, des courts-circuits, un incendie ou même une explosion due à une fuite de gaz.
+                        </p>
+                        <p>
+                            Ces rongeurs peuvent transmettre plusieurs maladies qui peuvent nuire à la santé de l'homme et des animaux domestiques. Voici quelques exemples de ces maladies :
                         </p>
                         <ul className={styles.list}>
-                            <li>Risques d'incendies (courts-circuits).</li>
-                            <li>Dégâts matériels importants (isolation, cloisons).</li>
-                            <li>Transmission de maladies (leptospirose, salmonellose...).</li>
-                            <li>Bruits nocturnes et odeurs désagréables.</li>
+                            <li>Le tétanos</li>
+                            <li>La pasteurellose (infections par plaies à travers des morsures)</li>
+                            <li>La leptospirose (transmise à travers l'urine)</li>
+                            <li>Le typhus murin</li>
+                            <li>La salmonellose</li>
+                            <li>Les fièvres hémorragiques (qui se transmettent à travers les puces de rats)</li>
                         </ul>
 
                         <img
@@ -114,21 +116,26 @@ export default function RongeursPage() {
                         <div className={styles.techniqueBox}>
                             <h3>Nos Techniques d'Intervention</h3>
                             <p>
-                                Spécialistes de la dératisation dans le 77, nous utilisons des méthodes professionnelles et sécurisées :
+                                Avant l'intervention, notre technicien se rend sur les lieux pour inspecter la zone infestée par les rongeurs. Cet examen leur permettra de mettre en place les traitements les plus adaptés pour lutter efficacement et judicieusement contre ces nuisibles. Voici quelques exemples des méthodes préventives que nous utilisons :
                             </p>
                             <ul className={styles.checkList}>
-                                <li>Diagnostic complet du lieu d'infestation.</li>
-                                <li>Mise en place de postes d'appâtage sécurisés (boîtes verrouillées).</li>
-                                <li>Utilisation de produits raticides professionnels (anticoagulants de nouvelle génération).</li>
-                                <li>Rebouchage des points d'entrée (si possible).</li>
-                                <li>Conseils de prévention pour éviter toute récidive.</li>
+                                <li>Dispositif chimique</li>
+                                <li>Postes sécurisés</li>
+                                <li>Systèmes de piégeage par des moyens naturels</li>
+                                <li>Appâts non toxiques</li>
                             </ul>
+                            <p>
+                                Notre tarif tient compte du degré d'infestation et de la surface à traiter.
+                            </p>
                         </div>
 
                         <div className={styles.pricingBox}>
                             <h3>Tarifs Dératisation</h3>
                             <p className={styles.price}>À partir de 145€ TTC*</p>
-                            <p className={styles.priceNote}>*Le prix varie selon la surface et le niveau d'infestation.</p>
+                            <p className={styles.priceNote}>*Suivant degré d'infestation et surface à traiter.</p>
+                            <p style={{ marginTop: '0.75rem', fontSize: '0.9rem' }}>
+                                Nous proposons des contrats annuels curatifs et préventifs pour toutes demandes : particuliers, entreprises, collectivités, restaurateurs...
+                            </p>
                             <Link href="/contact" className="btn btn-primary" style={{ width: '100%', marginTop: '1rem' }}>
                                 Obtenir un prix exact
                             </Link>
