@@ -1,11 +1,18 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import styles from './Header.module.css';
 
 export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const close = () => setIsOpen(false);
+
     return (
         <header className={styles.header}>
             <div className={`container ${styles.container}`}>
-                <Link href="/" className={styles.logo}>
+                <Link href="/" className={styles.logo} onClick={close}>
                     <img src="/images/logos/logo.png" alt="PFP Services" style={{ height: '60px', width: 'auto' }} />
                 </Link>
 
@@ -45,6 +52,57 @@ export default function Header() {
                         Contact & Devis
                     </Link>
                 </div>
+
+                <button
+                    type="button"
+                    className={styles.burger}
+                    onClick={() => setIsOpen(true)}
+                    aria-label="Ouvrir le menu"
+                    aria-expanded={isOpen}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div
+                className={`${styles.drawerOverlay} ${isOpen ? styles.drawerOverlayOpen : ''}`}
+                onClick={close}
+            />
+
+            <div className={`${styles.drawer} ${isOpen ? styles.drawerOpen : ''}`}>
+                <button
+                    type="button"
+                    className={styles.drawerClose}
+                    onClick={close}
+                    aria-label="Fermer le menu"
+                >
+                    ✕
+                </button>
+
+                <nav className={styles.drawerNav}>
+                    <p className={styles.drawerSectionTitle}>Entretien Toiture</p>
+                    <Link href="/services/demoussage" className={styles.drawerLink} onClick={close}>Démoussage</Link>
+                    <Link href="/services/ramonage" className={styles.drawerLink} onClick={close}>Ramonage</Link>
+
+                    <p className={styles.drawerSectionTitle}>Nuisibles</p>
+                    <Link href="/services/rongeurs" className={styles.drawerLink} onClick={close}>Rongeurs</Link>
+                    <Link href="/services/guepes-frelons" className={styles.drawerLink} onClick={close}>Guêpes & Frelons</Link>
+                    <Link href="/services/cafards" className={styles.drawerLink} onClick={close}>Cafards</Link>
+                    <Link href="/services/chenilles" className={styles.drawerLink} onClick={close}>Chenilles</Link>
+                    <Link href="/services/taupes" className={styles.drawerLink} onClick={close}>Taupes</Link>
+
+                    <div className={styles.drawerDivider} />
+
+                    <Link href="/zones" className={styles.drawerLink} onClick={close}>Zones d&apos;Intervention</Link>
+                    <Link href="/realisations" className={styles.drawerLink} onClick={close}>Réalisations</Link>
+                    <Link href="/contact" className={styles.drawerLink} onClick={close}>Contact & Devis</Link>
+
+                    <a href="tel:0629953262" className={styles.drawerPhone} onClick={close}>
+                        📞 06 29 95 32 62
+                    </a>
+                </nav>
             </div>
         </header>
     );
