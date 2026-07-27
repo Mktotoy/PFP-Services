@@ -1,9 +1,64 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { Phone } from 'lucide-react';
 import styles from './Header.module.css';
+
+function MobileDrawer({ isOpen, close }: { isOpen: boolean; close: () => void }) {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
+
+    return createPortal(
+        <>
+            <div
+                className={`${styles.drawerOverlay} ${isOpen ? styles.drawerOverlayOpen : ''}`}
+                onClick={close}
+            />
+
+            <div className={`${styles.drawer} ${isOpen ? styles.drawerOpen : ''}`}>
+                <button
+                    type="button"
+                    className={styles.drawerClose}
+                    onClick={close}
+                    aria-label="Fermer le menu"
+                >
+                    ✕
+                </button>
+
+                <nav className={styles.drawerNav}>
+                    <p className={styles.drawerSectionTitle}>Entretien Toiture</p>
+                    <Link href="/services/demoussage" className={styles.drawerLink} onClick={close}>Démoussage</Link>
+                    <Link href="/services/ramonage" className={styles.drawerLink} onClick={close}>Ramonage</Link>
+
+                    <p className={styles.drawerSectionTitle}>Nuisibles</p>
+                    <Link href="/services/rongeurs" className={styles.drawerLink} onClick={close}>Rongeurs</Link>
+                    <Link href="/services/guepes-frelons" className={styles.drawerLink} onClick={close}>Guêpes & Frelons</Link>
+                    <Link href="/services/cafards" className={styles.drawerLink} onClick={close}>Cafards</Link>
+                    <Link href="/services/chenilles" className={styles.drawerLink} onClick={close}>Chenilles</Link>
+                    <Link href="/services/taupes" className={styles.drawerLink} onClick={close}>Taupes</Link>
+
+                    <div className={styles.drawerDivider} />
+
+                    <Link href="/zones" className={styles.drawerLink} onClick={close}>Zones d&apos;Intervention</Link>
+                    <Link href="/realisations" className={styles.drawerLink} onClick={close}>Réalisations</Link>
+                    <Link href="/contact" className={styles.drawerLink} onClick={close}>Contact & Devis</Link>
+
+                    <a href="tel:0629953262" className={styles.drawerPhone} onClick={close}>
+                        <Phone size={18} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '4px' }} /> 06 29 95 32 62
+                    </a>
+                </nav>
+            </div>
+        </>,
+        document.body
+    );
+}
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -67,44 +122,7 @@ export default function Header() {
                 </button>
             </div>
 
-            <div
-                className={`${styles.drawerOverlay} ${isOpen ? styles.drawerOverlayOpen : ''}`}
-                onClick={close}
-            />
-
-            <div className={`${styles.drawer} ${isOpen ? styles.drawerOpen : ''}`}>
-                <button
-                    type="button"
-                    className={styles.drawerClose}
-                    onClick={close}
-                    aria-label="Fermer le menu"
-                >
-                    ✕
-                </button>
-
-                <nav className={styles.drawerNav}>
-                    <p className={styles.drawerSectionTitle}>Entretien Toiture</p>
-                    <Link href="/services/demoussage" className={styles.drawerLink} onClick={close}>Démoussage</Link>
-                    <Link href="/services/ramonage" className={styles.drawerLink} onClick={close}>Ramonage</Link>
-
-                    <p className={styles.drawerSectionTitle}>Nuisibles</p>
-                    <Link href="/services/rongeurs" className={styles.drawerLink} onClick={close}>Rongeurs</Link>
-                    <Link href="/services/guepes-frelons" className={styles.drawerLink} onClick={close}>Guêpes & Frelons</Link>
-                    <Link href="/services/cafards" className={styles.drawerLink} onClick={close}>Cafards</Link>
-                    <Link href="/services/chenilles" className={styles.drawerLink} onClick={close}>Chenilles</Link>
-                    <Link href="/services/taupes" className={styles.drawerLink} onClick={close}>Taupes</Link>
-
-                    <div className={styles.drawerDivider} />
-
-                    <Link href="/zones" className={styles.drawerLink} onClick={close}>Zones d&apos;Intervention</Link>
-                    <Link href="/realisations" className={styles.drawerLink} onClick={close}>Réalisations</Link>
-                    <Link href="/contact" className={styles.drawerLink} onClick={close}>Contact & Devis</Link>
-
-                    <a href="tel:0629953262" className={styles.drawerPhone} onClick={close}>
-                        <Phone size={18} style={{display:'inline', verticalAlign:'-3px', marginRight:'4px'}} /> 06 29 95 32 62
-                    </a>
-                </nav>
-            </div>
+            <MobileDrawer isOpen={isOpen} close={close} />
         </header>
     );
 }
