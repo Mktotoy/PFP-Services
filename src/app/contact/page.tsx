@@ -41,28 +41,35 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                    <form style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)' }}>
-                        <h2 style={{ marginBottom: 'var(--spacing-md)' }}>Demander un Devis Gratuit</h2>
-                        <div>
-                            <label style={{ display: 'block', marginBottom: '5px' }}>Nom</label>
-                            <input type="text" style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }} required />
-                        </div>
-                        <div>
-                            <label style={{ display: 'block', marginBottom: '5px' }}>Email</label>
-                            <input type="email" style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }} required />
-                        </div>
-                        <div>
-                            <label style={{ display: 'block', marginBottom: '5px' }}>Téléphone</label>
-                            <input type="tel" style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }} required />
-                        </div>
-                        <div>
-                            <label style={{ display: 'block', marginBottom: '5px' }}>Message</label>
-                            <textarea rows={5} style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }} required></textarea>
-                        </div>
-                        <button type="submit" className="btn btn-primary" style={{ marginTop: '10px' }}>
-                            Envoyer ma demande
-                        </button>
-                    </form>
+                    <h2 style={{ marginBottom: 'var(--spacing-md)' }}>Demander un Devis Gratuit</h2>
+                    <p style={{ marginBottom: 'var(--spacing-md)', color: 'var(--gray-500, #666)' }}>
+                        Réponse la plus rapide : contactez-nous directement par téléphone, SMS ou WhatsApp.
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                        <a
+                            href="tel:0629953262"
+                            className="btn btn-primary"
+                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '1rem', fontSize: '1.1rem' }}
+                        >
+                            📞 Appeler le 06 29 95 32 62
+                        </a>
+                        <a
+                            href="sms:0629953262"
+                            className="btn btn-outline"
+                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '1rem', fontSize: '1.1rem' }}
+                        >
+                            💬 Envoyer un SMS
+                        </a>
+                        <a
+                            href="https://wa.me/33629953262"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-outline"
+                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '1rem', fontSize: '1.1rem', borderColor: '#25D366', color: '#25D366' }}
+                        >
+                            ✅ WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
         </main>
