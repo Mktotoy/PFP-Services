@@ -1,9 +1,12 @@
 "use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import styles from './ReviewsSidebar.module.css';
 import { googleReviews } from '@/data/reviews';
 import StarRating from './StarRating';
+
+const GOOGLE_REVIEWS_URL = "https://www.google.com/search?q=PFP+Services+Melun+avis#lrd=0x47e5fa2b234ef9fd:0x6f699042c8d28e75,1";
 
 interface ReviewsSidebarProps {
     isOpen: boolean;
@@ -12,6 +15,11 @@ interface ReviewsSidebarProps {
 
 export default function ReviewsSidebar({ isOpen, onClose }: ReviewsSidebarProps) {
     const sidebarRef = useRef<HTMLDivElement>(null);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     // Close on click outside
     useEffect(() => {
@@ -38,9 +46,11 @@ export default function ReviewsSidebar({ isOpen, onClose }: ReviewsSidebarProps)
         };
     }, [isOpen]);
 
-    return (
+    if (!mounted) return null;
+
+    return createPortal(
         <>
-            <div className={`${styles.overlay} ${isOpen ? styles.open : ''}`} aria-hidden="true" />
+            <div className={`${styles.overlay} ${isOpen ? styles.open : ''}`} aria-hidden="true" onClick={onClose} />
             <div className={`${styles.sidebar} ${isOpen ? styles.open : ''}`} ref={sidebarRef}>
                 <div className={styles.header}>
                     <div className={styles.title}>
@@ -71,6 +81,15 @@ export default function ReviewsSidebar({ isOpen, onClose }: ReviewsSidebarProps)
 
                 <div className={styles.footer}>
                     <a
+                        href={GOOGLE_REVIEWS_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary"
+                        style={{ width: '100%', fontSize: '0.9rem', marginBottom: '10px' }}
+                    >
+                        Voir tous les avis Google
+                    </a>
+                    <a
                         href="https://g.page/r/CdERc9GXbKp-EBM/review"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -81,6 +100,7 @@ export default function ReviewsSidebar({ isOpen, onClose }: ReviewsSidebarProps)
                     </a>
                 </div>
             </div>
-        </>
+        </>,
+        document.body
     );
 }
