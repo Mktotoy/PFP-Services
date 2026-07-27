@@ -9,7 +9,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, image, slug }: ServiceCardProps) {
     return (
-        <Link href={`/services/${slug}`} className={styles.card}>
+        <Link href={slug} className={styles.card}>
             <div className={styles.imageContainer}>
                 {/* Placeholder gradient if no image */}
                 <div className={styles.placeholder} style={image ? { backgroundImage: `url(${image})` } : {}}></div>
