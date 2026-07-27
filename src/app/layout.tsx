@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import StickyMobileBar from "@/components/StickyMobileBar";
 import KonamiEasterEgg from "@/components/KonamiEasterEgg";
@@ -29,6 +30,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-XZ3EYCZMVT"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XZ3EYCZMVT');
+          `}
+        </Script>
+      </head>
       <body className={inter.variable}>
         <LocalBusinessSchema region="77" />
         <Header />
