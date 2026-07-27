@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Inter } from "next/font/google";
@@ -46,7 +47,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={inter.variable}>
-        <LocalBusinessSchema region="77" />
+        <LocalBusinessSchema full region="77" />
         <Header />
         <div style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column' }}>
           {children}
