@@ -40,24 +40,35 @@ export default function Hero() {
 
             <div className={`container ${styles.container}`}>
                 <div className={styles.content}>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginBottom: '20px', flexWrap: 'wrap' }}>
+                        <div className={styles.trustBadge}>
+                            <span className={styles.trustIcon}>✅</span>
+                            <span>Certifié Ramonage</span>
+                        </div>
+                        <div className={styles.trustBadge}>
+                            <span className={styles.trustIcon}>🌿</span>
+                            <span>Certibiocide</span>
+                        </div>
                         <GoogleReviewsBadge onClick={() => setIsReviewsOpen(true)} />
                     </div>
                     <h1 className={styles.title}>
-                        Vous avez besoin d'un service de{' '}
+                        Expert en{' '}
                         <span className={`${styles.highlight} ${styles.carousel} ${isAnimating ? styles.carouselOut : styles.carouselIn}`}>
                             {services[currentIndex]}
                         </span>
                         <br />
-                        dans le 77 ou alentours ?
+                        dans le 77, 91 & Sud Ile-de-France
                     </h1>
                     <p className={styles.subtitle}>
-                        Rats, Souris, Guêpes, Frelons... Ne laissez pas les nuisibles envahir votre quotidien.<br />
-                        <strong>PFP Services</strong> intervient rapidement à Melun, Fontainebleau et tout le département.
+                        Démoussage de toiture, Hydrofuge & Dératisation professionnelle.<br />
+                        <strong>PFP Services</strong> : l'expertise au service de votre habitat et de votre santé.
                     </p>
                     <div className={styles.actions}>
-                        <Link href="/contact" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
-                            Demander un devis gratuit
+                        <Link href="/nettoyage-toiture" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
+                            Nos Services Toiture
+                        </Link>
+                        <Link href="/nuisibles" className="btn btn-outline" style={{ padding: '1rem 2rem', fontSize: '1.1rem', marginLeft: '1rem', color: 'white', border: '2px solid white' }}>
+                            Nos Services Nuisibles
                         </Link>
                     </div>
                 </div>

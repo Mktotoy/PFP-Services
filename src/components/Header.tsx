@@ -10,27 +10,30 @@ export default function Header() {
                 </Link>
 
                 <nav className={styles.nav}>
-                    <Link href="/qui-sommes-nous" className={styles.link}>Qui sommes-nous</Link>
-
                     <div className={styles.dropdownParent}>
-                        <Link href="/services" className={styles.link}>
-                            Nos Solutions <span style={{ fontSize: '0.7em', marginLeft: '4px' }}>▼</span>
+                        <Link href="/nettoyage-toiture" className={styles.link}>
+                            Toiture <span style={{ fontSize: '0.7em', marginLeft: '4px' }}>▼</span>
                         </Link>
                         <div className={styles.dropdownMenu}>
-                            <Link href="/services/rongeurs" className={styles.dropdownItem}>Rats & Souris</Link>
-                            <Link href="/services/guepes-frelons" className={styles.dropdownItem}>Guêpes & Frelons</Link>
-                            <Link href="/services/cafards" className={styles.dropdownItem}>Cafards & Blattes</Link>
-                            <Link href="/services/chenilles" className={styles.dropdownItem}>Chenilles Processionnaires</Link>
-                            <Link href="/services/ramonage" className={styles.dropdownItem}>Ramonage & Débistrage</Link>
-                            <Link href="/services/taupes" className={styles.dropdownItem}>Taupes & Nuisibles</Link>
-                            <Link href="/services/demoussage" className={styles.dropdownItem}>Démoussage Toiture</Link>
-                            <div style={{ height: '1px', background: '#eee', margin: '5px 0' }}></div>
-                            <Link href="/services" className={styles.dropdownItem} style={{ fontSize: '0.85rem', color: 'var(--primary)', fontWeight: '700' }}>Voir tout</Link>
+                            <Link href="/nettoyage-toiture/demoussage" className={styles.dropdownItem}>Démoussage</Link>
+                            <Link href="/nettoyage-toiture/hydrofuge" className={styles.dropdownItem}>Hydrofuge</Link>
+                            <Link href="/nettoyage-toiture" className={styles.dropdownItem} style={{ fontWeight: '700' }}>Expertise Toiture</Link>
+                        </div>
+                    </div>
+
+                    <div className={styles.dropdownParent}>
+                        <Link href="/nuisibles" className={styles.link}>
+                            Nuisibles <span style={{ fontSize: '0.7em', marginLeft: '4px' }}>▼</span>
+                        </Link>
+                        <div className={styles.dropdownMenu}>
+                            <Link href="/nuisibles/rats-souris" className={styles.dropdownItem}>Rats & Souris</Link>
+                            <Link href="/nuisibles/guepes-frelons" className={styles.dropdownItem}>Guêpes & Frelons</Link>
+                            <Link href="/nuisibles" className={styles.dropdownItem} style={{ fontWeight: '700' }}>Expertise Nuisibles</Link>
                         </div>
                     </div>
 
                     <Link href="/zones" className={styles.link}>Zones d'Intervention</Link>
-                    <Link href="/galerie" className={styles.link}>Galerie</Link>
+                    <Link href="/realisations" className={styles.link}>Réalisations</Link>
                 </nav>
 
                 <div className={styles.actions}>

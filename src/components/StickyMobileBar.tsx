@@ -4,6 +4,9 @@ import styles from './StickyMobileBar.module.css';
 export default function StickyMobileBar() {
     return (
         <div className={styles.container}>
+            <a href="tel:0629953262" className={`${styles.btn} ${styles.emergencyBtn}`}>
+                🐝 URGENCE
+            </a>
             <a href="tel:0629953262" className={`${styles.btn} ${styles.callBtn}`}>
                 📞 Appeler
             </a>

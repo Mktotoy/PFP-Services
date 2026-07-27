@@ -1,0 +1,152 @@
+.main {
+  padding-top: 80px;
+}
+
+.hero {
+  background: #f8f9fa;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a202c;
+}
+
+.subtitle {
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.imageWrapper {
+  position: relative;
+  height: 200px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.cardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.location {
+  font-size: 0.85rem;
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.cardContent h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.cardContent p {
+  color: #718096;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Detail Page */
+
+.detailHeader {
+    background: #1a202c;
+    color: white;
+    padding: 6rem 0;
+}
+
+.meta {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.detailContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    margin-top: -4rem;
+}
+
+.detailContent {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.section {
+    margin-bottom: 3rem;
+}
+
+.section h2 {
+    color: #1a202c;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar {
+    padding-top: 4rem;
+}
+
+.linkingBox {
+    background: #ebf8ff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #bee3f8;
+}
+
+.linkingBox h4 {
+    color: #2b6cb0;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+    .detailContainer {
+        grid-template-columns: 1fr;
+        margin-top: 2rem;
+    }
+    .detailContent {
+        padding: 1.5rem;
+    }
+}

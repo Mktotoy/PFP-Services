@@ -18,12 +18,12 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
     {
         id: '1',
-        slug: 'demoussage-toiture-cely',
-        title: 'Rénovation complète d\'une toiture envahie par la mousse',
+        slug: 'nettoyage-toiture-melun-tuiles-mecaniques',
+        title: 'Nettoyage de tuiles mécaniques à Melun',
         category: 'Toiture',
-        location: 'Cély-en-Bière (77)',
+        location: 'Melun (77)',
         date: 'Octobre 2024',
-        summary: 'Nettoyage haute pression et traitement hydrofuge pour une toiture qui avait perdu son étanchéité.',
+        summary: 'Rénovation d\'une toiture envahie par la mousse avec brossage manuel et hydrofuge.',
         challenge: 'La toiture de cette maison individuelle était recouverte d\'une épaisse couche de mousse et de lichen, retenant l\'humidité et rendant les tuiles poreuses. Le client craignait des infiltrations.',
         solution: 'Nous avons procédé à un grattage manuel des plus gros amas, suivi d\'un nettoyage basse pression pour ne pas abîmer les tuiles. Un traitement anti-mousse préventif et curatif a ensuite été pulvérisé.',
         result: 'La toiture a retrouvé son aspect d\'origine. Le traitement appliqué garantit une protection durable contre le retour des végétaux parasites pour plusieurs années.',
@@ -33,15 +33,15 @@ export const caseStudies: CaseStudy[] = [
     },
     {
         id: '2',
-        slug: 'nid-frelons-asiatiques-melun',
-        title: 'Urgence : Énorme nid de frelons asiatiques à 15m de haut',
+        slug: 'destruction-nid-frelons-asiatiques-77-hauteur',
+        title: 'Destruction d\'un nid de frelons asiatiques en hauteur',
         category: 'Insectes',
         location: 'Melun (77)',
         date: 'Août 2024',
-        summary: 'Intervention technique sur un nid de frelons asiatiques situé à la cime d\'un arbre, menaçant le voisinage.',
+        summary: 'Intervention technique sur un nid de frelons asiatiques situé à 15m de haut.',
         challenge: 'Un nid de frelons asiatiques de plus de 60cm de diamètre s\'était développé en haut d\'un arbre, surplombant la rue et le jardin des voisins. L\'accès était complexe et la hauteur importante.',
-        solution: 'Utilisation de notre perche télescopique carbone (portée 20m) pour injecter la poudre insecticide directement au coeur du nid, sans avoir besoin de nacelle coûteuse. Intervention réalisée en combinaison intégrale.',
-        result: 'Le nid a été neutralisé en moins de 30 minutes. L\'activité de la colonie a cessé dans les heures suivantes, sécurisant totalement le quartier.',
+        solution: 'Utilisation de notre perche télescopique carbone (portée 20m) pour injecter la poudre insecticide directement au coeur du nid.',
+        result: 'Le nid a été neutralisé en moins de 30 minutes. L\'activité de la colonie a cessé dans les heures suivantes.',
         mainImage: '/images/services/guepes-frelons/frelons-arbre.jpg',
         gallery: [
             '/images/services/guepes-frelons/frelons-arbre.jpg',
@@ -50,19 +50,18 @@ export const caseStudies: CaseStudy[] = [
     },
     {
         id: '3',
-        slug: 'debistrage-cheminee-fontainebleau',
-        title: 'Sauvetage d\'un conduit de cheminée goudronné',
-        category: 'Ramonage',
+        slug: 'deratisation-fontainebleau-souris-immeuble',
+        title: 'Traitement anti-rongeurs dans un immeuble à Fontainebleau',
+        category: 'Insectes',
         location: 'Fontainebleau (77)',
         date: 'Novembre 2024',
-        summary: 'Débistrage mécanique d\'un conduit encrassé présentant un risque élevé de feu de cheminée.',
-        challenge: 'Lors d\'un ramonage d\'entretien, nous avons constaté que les parois étaient couvertes de bistre (goudron durci) que le hérisson classique ne pouvait pas enlever. Le risque d\'incendie était imminent.',
-        solution: 'Nous avons utilisé une débistreuse rotative électrique. Ses masselottes en acier viennent frapper les parois pour casser et décoller le goudron durci, remettant le conduit à nu.',
-        result: 'Plus de 3 seaux de bistre ont été retirés. Le conduit est redevenu sain et utilisable en toute sécurité pour l\'hiver. Le client a évité un potentiel sinistre grave.',
-        mainImage: '/images/services/ramonage/ramonage-bistre-1.jpg',
+        summary: 'Mise en place d\'un plan de lutte contre les souris dans les parties communes.',
+        challenge: 'Plusieurs appartements se plaignaient de bruits dans les cloisons et de câbles électriques rongés dans les gaines techniques.',
+        solution: 'Diagnostic complet des points d\'entrée et pose de postes d\'appâtage sécurisés avec raticide professionnel. Rebouclage des trous à la paille de fer.',
+        result: 'Infestation stoppée en 10 jours. Un contrat annuel a été signé avec le syndic pour la prévention.',
+        mainImage: '/images/services/ramonage/ramonage-bistre-1.jpg', // Placeholder
         gallery: [
-            '/images/services/ramonage/ramonage-bistre-1.jpg',
-            '/images/services/ramonage/ramonage-poele-allume.jpg'
+            '/images/services/ramonage/ramonage-bistre-1.jpg'
         ]
     }
 ];

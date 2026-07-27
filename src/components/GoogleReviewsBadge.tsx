@@ -4,30 +4,11 @@ interface GoogleReviewsBadgeProps {
     onClick?: () => void;
 }
 
-export default function GoogleReviewsBadge({ onClick }: GoogleReviewsBadgeProps) {
-    if (onClick) {
-        return (
-            <div onClick={onClick} className={styles.container} style={{ cursor: 'pointer' }}>
-                <div className={styles.logo}>
-                    <span className={styles.gLogo}>G</span>
-                </div>
-                <div className={styles.content}>
-                    <div className={styles.stars}>★★★★★</div>
-                    <div className={styles.text}>
-                        <strong>5.0/5</strong> sur Google
-                    </div>
-                </div>
-            </div>
-        );
-    }
+const GOOGLE_REVIEWS_URL = "https://www.google.com/search?q=PFP+Services+Melun+avis#lrd=0x47e5fa2b234ef9fd:0x6f699042c8d28e75,1";
 
-    return (
-        <a
-            href="https://g.page/r/CdERc9GXbKp-EBM/review"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.container}
-        >
+export default function GoogleReviewsBadge({ onClick }: GoogleReviewsBadgeProps) {
+    const content = (
+        <div className={styles.container}>
             <div className={styles.logo}>
                 <span className={styles.gLogo}>G</span>
             </div>
@@ -37,6 +18,25 @@ export default function GoogleReviewsBadge({ onClick }: GoogleReviewsBadgeProps)
                     <strong>5.0/5</strong> sur Google
                 </div>
             </div>
+        </div>
+    );
+
+    if (onClick) {
+        return (
+            <div onClick={onClick} style={{ cursor: 'pointer' }}>
+                {content}
+            </div>
+        );
+    }
+
+    return (
+        <a
+            href={GOOGLE_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: 'none' }}
+        >
+            {content}
         </a>
     );
 }

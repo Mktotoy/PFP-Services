@@ -20,7 +20,8 @@ export const metadata: Metadata = {
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import JsonLd from "@/components/JsonLd";
+import { LocalBusinessSchema } from "@/components/seo/JsonLd";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={inter.variable}>
-        <JsonLd />
+        <LocalBusinessSchema region="77" />
         <Header />
         <div style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column' }}>
           {children}
