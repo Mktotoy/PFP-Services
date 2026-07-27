@@ -11,39 +11,6 @@ export default function Home() {
     <main className={styles.main}>
       <Hero />
 
-      <section className="section container">
-        <ZoneSearch />
-      </section>
-
-      <section className="section container">
-        <div className={styles.splitSection}>
-            <div className={styles.textContent}>
-                <h2 className={styles.sectionTitle} style={{ textAlign: 'left' }}>
-                  Démoussage & Nettoyage de Toiture dans le 77
-                </h2>
-                <p>
-                    Votre toiture est envahie par la mousse, le lichen ou les traces noires ? 
-                    <strong> PFP Services</strong> intervient dans toute la Seine-et-Marne (Melun, Fontainebleau, Meaux) 
-                    pour redonner de l'éclat et protéger durablement votre couverture.
-                </p>
-                <ul className={styles.list}>
-                    <li><strong>Brossage manuel</strong> pour préserver l'intégrité de vos tuiles.</li>
-                    <li><strong>Traitement curatif</strong> anti-fongique haute efficacité.</li>
-                    <li><strong>Protection Hydrofuge</strong> pour une étanchéité renforcée.</li>
-                </ul>
-                <Link href="/services" className="btn btn-primary">Voir notre expertise Toiture</Link>
-            </div>
-            <div className={styles.visualContent}>
-                <BeforeAfter 
-                    beforeImg="/images/services/demoussage/toiture-nettoyage.jpg" 
-                    afterImg="/images/services/demoussage/toiture-nettoyage.jpg" // Using same for placeholder if multiple not available
-                    altText="Nettoyage de toiture"
-                    city="Melun"
-                />
-            </div>
-        </div>
-      </section>
-
       <section className="section" style={{ background: 'var(--gray-50)' }}>
         <div className="container">
           <h2 className={styles.sectionTitle}>
@@ -58,6 +25,39 @@ export default function Home() {
             <ServiceCard title="Chenilles Processionnaires" slug="/services/chenilles" image="/images/services/chenilles/chenilles-intervention.jpg" />
             <ServiceCard title="Taupes" slug="/services/taupes" image="/images/services/taupes/taupiniere.png" />
           </div>
+        </div>
+      </section>
+
+      <section className="section container">
+        <ZoneSearch />
+      </section>
+
+      <section className="section container">
+        <div className={styles.splitSection}>
+            <div className={styles.textContent}>
+                <h2 className={styles.sectionTitle} style={{ textAlign: 'left' }}>
+                  Démoussage & Nettoyage de Toiture dans le 77
+                </h2>
+                <p>
+                    Votre toiture est envahie par la mousse, le lichen ou les traces noires ?
+                    <strong> PFP Services</strong> intervient dans toute la Seine-et-Marne (Melun, Fontainebleau, Meaux)
+                    pour redonner de l'éclat et protéger durablement votre couverture.
+                </p>
+                <ul className={styles.list}>
+                    <li><strong>Brossage manuel</strong> pour préserver l'intégrité de vos tuiles.</li>
+                    <li><strong>Traitement curatif</strong> anti-fongique haute efficacité.</li>
+                    <li><strong>Protection Hydrofuge</strong> pour une étanchéité renforcée.</li>
+                </ul>
+                <Link href="/services" className="btn btn-primary">Voir notre expertise Toiture</Link>
+            </div>
+            <div className={styles.visualContent}>
+                <BeforeAfter
+                    beforeImg="/images/services/demoussage/toiture-nettoyage.jpg"
+                    afterImg="/images/services/demoussage/toiture-nettoyage.jpg" // Using same for placeholder if multiple not available
+                    altText="Nettoyage de toiture"
+                    city="Melun"
+                />
+            </div>
         </div>
       </section>
 

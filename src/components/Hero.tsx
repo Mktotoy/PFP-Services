@@ -64,14 +64,6 @@ export default function Hero() {
                         Démoussage de toiture, Hydrofuge & Dératisation professionnelle.<br />
                         <strong>PFP Services</strong> : l'expertise au service de votre habitat et de votre santé.
                     </p>
-                    <div className={styles.actions}>
-                        <Link href="/services" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
-                            Nos Services Toiture
-                        </Link>
-                        <Link href="/services" className="btn btn-outline" style={{ padding: '1rem 2rem', fontSize: '1.1rem', marginLeft: '1rem', color: 'white', border: '2px solid white' }}>
-                            Nos Services Nuisibles
-                        </Link>
-                    </div>
                 </div>
             </div>
         </section>
