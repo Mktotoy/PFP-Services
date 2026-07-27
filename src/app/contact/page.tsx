@@ -17,7 +17,7 @@ export default function ContactPage() {
                     <p style={{ marginBottom: 'var(--spacing-sm)' }}>
                         <strong>PFP Services</strong><br />
                         22 Rue de la Salle<br />
-                        77930 Cély-en-Bière
+                        77930 Cély
                     </p>
                     <p style={{ marginBottom: 'var(--spacing-sm)' }}>
                         <strong>Téléphone :</strong> <a href="tel:0629953262" style={{ color: 'var(--primary)', fontWeight: 'bold' }}>06 29 95 32 62</a>

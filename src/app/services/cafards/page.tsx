@@ -30,7 +30,7 @@ const jsonLd = {
                 "address": {
                     "@type": "PostalAddress",
                     "streetAddress": "22 Rue de la Salle",
-                    "addressLocality": "Cély-en-Bière",
+                    "addressLocality": "Cély",
                     "postalCode": "77930",
                     "addressCountry": "FR"
                 },

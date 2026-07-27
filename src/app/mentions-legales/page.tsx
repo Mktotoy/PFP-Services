@@ -27,7 +27,7 @@ export default function MentionsLegales() {
             <section style={{ marginBottom: '3rem' }}>
                 <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', borderBottom: '2px solid var(--secondary)', paddingBottom: '0.5rem' }}>Coordonnées</h2>
                 <ul style={{ listStyle: 'none', padding: 0, lineHeight: '1.8' }}>
-                    <li><strong>Adresse du siège social :</strong> 22 Rue de la Salle, 77930 Cély-en-Bière</li>
+                    <li><strong>Adresse du siège social :</strong> 22 Rue de la Salle, 77930 Cély</li>
                     <li><strong>Téléphone :</strong> 06 29 95 32 62</li>
                     <li><strong>Email :</strong> contact@pfp-services.fr</li>
                     <li><strong>Activité :</strong> Désinfection, désinsectisation, dératisation</li>
@@ -37,8 +37,8 @@ export default function MentionsLegales() {
             <section style={{ marginBottom: '3rem' }}>
                 <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', borderBottom: '2px solid var(--secondary)', paddingBottom: '0.5rem' }}>Hébergement du site</h2>
                 <p>
-                    Ce site est hébergé par Vercel Inc.<br />
-                    Adresse : 340 S Lemon Ave #4133 Walnut, CA 91789, USA.
+                    Ce site est hébergé par Google Cloud (Google App Engine).<br />
+                    Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irlande.
                 </p>
             </section>
 
