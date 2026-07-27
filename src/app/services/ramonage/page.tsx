@@ -1,12 +1,3 @@
-/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 355: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
-/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 2108: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
-/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 2108: warning: setlocale: LC_COLLATE: cannot change locale (fr_FR.UTF-8): No such file or directory
-/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 355: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
-/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 3442: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
-/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 3442: warning: setlocale: LC_COLLATE: cannot change locale (fr_FR.UTF-8): No such file or directory
-/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 355: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
-/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 3442: warning: setlocale: LC_CTYPE: cannot change locale (fr_FR.UTF-8): No such file or directory
-/nix/store/rdv67mff1y8i47bx85mdxw86fjmzq1sf-bash-completion-2.16.0/share/bash-completion/bash_completion: line 3442: warning: setlocale: LC_COLLATE: cannot change locale (fr_FR.UTF-8): No such file or directory
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
