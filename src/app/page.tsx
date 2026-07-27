@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import styles from "./page.module.css";
-import { ZoneSearch } from "@/components/blocks/ZoneSearch";
 import { BeforeAfter } from "@/components/blocks/BeforeAfter";
 import { LocalReviews } from "@/components/blocks/LocalReviews";
 import Link from 'next/link';
@@ -26,10 +25,6 @@ export default function Home() {
             <ServiceCard title="Taupes" slug="/services/taupes" image="/images/services/taupes/taupiniere.png" />
           </div>
         </div>
-      </section>
-
-      <section className="section container">
-        <ZoneSearch />
       </section>
 
       <section className="section container">
