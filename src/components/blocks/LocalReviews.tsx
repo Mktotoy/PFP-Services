@@ -1,5 +1,6 @@
 import React from 'react';
 import { googleReviews, Review } from '@/data/reviews';
+import StarRating from '@/components/StarRating';
 import styles from './LocalReviews.module.css';
 
 interface LocalReviewsProps {
@@ -28,7 +29,7 @@ export const LocalReviews: React.FC<LocalReviewsProps> = ({
             <div className={styles.header}>
               <span className={styles.author}>{review.author}</span>
               <div className={styles.stars}>
-                {"★".repeat(review.rating)}
+                <StarRating rating={review.rating} size={14} />
               </div>
             </div>
             <p className={styles.text}>"{review.text}"</p>

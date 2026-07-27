@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 import styles from './page.module.css';
 
@@ -71,7 +72,7 @@ export default function RamonagePage() {
                             et de réduire la pollution. Cette pratique nous protège contre tout danger d'intoxication et d'explosion !
                         </p>
                         <div className={styles.alertBox}>
-                            ⚠️ <strong>Danger :</strong> Outre l’incendie du conduit de cheminée, le risque principal du défaut de ramonage reste <strong>l’intoxication au monoxyde de carbone</strong>, inodore et mortel.
+                            <AlertTriangle size={18} style={{display:'inline', verticalAlign:'-3px', marginRight:'4px'}} /> <strong>Danger :</strong> Outre l’incendie du conduit de cheminée, le risque principal du défaut de ramonage reste <strong>l’intoxication au monoxyde de carbone</strong>, inodore et mortel.
                         </div>
 
                         <h3 className={styles.subHeading}>Fréquence obligatoire</h3>

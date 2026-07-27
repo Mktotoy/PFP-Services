@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { Phone } from 'lucide-react';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -46,7 +47,7 @@ export default function Header() {
 
                 <div className={styles.actions}>
                     <a href="tel:0629953262" className={styles.phoneLink}>
-                        <span className={styles.icon}>📞</span> 06 29 95 32 62
+                        <span className={styles.icon}><Phone size={18} /></span> 06 29 95 32 62
                     </a>
                     <Link href="/contact" className="btn btn-primary">
                         Contact & Devis
@@ -100,7 +101,7 @@ export default function Header() {
                     <Link href="/contact" className={styles.drawerLink} onClick={close}>Contact & Devis</Link>
 
                     <a href="tel:0629953262" className={styles.drawerPhone} onClick={close}>
-                        📞 06 29 95 32 62
+                        <Phone size={18} style={{display:'inline', verticalAlign:'-3px', marginRight:'4px'}} /> 06 29 95 32 62
                     </a>
                 </nav>
             </div>

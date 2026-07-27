@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import styles from './ReviewsSidebar.module.css';
 import { googleReviews } from '@/data/reviews';
+import StarRating from './StarRating';
 
 interface ReviewsSidebarProps {
     isOpen: boolean;
@@ -61,8 +62,7 @@ export default function ReviewsSidebar({ isOpen, onClose }: ReviewsSidebarProps)
                                 <span className={styles.date}>{review.date}</span>
                             </div>
                             <div className={styles.stars}>
-                                {"★".repeat(review.rating)}
-                                <span style={{ color: '#e0e0e0' }}>{"★".repeat(5 - review.rating)}</span>
+                                <StarRating rating={review.rating} size={14} />
                             </div>
                             <p className={styles.text}>{review.text}</p>
                         </div>

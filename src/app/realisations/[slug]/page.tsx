@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { MapPin, CalendarDays } from 'lucide-react';
 import { caseStudies } from '@/data/caseStudies';
 import styles from '../realisations.module.css';
 import Link from 'next/link';
@@ -35,8 +36,8 @@ export default async function RealisationDetailPage({ params }: PageProps) {
                     <span className={styles.badge}>{study.category}</span>
                     <h1 className={styles.title} style={{ color: 'white', marginTop: '1rem' }}>{study.title}</h1>
                     <div className={styles.meta}>
-                        <span>📍 {study.location}</span>
-                        <span>📅 {study.date}</span>
+                        <span style={{display:'inline-flex', alignItems:'center', gap:'4px'}}><MapPin size={14} /> {study.location}</span>
+                        <span style={{display:'inline-flex', alignItems:'center', gap:'4px'}}><CalendarDays size={14} /> {study.date}</span>
                     </div>
                 </div>
             </section>

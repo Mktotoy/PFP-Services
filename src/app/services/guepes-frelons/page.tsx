@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { Info } from 'lucide-react';
 import Link from 'next/link';
 import styles from './page.module.css';
 
@@ -109,7 +110,7 @@ export default function GuepesFrelonsPage() {
                         </div>
 
                         <div className={styles.beeBox}>
-                            <h3>🐝 Abeilles & Bourdons : Espèces Protégées</h3>
+                            <h3 style={{display:'flex', alignItems:'center', gap:'8px'}}><Info size={20} /> Abeilles & Bourdons : Espèces Protégées</h3>
                             <p>
                                 <strong>Attention :</strong> Les abeilles et les bourdons ne sont pas considérés comme des nuisibles et sont même essentiels à l'environnement.
                                 Ils mangent du nectar et collectent du pollen pour nourrir leurs compagnons.

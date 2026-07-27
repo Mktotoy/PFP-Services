@@ -59,7 +59,7 @@ export default function TaupesPage() {
                         Intervention rapide et écologique à partir de <strong>155€</strong>.
                     </p>
                     <div className={styles.heroActions}>
-                        <a href="tel:0629953262" className="btn btn-primary">Appeler le Taupier : 06 29 95 32 62</a>
+                        <a href="tel:0629953262" className="btn btn-primary">Appeler : 06 29 95 32 62</a>
                         <Link href="/contact" className="btn btn-secondary">Devis Gratuit</Link>
                     </div>
                 </div>
@@ -129,7 +129,7 @@ export default function TaupesPage() {
 
                         <div className={styles.pricingBox}>
                             <h3>Tarifs Détaupisation</h3>
-                            <p className={styles.price}>À partir de 155€*</p>
+                            <p className={styles.price}>Intervention à partir de 155€*</p>
                             <p className={styles.priceNote}>*Suivant l’infestation et la surface à traiter.</p>
 
                             <p style={{ marginTop: '15px' }}>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { BadgeCheck, Leaf } from 'lucide-react';
 import Link from 'next/link';
 import styles from './Hero.module.css';
 import GoogleReviewsBadge from './GoogleReviewsBadge';
@@ -42,11 +43,11 @@ export default function Hero() {
                 <div className={styles.content}>
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginBottom: '20px', flexWrap: 'wrap' }}>
                         <div className={styles.trustBadge}>
-                            <span className={styles.trustIcon}>✅</span>
+                            <span className={styles.trustIcon}><BadgeCheck size={16} /></span>
                             <span>Certifié Ramonage</span>
                         </div>
                         <div className={styles.trustBadge}>
-                            <span className={styles.trustIcon}>🌿</span>
+                            <span className={styles.trustIcon}><Leaf size={16} /></span>
                             <span>Certibiocide</span>
                         </div>
                         <GoogleReviewsBadge onClick={() => setIsReviewsOpen(true)} />

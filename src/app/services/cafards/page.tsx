@@ -161,8 +161,8 @@ export default function CafardsPage() {
 
                         <div className={styles.pricingBox}>
                             <h3>Tarifs Désinsectisation</h3>
-                            <p className={styles.price}>À partir de 145€ TTC*</p>
-                            <p className={styles.priceNote}>*Selon surface et infestation.</p>
+                            <p className={styles.price}>Intervention à partir de 145€*</p>
+                            <p className={styles.priceNote}>*En fonction du degré d’infestation et de la surface à traiter.</p>
 
                             <div style={{ borderTop: '1px solid rgba(255,255,255,0.2)', paddingTop: '10px', marginTop: '10px' }}>
                                 <strong style={{ color: 'var(--secondary)' }}>Contrats Annuels</strong> disponibles pour Pros & Restaurateurs.

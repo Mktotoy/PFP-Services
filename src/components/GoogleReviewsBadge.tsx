@@ -1,4 +1,5 @@
 import styles from './GoogleReviewsBadge.module.css';
+import StarRating from './StarRating';
 
 interface GoogleReviewsBadgeProps {
     onClick?: () => void;
@@ -13,7 +14,7 @@ export default function GoogleReviewsBadge({ onClick }: GoogleReviewsBadgeProps)
                 <span className={styles.gLogo}>G</span>
             </div>
             <div className={styles.content}>
-                <div className={styles.stars}>★★★★★</div>
+                <div className={styles.stars}><StarRating rating={5} size={14} /></div>
                 <div className={styles.text}>
                     <strong>5.0/5</strong> sur Google
                 </div>

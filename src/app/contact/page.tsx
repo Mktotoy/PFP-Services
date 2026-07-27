@@ -1,3 +1,4 @@
+import { Phone, MessageSquare, MessageCircle } from 'lucide-react';
 export const metadata = {
     title: "Contactez PFP Services | Devis Gratuit Dératisation 77",
     description: "Contactez PFP Services pour une intervention rapide à Melun, Fontainebleau et dans le 77. Devis gratuit pour dératisation, désinsectisation.",
@@ -51,14 +52,14 @@ export default function ContactPage() {
                             className="btn btn-primary"
                             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '1rem', fontSize: '1.1rem' }}
                         >
-                            📞 Appeler le 06 29 95 32 62
+                            <Phone size={20} /> Appeler le 06 29 95 32 62
                         </a>
                         <a
                             href="sms:0629953262"
                             className="btn btn-outline"
                             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '1rem', fontSize: '1.1rem' }}
                         >
-                            💬 Envoyer un SMS
+                            <MessageSquare size={20} /> Envoyer un SMS
                         </a>
                         <a
                             href="https://wa.me/33629953262"
@@ -67,7 +68,7 @@ export default function ContactPage() {
                             className="btn btn-outline"
                             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '1rem', fontSize: '1.1rem', borderColor: '#25D366', color: '#25D366' }}
                         >
-                            ✅ WhatsApp
+                            <MessageCircle size={20} /> WhatsApp
                         </a>
                     </div>
                 </div>

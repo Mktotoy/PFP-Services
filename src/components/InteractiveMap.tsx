@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import { CheckCircle2 } from 'lucide-react';
 
 export default function InteractiveMap() {
     const [hoveredDept, setHoveredDept] = useState<string | null>(null);
@@ -51,7 +52,7 @@ export default function InteractiveMap() {
                 ))}
             </svg>
             <div style={{ height: '30px', marginTop: '10px', fontWeight: 'bold', color: 'var(--primary)' }}>
-                {hoveredDept ? `${hoveredDept} - Zone Couverte ✅` : 'Survolez un département'}
+                {hoveredDept ? <span style={{display:'inline-flex', alignItems:'center', gap:'4px'}}>{hoveredDept} - Zone Couverte <CheckCircle2 size={16} /></span> : 'Survolez un département'}
             </div>
         </div>
     );

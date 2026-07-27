@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { MapPin, CalendarDays } from 'lucide-react';
 import { Metadata } from 'next';
 import styles from './page.module.css';
 import { caseStudies } from '@/data/caseStudies';
@@ -31,8 +32,8 @@ export default function CasClientsPage() {
                             </div>
                             <div className={styles.content}>
                                 <div className={styles.meta}>
-                                    <span>📍 {study.location}</span>
-                                    <span>🗓️ {study.date}</span>
+                                    <span style={{display:'inline-flex', alignItems:'center', gap:'4px'}}><MapPin size={14} /> {study.location}</span>
+                                    <span style={{display:'inline-flex', alignItems:'center', gap:'4px'}}><CalendarDays size={14} /> {study.date}</span>
                                 </div>
                                 <h2 className={styles.cardTitle}>{study.title}</h2>
                                 <p className={styles.summary}>{study.summary}</p>

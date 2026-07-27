@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { Bug, Home } from 'lucide-react';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -54,7 +55,7 @@ export default function ServicesPage() {
 
             <section className="container section">
                 <div className={styles.categorySection}>
-                    <h2 className={styles.categoryTitle}>🦟 Nuisibles & Parasites</h2>
+                    <h2 className={styles.categoryTitle} style={{display:'flex', alignItems:'center', gap:'8px'}}><Bug size={22} /> Nuisibles & Parasites</h2>
                     <div className={styles.categoryGrid}>
                         <Link href="/services/rongeurs" className={styles.serviceCard}>
                             <div className={styles.cardImage} style={{ backgroundImage: "url('/images/services/rongeurs/rongeurs-infestation.jpg')" }}></div>
@@ -100,7 +101,7 @@ export default function ServicesPage() {
                 </div>
 
                 <div className={styles.categorySection}>
-                    <h2 className={styles.categoryTitle}>🏠 Entretien de l'Habitat</h2>
+                    <h2 className={styles.categoryTitle} style={{display:'flex', alignItems:'center', gap:'8px'}}><Home size={22} /> Entretien de l'Habitat</h2>
                     <div className={styles.categoryGrid}>
                         <Link href="/services/ramonage" className={styles.serviceCard}>
                             <div className={styles.cardImage} style={{ backgroundImage: "url('/images/services/ramonage/ramonage-poele-allume.jpg')" }}></div>
