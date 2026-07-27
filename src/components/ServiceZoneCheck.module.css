@@ -27,7 +27,8 @@
     border: 2px solid var(--gray-200);
     border-radius: var(--radius-full);
     font-size: 1rem;
-    width: 200px;
+    flex: 1;
+    min-width: 220px;
     outline: none;
     transition: border-color 0.2s;
 }
