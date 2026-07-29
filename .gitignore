@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# dossier de travail interne (docs/photos/plans), jamais commité
+/_projet/
