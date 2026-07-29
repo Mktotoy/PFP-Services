@@ -28,7 +28,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at center, rgba(1, 91, 0, 0.55) 0%, rgba(0, 42, 0, 0.85) 100%);
+    background: radial-gradient(circle at center, rgba(5, 156, 33, 0.55) 0%, rgba(4, 109, 23, 0.85) 100%);
     z-index: 2;
 }
 
@@ -122,5 +122,3 @@
 
     .content {
         padding: 0 var(--spacing-xs);
-    }
-}

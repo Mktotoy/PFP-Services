@@ -71,7 +71,7 @@ export const realisationsSections: ServiceSection[] = [
     {
         slug: 'ramonage',
         title: 'Ramonage',
-        intro: "Ramonage de conduits de cheminée, poêles à bois et inserts : entretien obligatoire et sécurité contre les risques d'incendie et d'intoxication au monoxyde de carbone. Nos interventions couvrent aussi bien les conduits traditionnels que les conduits inox modernes.",
+        intro: "Ramonage de conduits de cheminée, poêles à bois et inserts : entretien conseillé et sécurité contre les risques d'incendie. Nos interventions couvrent aussi bien les conduits traditionnels que les conduits inox modernes.",
         photos: [
             { src: '/images/services/ramonage/ramonage-technique-conduit-inox.jpg', alt: 'Ramonage technique de conduit inox' },
             { src: '/images/services/ramonage/ramonage-conduit.jpg', alt: 'Ramonage de conduit de cheminée' },

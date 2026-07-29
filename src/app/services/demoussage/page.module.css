@@ -4,7 +4,7 @@
 }
 
 .hero {
-    background: linear-gradient(rgba(0, 42, 0, 0.7), rgba(0, 42, 0, 0.7)), url('/images/services/demoussage/toiture-tuiles-propres-hero.jpg');
+    background: linear-gradient(rgba(4, 109, 23, 0.7), rgba(4, 109, 23, 0.7)), url('/images/services/demoussage/toiture-tuiles-propres-hero.jpg');
     background-size: cover;
     background-position: center;
     color: var(--white);

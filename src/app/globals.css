@@ -120,13 +120,13 @@ h6 {
 .btn-primary {
   background-color: var(--primary);
   color: var(--white);
-  box-shadow: 0 4px 14px 0 rgba(1, 91, 0, 0.39);
+  box-shadow: 0 4px 14px 0 rgba(5, 156, 33, 0.39);
 }
 
 .btn-primary:hover {
   background-color: var(--primary-light);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(1, 91, 0, 0.23);
+  box-shadow: 0 6px 20px rgba(5, 156, 33, 0.23);
 }
 
 .btn-secondary {

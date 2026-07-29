@@ -4,7 +4,7 @@
 }
 
 .hero {
-    background: linear-gradient(rgba(0, 42, 0, 0.7), rgba(0, 42, 0, 0.7)), url('/images/services/rongeurs/rongeurs-pieges.jpg');
+    background: linear-gradient(rgba(4, 109, 23, 0.7), rgba(4, 109, 23, 0.7)), url('/images/services/rongeurs/rongeurs-pieges.jpg');
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -61,7 +61,7 @@
     background: var(--primary);
     color: var(--white);
     border-color: var(--primary);
-    box-shadow: 0 4px 15px rgba(1, 91, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(5, 156, 33, 0.3);
 }
 
 .galleryGrid {

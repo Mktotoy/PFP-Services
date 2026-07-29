@@ -18,7 +18,8 @@ export default function Home() {
             <ServiceCard title="Ramonage" slug="/services/ramonage" image="/images/services/ramonage/ramonage-poele-allume.jpg" />
             <ServiceCard title="Rongeurs" slug="/services/rongeurs" image="/images/services/rongeurs/rongeurs-infestation.jpg" />
             <ServiceCard title="Guêpes / Frelons" slug="/services/guepes-frelons" image="/images/services/guepes-frelons/frelons-arbre.jpg" />
-            <ServiceCard title="Cafards" slug="/services/cafards" image="/images/services/rongeurs/rongeurs-pieges.jpg" />
+            {/* TODO: photo cafards manquante (aucune disponible au 29/07/2026), placeholder gradient en attendant */}
+            <ServiceCard title="Cafards" slug="/services/cafards" />
             <ServiceCard title="Chenilles Processionnaires" slug="/services/chenilles" image="/images/services/chenilles/chenilles-intervention.jpg" />
             <ServiceCard title="Taupes" slug="/services/taupes" image="/images/services/taupes/taupiniere.png" />
           </div>

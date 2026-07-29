@@ -5,7 +5,7 @@ import styles from './page.module.css';
 
 export const metadata: Metadata = {
     title: "Anti-Taupes & Taupiers 77 | Dératisation & Piégeage Mécanique",
-    description: "Service professionnel de chasseur de taupes (taupier) en Seine-et-Marne. Piégeage traditionnel mécanique sans poison. Intervention rapide.",
+    description: "Service professionnel de détaupisation en Seine-et-Marne. Piégeage traditionnel mécanique sans poison. Intervention rapide.",
 };
 
 const jsonLd = {
@@ -19,7 +19,7 @@ const jsonLd = {
                 "@type": "AdministrativeArea",
                 "name": "Seine-et-Marne"
             },
-            "description": "Piégeage traditionnel et mécanique des taupes (taupier). Méthode écologique sans poison pour préserver votre jardin."
+            "description": "Piégeage traditionnel et mécanique des taupes. Méthode écologique sans poison pour préserver votre jardin."
         },
         {
             "@type": "FAQPage",
@@ -56,7 +56,7 @@ export default function TaupesPage() {
                 <div className="container">
                     <h1 className={styles.title}>Détaupisation</h1>
                     <p className={styles.subtitle}>
-                        NOUS VOUS AIDONS À VOUS DÉBARRASSER DES TAUPES<br />
+                        Nous vous aidons à vous débarrasser des taupes<br />
                         Intervention rapide et écologique.
                     </p>
                     <div className={styles.heroActions}>
