@@ -61,7 +61,6 @@ export default function Hero() {
                         en Seine-et-Marne et départements limitrophes
                     </h1>
                     <p className={styles.subtitle}>
-                        Démoussage de toiture, Hydrofuge & Dératisation professionnelle.<br />
                         <strong>PFP Services</strong> : l'expertise au service de votre habitat et de votre santé.
                     </p>
                 </div>
