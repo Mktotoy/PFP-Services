@@ -8,6 +8,9 @@
   /* A lighter fresh green to complement */
   --secondary-hover: #7cb342;
 
+  --header-green: #059c21;
+  /* Vert dedie au bandeau/header uniquement, ne pas utiliser ailleurs */
+
   --accent: #FFD700;
   /* Gold for subtle highlights/stars */
 

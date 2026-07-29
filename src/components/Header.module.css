@@ -56,7 +56,7 @@
 }
 
 .link:hover {
-    color: var(--primary);
+    color: var(--header-green);
 }
 
 /* Dropdown Styles */
@@ -117,7 +117,16 @@
 
 .dropdownItem:hover {
     background: var(--gray-50);
-    color: var(--primary);
+    color: var(--header-green);
+}
+
+.dropdownItemSubtitle {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: var(--gray-500, #6b7280);
+    text-transform: none;
+    margin-top: 2px;
 }
 
 .actions {
@@ -128,7 +137,7 @@
 
 .phoneLink {
     font-weight: 700;
-    color: var(--primary);
+    color: var(--header-green);
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -225,6 +234,13 @@
     margin-top: 0;
 }
 
+.drawerSubtitle {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: var(--gray-500, #6b7280);
+    margin: -0.3rem 0 0.5rem;
+}
+
 .drawerLink {
     padding: 12px 4px;
     font-weight: 600;
@@ -242,7 +258,7 @@
     margin-top: 1.5rem;
     display: block;
     text-align: center;
-    background: var(--primary);
+    background: var(--header-green);
     color: var(--white);
     font-weight: 700;
     padding: 14px;

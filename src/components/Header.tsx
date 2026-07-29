@@ -33,8 +33,10 @@ function MobileDrawer({ isOpen, close }: { isOpen: boolean; close: () => void })
                 </button>
 
                 <nav className={styles.drawerNav}>
-                    <p className={styles.drawerSectionTitle}>Entretien Toiture</p>
+                    <p className={styles.drawerSectionTitle}>Nettoyage Toiture</p>
+                    <p className={styles.drawerSubtitle}>Expert en démoussage</p>
                     <Link href="/services/demoussage" className={styles.drawerLink} onClick={close}>Démoussage</Link>
+
                     <Link href="/services/ramonage" className={styles.drawerLink} onClick={close}>Ramonage</Link>
 
                     <p className={styles.drawerSectionTitle}>Nuisibles</p>
@@ -46,7 +48,6 @@ function MobileDrawer({ isOpen, close }: { isOpen: boolean; close: () => void })
 
                     <div className={styles.drawerDivider} />
 
-                    <Link href="/zones" className={styles.drawerLink} onClick={close}>Zones d&apos;Intervention</Link>
                     <Link href="/realisations" className={styles.drawerLink} onClick={close}>Réalisations</Link>
                     <Link href="/contact" className={styles.drawerLink} onClick={close}>Contact & Devis</Link>
 
@@ -74,14 +75,18 @@ export default function Header() {
 
                 <nav className={styles.nav}>
                     <div className={styles.dropdownParent}>
-                        <Link href="/services" className={styles.link}>
-                            Entretien Toiture <span style={{ fontSize: '0.7em', marginLeft: '4px' }}>▼</span>
+                        <Link href="/services/demoussage" className={styles.link}>
+                            Nettoyage Toiture <span style={{ fontSize: '0.7em', marginLeft: '4px' }}>▼</span>
                         </Link>
                         <div className={styles.dropdownMenu}>
-                            <Link href="/services/demoussage" className={styles.dropdownItem}>Démoussage</Link>
-                            <Link href="/services/ramonage" className={styles.dropdownItem}>Ramonage</Link>
+                            <Link href="/services/demoussage" className={styles.dropdownItem}>
+                                Démoussage
+                                <span className={styles.dropdownItemSubtitle}>Expert en démoussage</span>
+                            </Link>
                         </div>
                     </div>
+
+                    <Link href="/services/ramonage" className={styles.link}>Ramonage</Link>
 
                     <div className={styles.dropdownParent}>
                         <Link href="/services" className={styles.link}>
@@ -96,7 +101,6 @@ export default function Header() {
                         </div>
                     </div>
 
-                    <Link href="/zones" className={styles.link}>Zones d&apos;Intervention</Link>
                     <Link href="/realisations" className={styles.link}>Réalisations</Link>
                 </nav>
 
