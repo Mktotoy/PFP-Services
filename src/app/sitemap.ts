@@ -1,5 +1,4 @@
 import type { MetadataRoute } from 'next';
-import { caseStudies } from '@/data/caseStudies';
 
 const BASE_URL = 'https://pfp-services.fr';
 
@@ -22,17 +21,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.6,
         })),
         { url: `${BASE_URL}/realisations`, changeFrequency: 'weekly', priority: 0.6 },
-        { url: `${BASE_URL}/cas-clients`, changeFrequency: 'weekly', priority: 0.6 },
         { url: `${BASE_URL}/galerie`, changeFrequency: 'monthly', priority: 0.5 },
         { url: `${BASE_URL}/qui-sommes-nous`, changeFrequency: 'yearly', priority: 0.5 },
         { url: `${BASE_URL}/contact`, changeFrequency: 'yearly', priority: 0.7 },
         { url: `${BASE_URL}/mentions-legales`, changeFrequency: 'yearly', priority: 0.1 },
     ];
 
-    const caseStudyRoutes: MetadataRoute.Sitemap = caseStudies.flatMap((study) => [
-        { url: `${BASE_URL}/realisations/${study.slug}`, changeFrequency: 'yearly' as const, priority: 0.4 },
-        { url: `${BASE_URL}/cas-clients/${study.slug}`, changeFrequency: 'yearly' as const, priority: 0.4 },
-    ]);
-
-    return [...staticRoutes, ...caseStudyRoutes];
+    return staticRoutes;
 }
