@@ -1,4 +1,5 @@
-import { Phone, MessageSquare, MessageCircle } from 'lucide-react';
+import { Phone, MessageSquare, MessageCircle, Mail } from 'lucide-react';
+import ContactForm from '@/components/ContactForm';
 export const metadata = {
     title: "Contactez PFP Services | Devis Gratuit Dératisation 77",
     description: "Contactez PFP Services pour une intervention rapide à Melun, Fontainebleau et dans le 77. Devis gratuit pour dératisation, désinsectisation.",
@@ -15,29 +16,31 @@ export default function ContactPage() {
                 <div>
                     <h2 style={{ marginBottom: 'var(--spacing-md)' }}>Nos Coordonnées</h2>
                     <p style={{ marginBottom: 'var(--spacing-sm)' }}>
-                        <strong>PFP Services</strong><br />
-                        22 Rue de la Salle<br />
-                        77930 Cély
+                        <strong>PFP Services</strong>
                     </p>
                     <p style={{ marginBottom: 'var(--spacing-sm)' }}>
                         <strong>Téléphone :</strong> <a href="tel:0629953262" style={{ color: 'var(--primary)', fontWeight: 'bold' }}>06 29 95 32 62</a>
                     </p>
-                    <p style={{ marginBottom: 'var(--spacing-md)' }}>
+                    <p style={{ marginBottom: 'var(--spacing-sm)' }}>
                         <strong>Email :</strong> <a href="mailto:contact@pfp-services.fr">contact@pfp-services.fr</a>
+                    </p>
+                    <p style={{ marginBottom: 'var(--spacing-md)' }}>
+                        <strong>Facebook :</strong>{' '}
+                        <a
+                            href="https://www.facebook.com/PFP.Services77"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ color: 'var(--primary)', fontWeight: 'bold' }}
+                        >
+                            PFP.Services77
+                        </a>
                     </p>
 
                     <div style={{ background: 'var(--gray-light)', padding: 'var(--spacing-md)', borderRadius: 'var(--radius-md)' }}>
                         <h3>Zone d'Intervention</h3>
                         <p>
-                            Nous intervenons rapidement dans tout le département de Seine-et-Marne (77), notamment à :
+                            Nous intervenons en Seine-et-Marne et départements limitrophes, mais sommes également en capacité d'intervenir bien plus loin. Nous contacter, peu importe votre localisation, pour un devis gratuit.
                         </p>
-                        <ul style={{ paddingLeft: '20px', marginTop: '10px' }}>
-                            <li>Melun</li>
-                            <li>Fontainebleau</li>
-                            <li>Dammarie-les-Lys</li>
-                            <li>Le Mée-sur-Seine</li>
-                            <li>... et communes environnantes.</li>
-                        </ul>
                     </div>
                 </div>
 
@@ -46,7 +49,7 @@ export default function ContactPage() {
                     <p style={{ marginBottom: 'var(--spacing-md)', color: 'var(--gray-500, #666)' }}>
                         Réponse la plus rapide : contactez-nous directement par téléphone, SMS ou WhatsApp.
                     </p>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: 'var(--spacing-lg)' }}>
                         <a
                             href="tel:0629953262"
                             className="btn btn-primary"
@@ -70,7 +73,19 @@ export default function ContactPage() {
                         >
                             <MessageCircle size={20} /> WhatsApp
                         </a>
+                        <a
+                            href="mailto:contact@pfp-services.fr"
+                            className="btn btn-outline"
+                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '1rem', fontSize: '1.1rem' }}
+                        >
+                            <Mail size={20} /> Nous écrire
+                        </a>
+                        <p style={{ textAlign: 'center', margin: 0, fontSize: '0.9rem', color: 'var(--gray-500, #666)' }}>
+                            Réponse rapide par email
+                        </p>
                     </div>
+
+                    <ContactForm />
                 </div>
             </div>
         </main>
