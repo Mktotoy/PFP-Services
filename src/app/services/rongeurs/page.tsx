@@ -19,12 +19,7 @@ const jsonLd = {
                 "@type": "AdministrativeArea",
                 "name": "Seine-et-Marne"
             },
-            "description": "Extermination professionnelle de rats, souris et mulots.",
-            "offers": {
-                "@type": "Offer",
-                "price": "145",
-                "priceCurrency": "EUR"
-            }
+            "description": "Extermination professionnelle de rats, souris et mulots."
         },
         {
             "@type": "FAQPage",
@@ -62,7 +57,7 @@ export default function RongeursPage() {
                     <h1 className={styles.title}>Dératisation : Rats, Souris et Mulots</h1>
                     <p className={styles.subtitle}>
                         Nous vous venons en aide face à l'invasion de rongeurs.<br />
-                        Intervention rapide à partir de <strong>145€</strong>.
+                        Intervention rapide et efficace.
                     </p>
                     <div className={styles.heroActions}>
                         <a href="tel:0629953262" className="btn btn-primary">

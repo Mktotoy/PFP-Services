@@ -1,15 +1,12 @@
 :root {
   /* Brand Colors */
-  --primary: #015b00;
-  --primary-light: #027a00;
-  --primary-dark: #004200;
+  --primary: #059c21;
+  --primary-light: #44b559;
+  --primary-dark: #046d17;
 
   --secondary: #8bc34a;
   /* A lighter fresh green to complement */
   --secondary-hover: #7cb342;
-
-  --header-green: #059c21;
-  /* Vert dedie au bandeau/header uniquement, ne pas utiliser ailleurs */
 
   --accent: #FFD700;
   /* Gold for subtle highlights/stars */

@@ -1,5 +1,5 @@
 import { Phone, MessageSquare, MessageCircle, Mail } from 'lucide-react';
-import ContactForm from '@/components/ContactForm';
+// import ContactForm from '@/components/ContactForm'; // mis de cote 29/07/2026, pas de backend d'envoi reel
 export const metadata = {
     title: "Contactez PFP Services | Devis Gratuit Dératisation 77",
     description: "Contactez PFP Services pour une intervention rapide à Melun, Fontainebleau et dans le 77. Devis gratuit pour dératisation, désinsectisation.",
@@ -85,7 +85,6 @@ export default function ContactPage() {
                         </p>
                     </div>
 
-                    <ContactForm />
                 </div>
             </div>
         </main>

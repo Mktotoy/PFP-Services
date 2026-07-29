@@ -125,7 +125,7 @@ export default function RamonagePage() {
                         </div>
 
                         <div className={styles.faqBox}>
-                            <h3>questions fréquentes</h3>
+                            <h3>Questions fréquentes</h3>
                             <p>
                                 Le printemps est la période privilégiée pour le nettoyage de son conduit, car la période de chauffe
                                 est généralement tout juste terminée. De plus, il est conseillé d'anticiper la prise de rendez-vous
