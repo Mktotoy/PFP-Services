@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { Phone, MessageSquare, MessageCircle } from 'lucide-react';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -24,8 +25,7 @@ const jsonLd = {
                     "addressLocality": "Cély",
                     "postalCode": "77930",
                     "addressCountry": "FR"
-                },
-                "priceRange": "Sur devis (dès 145€)"
+                }
             },
             "areaServed": {
                 "@type": "AdministrativeArea",
@@ -42,14 +42,6 @@ const jsonLd = {
                     "acceptedAnswer": {
                         "@type": "Answer",
                         "text": "Les cafards peuvent transmettre de nombreuses maladies comme la salmonellose, la dysenterie, la tuberculose ou encore gastro-entérite. Ils sont aussi vecteurs d'allergies et d'asthme."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Combien coûte une intervention contre les cafards ?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Nos interventions débutent à partir de 145€ TTC. Le prix varie selon la surface à traiter et le degré d'infestation."
                     }
                 },
                 {
@@ -79,7 +71,7 @@ export default function CafardsPage() {
                     <h1 className={styles.title}>Désinsectisation : Cafards & Blattes</h1>
                     <p className={styles.subtitle}>
                         Débarrassez-vous définitivement des cafards avec PFP Services.<br />
-                        Intervention rapide et discrète à partir de <strong>145€</strong>.
+                        Intervention rapide et discrète.
                     </p>
                     <div className={styles.heroActions}>
                         <a href="tel:0629953262" className="btn btn-primary">Urgence 7j/7 : 06 29 95 32 62</a>
@@ -102,9 +94,10 @@ export default function CafardsPage() {
                         </p>
 
                         <div className={styles.alertBox}>
-                            <strong>Attention :</strong> L'infestation peut être très rapide. Une seule femelle peut engendrer des milliers de descendants en une année.
+                            <strong>Attention :</strong> L'infestation peut être très rapide. Une seule femelle peut engendrer des milliers de descendants très rapidement !
                         </div>
 
+                        {/* TODO: photo cafard/blatte manquante - aucune disponible dans les sources locales au 29/07/2026, prevoir photo IA ou shooting terrain */}
                         <div className={styles.imagePlaceholder}>
                             <span>Photo: Cafard / Blatte (Identification)</span>
                         </div>
@@ -128,10 +121,6 @@ export default function CafardsPage() {
                                 <p>Les produits du commerce sont souvent inefficaces sur les œufs. Nos produits professionnels (gels biocides) permettent une éradication totale de la colonie par effet domino.</p>
                             </details>
                             <details className={styles.faqItem}>
-                                <summary>Comment se déroule l'intervention ?</summary>
-                                <p>Nous appliquons un gel appât discret et sans odeur aux endroits stratégiques. Il n'est généralement pas nécessaire de quitter les lieux.</p>
-                            </details>
-                            <details className={styles.faqItem}>
                                 <summary>Proposez-vous des contrats annuels ?</summary>
                                 <p>Oui, pour les entreprises, collectivités et restaurateurs, nous proposons des contrats incluant passages préventifs et curatifs.</p>
                             </details>
@@ -140,28 +129,46 @@ export default function CafardsPage() {
 
                     <div className={styles.sidebar}>
                         <div className={styles.techniqueBox}>
-                            <h3>Nos Techniques d'Intervention</h3>
+                            <h3>nos techniques d'intervention</h3>
                             <p>
                                 Nous utilisons différents procédés pour éliminer durablement ces nuisibles :
                             </p>
                             <ul className={styles.checkList}>
-                                <li>Diagnostic du degré d'infestation.</li>
-                                <li>Traitement par gel biocide (puissant attractif).</li>
-                                <li>Pulvérisation d'insecticide (si forte infestation).</li>
-                                <li>Suivi post-intervention pour valider l'éradication.</li>
+                                <li>Diagnostic et mise en place d'un programme de désinsectisation adapté à la situation, avec protocole avant / pendant et après le traitement</li>
+                                <li>Plusieurs passages à prévoir avant le contrôle final.</li>
                             </ul>
-                            <p style={{ marginTop: '10px', fontSize: '0.9rem' }}>
-                                <em>Selon le degré d’infestation, plusieurs passages peuvent être nécessaires.</em>
-                            </p>
                         </div>
 
                         <div className={styles.pricingBox}>
-                            <h3>Tarifs Désinsectisation</h3>
-                            <p className={styles.price}>Intervention à partir de 145€*</p>
-                            <p className={styles.priceNote}>*En fonction du degré d’infestation et de la surface à traiter.</p>
+                            <h3>Nous Contacter</h3>
+                            <p>
+                                Réponse la plus rapide : contactez-nous directement par téléphone, SMS ou WhatsApp.
+                            </p>
 
-                            <div style={{ borderTop: '1px solid rgba(255,255,255,0.2)', paddingTop: '10px', marginTop: '10px' }}>
-                                <strong style={{ color: 'var(--secondary)' }}>Contrats Annuels</strong> disponibles pour Pros & Restaurateurs.
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: 'var(--spacing-sm)' }}>
+                                <a
+                                    href="tel:0629953262"
+                                    className="btn btn-primary"
+                                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}
+                                >
+                                    <Phone size={20} /> Appeler le 06 29 95 32 62
+                                </a>
+                                <a
+                                    href="sms:0629953262"
+                                    className="btn btn-outline"
+                                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}
+                                >
+                                    <MessageSquare size={20} /> Envoyer un SMS
+                                </a>
+                                <a
+                                    href="https://wa.me/33629953262"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn btn-outline"
+                                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', borderColor: '#25D366', color: '#25D366' }}
+                                >
+                                    <MessageCircle size={20} /> WhatsApp
+                                </a>
                             </div>
 
                             <Link href="/contact" className="btn btn-secondary" style={{ width: '100%', marginTop: '1rem' }}>
@@ -169,6 +176,7 @@ export default function CafardsPage() {
                             </Link>
                         </div>
 
+                        {/* TODO: photo cafard/blatte manquante - aucune disponible dans les sources locales au 29/07/2026, prevoir photo IA ou shooting terrain */}
                         <div className={styles.imagePlaceholder} style={{ height: '300px' }}>
                             <span>Photo: Application de gel anti-cafards</span>
                         </div>
