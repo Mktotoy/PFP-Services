@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { MessageCircle, Phone } from 'lucide-react';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -53,13 +54,21 @@ export default function TaupesPage() {
             />
             <section className={styles.hero}>
                 <div className="container">
-                    <h1 className={styles.title}>Détaupisation & Chasseur de Taupes</h1>
+                    <h1 className={styles.title}>Détaupisation</h1>
                     <p className={styles.subtitle}>
                         NOUS VOUS AIDONS À VOUS DÉBARRASSER DES TAUPES<br />
-                        Intervention rapide et écologique à partir de <strong>155€</strong>.
+                        Intervention rapide et écologique.
                     </p>
                     <div className={styles.heroActions}>
-                        <a href="tel:0629953262" className="btn btn-primary">Appeler : 06 29 95 32 62</a>
+                        <a href="tel:0629953262" className="btn btn-primary">
+                            <Phone size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
+                            Appeler : 06 29 95 32 62
+                        </a>
+                        <a href="sms:0629953262" className="btn btn-secondary">Envoyer un SMS</a>
+                        <a href="https://wa.me/33629953262" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                            <MessageCircle size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
+                            WhatsApp
+                        </a>
                         <Link href="/contact" className="btn btn-secondary">Devis Gratuit</Link>
                     </div>
                 </div>
@@ -125,20 +134,6 @@ export default function TaupesPage() {
                             <p style={{ marginTop: '10px', fontSize: '0.9rem', fontStyle: 'italic' }}>
                                 Cette méthode est écologique (sans poison) et évite de polluer les sols ou de mettre en danger vos animaux domestiques.
                             </p>
-                        </div>
-
-                        <div className={styles.pricingBox}>
-                            <h3>Tarifs Détaupisation</h3>
-                            <p className={styles.price}>Intervention à partir de 155€*</p>
-                            <p className={styles.priceNote}>*Suivant l’infestation et la surface à traiter.</p>
-
-                            <p style={{ marginTop: '15px' }}>
-                                Le tarif dépend du degré d’infestation et de la surface du terrain à traiter.
-                            </p>
-
-                            <Link href="/contact" className="btn btn-secondary" style={{ width: '100%', marginTop: '1rem' }}>
-                                Obtenir un devis exact
-                            </Link>
                         </div>
                     </div>
                 </div>
