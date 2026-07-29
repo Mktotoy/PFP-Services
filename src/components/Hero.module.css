@@ -1,7 +1,7 @@
 .hero {
     position: relative;
     /* Modern clean gradient since I don't have the image yet, but mimicking the dark look */
-    background: linear-gradient(135deg, var(--primary-dark) 0%, #002600 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: var(--white);
     padding: 4rem 0;
     min-height: 420px;
