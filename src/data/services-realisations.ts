@@ -36,8 +36,8 @@ export const realisationsSections: ServiceSection[] = [
         },
         beforeAfter: [
             {
-                beforeImg: '/images/services/demoussage/toiture-mousse.jpg',
-                afterImg: '/images/services/demoussage/toiture-nettoyage.jpg',
+                beforeImg: '/images/services/demoussage/toiture-avant-melun.jpg',
+                afterImg: '/images/services/demoussage/toiture-apres-melun.jpg',
                 altText: 'Nettoyage de toiture envahie par la mousse',
                 city: 'Melun (77)',
             },
