@@ -19,6 +19,28 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  openGraph: {
+    type: 'website',
+    locale: 'fr_FR',
+    siteName: 'PFP Services',
+    url: 'https://pfp-services.fr',
+    title: "PFP Services | Dératisation & Nuisibles Seine-et-Marne",
+    description: "Expert dératisation et lutte anti-nuisibles en Seine-et-Marne (77), Melun, Fontainebleau. Rats, souris, guêpes, frelons, punaises. Intervention rapide.",
+    images: [
+      {
+        url: '/images/logos/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'PFP Services',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: "PFP Services | Dératisation & Nuisibles Seine-et-Marne",
+    description: "Expert dératisation et lutte anti-nuisibles en Seine-et-Marne (77), Melun, Fontainebleau. Rats, souris, guêpes, frelons, punaises. Intervention rapide.",
+    images: ['/images/logos/logo.png'],
+  },
   icons: {
     icon: '/images/favicon-pfp.jpeg',
   },
