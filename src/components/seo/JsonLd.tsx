@@ -31,7 +31,7 @@ export const LocalBusinessSchema = ({
 }) => {
   const schema: Record<string, any> = {
     "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
+    "@type": ["HomeAndConstructionBusiness", "Organization"],
     "@id": "https://pfp-services.fr/#organization",
     name,
     url: "https://pfp-services.fr",
@@ -100,6 +100,20 @@ export const LocalBusinessSchema = ({
       itemOffered: { "@type": "Service", name: serviceName },
     }));
   }
+
+  return <JsonLd data={schema} />;
+};
+
+export const WebSiteSchema = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://pfp-services.fr/#website",
+    url: "https://pfp-services.fr",
+    name: "PFP Services",
+    publisher: { "@id": "https://pfp-services.fr/#organization" },
+    inLanguage: "fr-FR",
+  };
 
   return <JsonLd data={schema} />;
 };

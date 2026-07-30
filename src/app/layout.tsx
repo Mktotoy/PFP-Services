@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { LocalBusinessSchema } from "@/components/seo/JsonLd";
+import { LocalBusinessSchema, WebSiteSchema } from "@/components/seo/JsonLd";
 
 export default function RootLayout({
   children,
@@ -74,6 +74,7 @@ export default function RootLayout({
       </head>
       <body className={inter.variable}>
         <LocalBusinessSchema full region="77" />
+        <WebSiteSchema />
         <Header />
         <div style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column' }}>
           {children}
