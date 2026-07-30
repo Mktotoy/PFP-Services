@@ -33,10 +33,34 @@ const jsonLd = {
             "mainEntity": [
                 {
                     "@type": "Question",
+                    "name": "Quelle est la meilleure période de l'année pour ramoner ma cheminée ?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Le printemps est la période préférée pour le nettoyage de son conduit, car la période de chauffage est généralement juste terminée. Son installation peut également être maintenue en été. En revanche, il est conseillé de ne pas attendre l'automne, car les ramoneurs sont davantage sollicités en raison du retour du froid."
+                    }
+                },
+                {
+                    "@type": "Question",
                     "name": "Le certificat de ramonage est-il obligatoire ?",
                     "acceptedAnswer": {
                         "@type": "Answer",
                         "text": "Oui, les assurances exigent un certificat de ramonage annuel (voire biannuel selon les règlements sanitaires départementaux) pour vous couvrir en cas d'incendie."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Ai-je un justificatif à remettre à mon assurance ?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Oui, en cas de sinistre, ce certificat de ramonage peut servir d'attestation pour votre compagnie d'assurance. Seuls les ramoneurs qualifiés sont autorisés à délivrer des certificats de ramonage."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Comment préparer votre venue ?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Retirez toutes les cendres, les bûches et les agrafes du foyer. Évitez d'allumer un feu au moins 1 jour (24h) avant le passage du ramoneur. Dégagez l'accès autour du générateur pour permettre l'intervention."
                     }
                 }
             ]
