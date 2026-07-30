@@ -42,6 +42,22 @@ export default function Footer() {
                     </div>
 
                     <div className={styles.column}>
+                        <h3>L&apos;Entreprise</h3>
+                        <ul>
+                            <li><Link href="/qui-sommes-nous">Qui Sommes-Nous</Link></li>
+                            <li><Link href="/services">Toutes nos prestations</Link></li>
+                            <li><Link href="/realisations">Réalisations</Link></li>
+                            <li><Link href="/galerie">Galerie Photo</Link></li>
+                            <li><Link href="/zones">Zones d&apos;Intervention</Link></li>
+                            <li><Link href="/zones/77-seine-et-marne">Seine-et-Marne (77)</Link></li>
+                            <li><Link href="/zones/91-essonne">Essonne (91)</Link></li>
+                            <li><Link href="/zones/89-yonne">Yonne (89)</Link></li>
+                            <li><Link href="/zones/45-loiret">Loiret (45)</Link></li>
+                            <li><Link href="/zones/fontainebleau">Fontainebleau</Link></li>
+                        </ul>
+                    </div>
+
+                    <div className={styles.column}>
                         <h3>Contact</h3>
                         <ul className={styles.contactInfo}>
                             <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><MapPin size={16} /> 22 Rue de la Salle, 77930 Cély</li>

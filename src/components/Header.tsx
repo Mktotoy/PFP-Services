@@ -46,8 +46,11 @@ function MobileDrawer({ isOpen, close }: { isOpen: boolean; close: () => void })
 
                     <div className={styles.drawerDivider} />
 
+                    <Link href="/services" className={styles.drawerLink} onClick={close}>Toutes nos prestations</Link>
                     <Link href="/zones" className={styles.drawerLink} onClick={close}>Zones d&apos;Intervention</Link>
                     <Link href="/realisations" className={styles.drawerLink} onClick={close}>Réalisations</Link>
+                    <Link href="/galerie" className={styles.drawerLink} onClick={close}>Galerie Photo</Link>
+                    <Link href="/qui-sommes-nous" className={styles.drawerLink} onClick={close}>Qui Sommes-Nous</Link>
                     <Link href="/contact" className={styles.drawerLink} onClick={close}>Contact & Devis</Link>
 
                     <a href="tel:0629953262" className={styles.drawerPhone} onClick={close}>
@@ -98,6 +101,7 @@ export default function Header() {
 
                     <Link href="/zones" className={styles.link}>Zones d&apos;Intervention</Link>
                     <Link href="/realisations" className={styles.link}>Réalisations</Link>
+                    <Link href="/qui-sommes-nous" className={styles.link}>Qui Sommes-Nous</Link>
                 </nav>
 
                 <div className={styles.actions}>
