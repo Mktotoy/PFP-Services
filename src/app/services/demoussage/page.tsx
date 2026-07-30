@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { BreadcrumbSchema } from '@/components/seo/JsonLd';
 import Link from 'next/link';
 import styles from './page.module.css';
 
@@ -59,6 +60,13 @@ export default function DemoussagePage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <BreadcrumbSchema
+                items={[
+                    { name: 'Accueil', url: 'https://pfp-services.fr' },
+                    { name: 'Services', url: 'https://pfp-services.fr/services' },
+                    { name: 'Démoussage', url: 'https://pfp-services.fr/services/demoussage' },
+                ]}
             />
             <section className={styles.hero}>
                 <div className="container">

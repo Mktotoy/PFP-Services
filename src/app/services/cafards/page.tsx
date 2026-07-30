@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { BreadcrumbSchema } from '@/components/seo/JsonLd';
 import Link from 'next/link';
 import styles from './page.module.css';
 
@@ -60,6 +61,13 @@ export default function CafardsPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <BreadcrumbSchema
+                items={[
+                    { name: 'Accueil', url: 'https://pfp-services.fr' },
+                    { name: 'Services', url: 'https://pfp-services.fr/services' },
+                    { name: 'Cafards', url: 'https://pfp-services.fr/services/cafards' },
+                ]}
             />
 
             <section className={styles.hero}>

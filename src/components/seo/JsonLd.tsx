@@ -103,3 +103,22 @@ export const LocalBusinessSchema = ({
 
   return <JsonLd data={schema} />;
 };
+
+export const BreadcrumbSchema = ({
+  items,
+}: {
+  items: { name: string; url: string }[];
+}) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+
+  return <JsonLd data={schema} />;
+};

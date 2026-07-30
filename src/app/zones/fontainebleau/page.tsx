@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import styles from '../_shared.module.css';
-import { LocalBusinessSchema } from '@/components/seo/JsonLd';
+import { BreadcrumbSchema } from '@/components/seo/JsonLd';
 import { BeforeAfter } from '@/components/blocks/BeforeAfter';
 
 export const metadata: Metadata = {
@@ -12,7 +12,13 @@ export const metadata: Metadata = {
 export default function FontainebleauPage() {
     return (
         <main className={styles.main}>
-            <LocalBusinessSchema region="77" name="PFP Services Fontainebleau" />
+            <BreadcrumbSchema
+                items={[
+                    { name: 'Accueil', url: 'https://pfp-services.fr' },
+                    { name: 'Zones d\'Intervention', url: 'https://pfp-services.fr/zones' },
+                    { name: 'Fontainebleau', url: 'https://pfp-services.fr/zones/fontainebleau' },
+                ]}
+            />
             
             <section className={styles.hero} style={{ background: '#374151' }}>
                 <div className="container">

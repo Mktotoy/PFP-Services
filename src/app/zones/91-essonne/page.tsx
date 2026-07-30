@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import styles from '../_shared.module.css';
-import { LocalBusinessSchema } from '@/components/seo/JsonLd';
+import { BreadcrumbSchema } from '@/components/seo/JsonLd';
 import ServiceCard from '@/components/ServiceCard';
 
 export const metadata: Metadata = {
@@ -12,7 +12,13 @@ export const metadata: Metadata = {
 export default function Zone91Page() {
     return (
         <main className={styles.main}>
-            <LocalBusinessSchema region="91" name="PFP Services Essonne" />
+            <BreadcrumbSchema
+                items={[
+                    { name: 'Accueil', url: 'https://pfp-services.fr' },
+                    { name: 'Zones d\'Intervention', url: 'https://pfp-services.fr/zones' },
+                    { name: 'Essonne (91)', url: 'https://pfp-services.fr/zones/91-essonne' },
+                ]}
+            />
             
             <section className={styles.hero} style={{ background: '#1e3a8a' }}>
                 <div className="container">
