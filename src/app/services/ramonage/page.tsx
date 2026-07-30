@@ -142,6 +142,10 @@ export default function RamonagePage() {
                                 <p>Le printemps est la période préférée pour le nettoyage de son conduit, car la période de chauffage est généralement juste terminée. Son installation peut également être maintenue en été. En revanche, il est conseillé de ne pas attendre l'automne, car les ramoneurs sont davantage sollicités en raison du retour du froid.</p>
                             </details>
                             <details>
+                                <summary>Le certificat de ramonage est-il obligatoire ?</summary>
+                                <p>Oui, les assurances exigent un certificat de ramonage annuel (voire biannuel selon les règlements sanitaires départementaux) pour vous couvrir en cas d'incendie.</p>
+                            </details>
+                            <details>
                                 <summary>Ai-je un justificatif à remettre à mon assurance ?</summary>
                                 <p>Oui, en cas de sinistre, ce certificat de ramonage peut servir d'attestation pour votre compagnie d'assurance. Seuls les ramoneurs qualifiés sont autorisés à délivrer des certificats de ramonage.</p>
                             </details>
