@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
+import { Phone, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import styles from './page.module.css';
 
@@ -20,7 +21,7 @@ const jsonLd = {
                 "@type": "AdministrativeArea",
                 "name": "Seine-et-Marne"
             },
-            "description": "Enlèvement mécanique des nids, pose d'écopièges et traitements biologiques contre les chenilles processionnaires du pin et du chêne."
+            "description": "Enlèvement mécanique des nids, pose d'écopièges contre les chenilles processionnaires du pin et du chêne."
         },
         {
             "@type": "FAQPage",
@@ -67,10 +68,18 @@ export default function ChenillesPage() {
                     <h1 className={styles.title}>Chenilles Processionnaires</h1>
                     <p className={styles.subtitle}>
                         Nous luttons contre l'invasion des chenilles du pin et du chêne.<br />
-                        Traitement, Écopièges et Enlèvement de nids à partir de <strong>90€</strong>.
+                        Traitement, Écopièges et Enlèvement de nids.
                     </p>
                     <div className={styles.heroActions}>
-                        <a href="tel:0629953262" className="btn btn-primary">Intervention 7j/7 : 06 29 95 32 62</a>
+                        <a href="tel:0629953262" className="btn btn-primary">
+                            <Phone size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
+                            Appeler : 06 29 95 32 62
+                        </a>
+                        <a href="sms:0629953262" className="btn btn-secondary">Envoyer un SMS</a>
+                        <a href="https://wa.me/33629953262" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                            <MessageCircle size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
+                            WhatsApp
+                        </a>
                         <Link href="/contact" className="btn btn-secondary">Devis Gratuit</Link>
                     </div>
                 </div>
@@ -79,7 +88,7 @@ export default function ChenillesPage() {
             <section className="container section">
                 <div className={styles.grid}>
                     <div className={styles.content}>
-                        <h2 className={styles.heading}>C'est quoi une Processionnaire ?</h2>
+                        <h2 className={styles.heading}>C'est quoi une chenille processionnaire ?</h2>
                         <p>
                             La <strong>chenille processionnaire du pin</strong> est la larve d’un papillon de nuit. Elle mesure près de 40 mm et se reconnaît à sa couleur brune/noire avec des tâches rougeâtres.
                         </p>
@@ -95,7 +104,7 @@ export default function ChenillesPage() {
                         />
 
                         <div className={styles.alertBox}>
-                            <strong>Danger Sanitaire :</strong> Elles sont couvertes de poils microscopiques ultra-urticants et allergisants, qu'elles libèrent dans l'air au moindre stress.
+                            <strong>Danger Sanitaire :</strong> elles sont couvertes de poils microscopiques ultra-urticants et allergisants, qu'elles libèrent dans l'air. Ces derniers sont nocifs pour l'Homme et très dangereux pour vos animaux domestiques.
                         </div>
 
                         <h2 className={styles.heading}>Risques & Nuisances</h2>
@@ -110,10 +119,11 @@ export default function ChenillesPage() {
                             <li>Difficultés respiratoires (asthme, œdème).</li>
                         </ul>
 
-                        <h3>Pour les Animaux (Urgence Vétérinaire) :</h3>
+                        <h3>Pour les animaux (urgence vétérinaire) :</h3>
                         <p>
                             Si votre chien ou chat renifle ou lèche une chenille, sa langue peut nécroser rapidement.
-                            <span className={styles.urgent}> Consultez un vétérinaire immédiatement.</span>
+                            <br />
+                            <span className={styles.urgent}>Consultez un vétérinaire immédiatement.</span>
                         </p>
 
                         <div className={styles.faqSection}>
@@ -146,23 +156,15 @@ export default function ChenillesPage() {
                                     <strong>Piégeage par phéromones :</strong> Pour capturer les papillons mâles l'été et limiter la reproduction.
                                 </li>
                                 <li>
-                                    <strong>Traitement biologique :</strong> Utilisation du Bacille de Thuringe (btK), un insecticide naturel ciblé.
+                                    <strong>Pin :</strong> coupe de cocons jusqu'à 15m et incinération.
+                                </li>
+                                <li>
+                                    <strong>Chêne :</strong> brûlage des cocons jusqu'à 10m.
+                                </li>
+                                <li>
+                                    <strong>Pose d'éco-pièges</strong> tous diamètres avec sacs collecteurs renouvelables.
                                 </li>
                             </ul>
-                        </div>
-
-                        <div className={styles.pricingBox}>
-                            <h3>Tarifs Traitement</h3>
-                            <p className={styles.price}>À partir de 90€ TTC*</p>
-                            <p className={styles.priceNote}>*Selon le nombre de cocons et la hauteur de l'arbre.</p>
-
-                            <div style={{ borderTop: '1px solid rgba(255,255,255,0.2)', paddingTop: '10px', marginTop: '10px' }}>
-                                <strong style={{ color: 'var(--white)' }}>Contrats Annuels</strong> disponibles pour le suivi de vos arbres.
-                            </div>
-
-                            <Link href="/contact" className="btn btn-secondary" style={{ width: '100%', marginTop: '1rem' }}>
-                                Demander un devis
-                            </Link>
                         </div>
 
                         <img

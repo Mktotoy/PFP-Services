@@ -1,13 +1,12 @@
 import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
-import { AlertTriangle } from 'lucide-react';
-import Link from 'next/link';
+import { ShieldCheck, MessageCircle, Phone } from 'lucide-react';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
     title: "Ramonage & Débistrage 77 (Seine-et-Marne) | PFP Services",
     alternates: { canonical: '/services/ramonage' },
-    description: "Ramonage certifié cheminée, poêle, insert et chaudière. Débistrage et entretien dans le 77. Attestation assurance fournie.",
+    description: "Ramonage certifié cheminée, poêle et insert. Débistrage et entretien dans le 77. Certificat de conformité fourni pour votre assurance.",
 };
 
 const jsonLd = {
@@ -86,12 +85,19 @@ export default function RamonagePage() {
                 <div className="container">
                     <h1 className={styles.title}>Ramonage & Débistrage</h1>
                     <p className={styles.subtitle}>
-                        Entretien de vos conduits de cheminée, poêles et chaudières.<br />
-                        <strong>Sécurité - Économies - Conformité Assurances</strong>
+                        Entretien de vos conduits de cheminée, poêles et inserts.<br />
+                        <strong>Sécurité - Conformité Assurances</strong>
                     </p>
                     <div className={styles.heroActions}>
-                        <a href="tel:0629953262" className="btn btn-primary">Prendre RDV : 06 29 95 32 62</a>
-                        <Link href="/contact" className="btn btn-secondary">Demander un Devis</Link>
+                        <a href="tel:0629953262" className="btn btn-primary">
+                            <Phone size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
+                            Appeler : 06 29 95 32 62
+                        </a>
+                        <a href="sms:0629953262" className="btn btn-secondary">Envoyer un SMS</a>
+                        <a href="https://wa.me/33629953262" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                            <MessageCircle size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
+                            WhatsApp
+                        </a>
                     </div>
                 </div>
             </section>
@@ -99,41 +105,57 @@ export default function RamonagePage() {
             <section className="container section">
                 <div className={styles.grid}>
                     <div className={styles.content}>
-                        <h2 className={styles.heading}>Qu'est-ce que le Ramonage ?</h2>
-                        <p>
-                            Le ramonage permet de réaliser des <strong>économies</strong> sur des combustibles, d'avoir un <strong>meilleur confort thermique</strong>,
-                            et de réduire la pollution. Cette pratique nous protège contre tout danger d'intoxication et d'explosion !
-                        </p>
-                        <div className={styles.alertBox}>
-                            <AlertTriangle size={18} style={{display:'inline', verticalAlign:'-3px', marginRight:'4px'}} /> <strong>Danger :</strong> Outre l’incendie du conduit de cheminée, le risque principal du défaut de ramonage reste <strong>l’intoxication au monoxyde de carbone</strong>, inodore et mortel.
-                        </div>
-
-                        <h3 className={styles.subHeading}>Fréquence obligatoire</h3>
+                        <h3 className={styles.subHeading}>Fréquence conseillée</h3>
                         <ul className={styles.list}>
-                            <li><strong>2 fois par an</strong> pour les installations au <strong>bois, charbon et fuel</strong> (dont une fois pendant la période de chauffe).</li>
+                            <li><strong>2 fois par an</strong> pour les installations au <strong>bois et charbon</strong> (dont une fois pendant la période de chauffe).</li>
                             <li><strong>1 fois par an</strong> pour les installations au <strong>gaz</strong>.</li>
                         </ul>
+                        <p>
+                            Il est obligatoire de faire ramoner son conduit une fois par an. PFP Services conseille toutefois d'en
+                            effectuer deux, surtout si le conduit a beaucoup servi sur la saison de chauffe.
+                        </p>
                         <p style={{ fontStyle: 'italic', fontSize: '0.9rem' }}>Le nombre de ramonages est fixé par le Règlement Sanitaire Départemental.</p>
 
                         <h2 className={styles.heading} style={{ marginTop: '2rem' }}>Le Débistrage</h2>
                         <p>
-                            Le débistrage est une action mécanique qui consiste à enlever par martèlement le goudron durci (bistre) à l’aide de masselottes rotatives.
+                            Le débistrage est une action mécanique qui consiste à enlever par martèlement le goudron durci (bistre) à l'aide de masselottes rotatives.
                             Le <strong>bistre</strong> est très inflammable et sa présence est la cause principale des feux de cheminée.
                         </p>
 
-                        <h2 className={styles.heading} style={{ marginTop: '2rem' }}>Législation & Assurances</h2>
-                        <p>
-                            Un ramonage efficace vous permet d'obtenir un meilleur tirage en période de chauffe, mais évite surtout
-                            l'intoxication au monoxyde de carbone, <strong>responsable chaque année de 90 décès et 5 000 intoxications</strong>.
-                        </p>
-                        <p>
-                            Bien entendu, il prévient les risques d'incendies qui ne sont pas pris en charge par votre assurance dès lors
-                            que vous êtes en défaut d'entretien. Une <strong>amende de troisième classe d'un montant de 450 euros</strong> peut
-                            également vous être attribuée.
-                        </p>
-                        <p>
-                            À la fin de la prestation, nous vous délivrerons un certificat en bonne et due forme.
-                        </p>
+                        <h2 className={styles.heading} style={{ marginTop: '2rem' }}>Notre technique d'intervention</h2>
+                        <div className={styles.techniqueGrid}>
+                            <div>
+                                <p>
+                                    Experts dans notre domaine d'intervention, nos prestations sont adaptées à chaque requête et cas
+                                    rencontrés par nos clients. Voici les différentes actions que nous effectuons au quotidien :
+                                </p>
+                                <ul className={styles.checkList}>
+                                    <li>Le ramonage rotatif effectué par le bas pour tous les types de diamètre de conduits existants</li>
+                                    <li>Le ramonage intégral de conduit de fumées et de conduit de raccordement</li>
+                                    <li>Le nettoyage intégral de l'intérieur du générateur</li>
+                                    <li>Le débistrage pour tous les types de diamètre de conduits tubés existants</li>
+                                </ul>
+                                <p>
+                                    Enfin, nous mettons en place un protocole de détection et de signalement des non-conformités
+                                    apparentes (distances de sécurité, raccordement, etc.) qui peuvent être à l'origine de dangers
+                                    graves et imminents dans l'intérêt des clients.
+                                </p>
+                            </div>
+                            <img
+                                src="/images/services/ramonage/ramonage-technique-conduit-inox.jpg"
+                                alt="Conduit de cheminée en inox après intervention de ramonage PFP Services"
+                                className={styles.techniqueImage}
+                            />
+                        </div>
+
+                        <div className={styles.certifBox}>
+                            <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                <ShieldCheck size={20} /> Certificat de conformité
+                            </h3>
+                            <p>
+                                Nous délivrons sur place un <strong>certificat de conformité</strong> en cas de besoin pour votre assurance.
+                            </p>
+                        </div>
 
                         <div className={styles.faqBox}>
                             <h3>Questions Fréquentes</h3>
@@ -161,37 +183,11 @@ export default function RamonagePage() {
                     </div>
 
                     <div className={styles.sidebar}>
-                        <div className={styles.pricingBox}>
-                            <h3>Nos Tarifs TTC</h3>
-                            <div className={styles.priceItem}>
-                                <span>Chaudière</span>
-                                <span className={styles.priceValue}>55€</span>
-                            </div>
-                            <div className={styles.priceItem}>
-                                <span style={{ lineHeight: 1.2 }}>Poêle à bois,<br />Inserts & Cheminées</span>
-                                <span className={styles.priceValue}>77€</span>
-                            </div>
-                            <div className={styles.priceItem}>
-                                <span>Foyer ouvert</span>
-                                <span className={styles.priceValue}>95€</span>
-                            </div>
-                            <div className={styles.priceItem}>
-                                <span>Débistrage</span>
-                                <span className={styles.priceValue}>dès 250€</span>
-                            </div>
-                        </div>
-
-                        <div className={styles.techniqueBox}>
-                            <h3>Nos Techniques</h3>
-                            <ul className={styles.checkList}>
-                                <li>Ramonage rotatif (par le bas)</li>
-                                <li>Ramonage mécanique (par le haut)</li>
-                                <li>Nettoyage intégral du générateur</li>
-                                <li>Inspection & Débistrage</li>
-                                <li>Contrôle de conformité</li>
-                            </ul>
-                        </div>
-
+                        <img
+                            src="/images/services/ramonage/ramonage-poele-installe.jpg"
+                            alt="Poêle à bois allumé après ramonage PFP Services"
+                            style={{ borderRadius: 'var(--radius-md)', width: '100%', height: 'auto' }}
+                        />
                         <img
                             src="/images/services/ramonage/ramonage-poele-allume.jpg"
                             alt="Poêle à bois après ramonage"

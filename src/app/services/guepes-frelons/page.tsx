@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
-import { Info } from 'lucide-react';
+import { Info, Phone, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import styles from './page.module.css';
 
@@ -21,12 +21,7 @@ const jsonLd = {
                 "@type": "AdministrativeArea",
                 "name": "Seine-et-Marne"
             },
-            "description": "Destruction et enlèvement de nids de guêpes et frelons asiatiques. Récupération d'essaims d'abeilles.",
-            "offers": {
-                "@type": "Offer",
-                "price": "90",
-                "priceCurrency": "EUR"
-            }
+            "description": "Destruction et enlèvement de nids de guêpes et frelons asiatiques. Récupération d'essaims d'abeilles."
         },
         {
             "@type": "FAQPage",
@@ -71,13 +66,29 @@ export default function GuepesFrelonsPage() {
                     <h1 className={styles.title}>Guêpes, Frelons & Abeilles</h1>
                     <p className={styles.subtitle}>
                         Destruction de nids de guêpes et frelons en toute sécurité.<br />
-                        Récupération d'essaims d'abeilles par des apiculteurs certifiés.<br />
-                        Intervention à partir de <strong>90€</strong>.
+                        Récupération d'essaims d'abeilles par des apiculteurs certifiés.
                     </p>
                     <div className={styles.heroActions}>
-                        <a href="tel:0629953262" className="btn btn-primary">Urgence Nid : 06 29 95 32 62</a>
+                        <a href="tel:0629953262" className="btn btn-primary">
+                            <Phone size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
+                            Appeler : 06 29 95 32 62
+                        </a>
+                        <a href="sms:0629953262" className="btn btn-secondary">Envoyer un SMS</a>
+                        <a href="https://wa.me/33629953262" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                            <MessageCircle size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
+                            WhatsApp
+                        </a>
                         <Link href="/contact" className="btn btn-secondary">Devis Gratuit</Link>
                     </div>
+                </div>
+            </section>
+
+            <section className="container section">
+                <div className={styles.beeBox}>
+                    <h3 style={{display:'flex', alignItems:'center', gap:'8px'}}><Info size={20} /> Abeilles & bourdons : espèces protégées</h3>
+                    <p>
+                        Attention : Les abeilles et les bourdons ne sont pas considérés comme des nuisibles et sont même essentiels à l'environnement. Ils mangent du nectar et collectent du pollen pour nourrir leurs compagnons. En tant qu'apiculteurs entièrement dédiés à la protection de cette espèce, nous avons conçu un rucher à Samoreau (77). Nous récupérons les essaims gratuitement, avec tout le matériel nécessaire (ruchettes, enfumoir, cadres de ruches...), pour les réinstaller en ruche.
+                    </p>
                 </div>
             </section>
 
@@ -89,6 +100,7 @@ export default function GuepesFrelonsPage() {
                             Il est crucial de bien identifier l'insecte avant d'intervenir. Si vous avez un doute, ne prenez pas de risque et contactez-nous pour une identification.
                         </p>
 
+                        {/* TODO: remplacer par un bandeau unique avec une seule image montrant les 4 especes (abeille/frelon asiatique/frelon europeen/guepe) - generation IA a faire, demande Thomas 29/07/2026 */}
                         <div className={styles.insectCard}>
                             <h3>Le Frelon Asiatique</h3>
                             <p>
@@ -107,6 +119,7 @@ export default function GuepesFrelonsPage() {
                                 Comme le nid de frelons asiatiques, son nid est construit d'écorces et de résineux, sauf que l'entrée se trouve sous le nid.
                                 Il peut tout de même représenter un danger s'il est proche de l'habitation : n'hésitez pas à nous contacter pour vous en débarrasser.
                             </p>
+                            <img src="/images/services/guepes-frelons/frelon-europeen-taille.jpg" alt="Nid de frelon européen, taille impressionnante" style={{ width: '100%', borderRadius: 'var(--radius-sm)', marginTop: '10px' }} />
                         </div>
 
                         <div className={styles.insectCard}>
@@ -117,18 +130,6 @@ export default function GuepesFrelonsPage() {
                             </p>
                             <img src="/images/services/guepes-frelons/frelons-combles.jpg" alt="Nid sous toiture" style={{ width: '100%', borderRadius: 'var(--radius-sm)', marginTop: '10px' }} />
                         </div>
-
-                        <div className={styles.beeBox}>
-                            <h3 style={{display:'flex', alignItems:'center', gap:'8px'}}><Info size={20} /> Abeilles & Bourdons : Espèces Protégées</h3>
-                            <p>
-                                <strong>Attention :</strong> Les abeilles et les bourdons ne sont pas considérés comme des nuisibles et sont même essentiels à l'environnement.
-                                Ils mangent du nectar et collectent du pollen pour nourrir leurs compagnons.
-                                <br />
-                                En tant qu'anciens apiculteurs et adhérents au <strong><a href="https://www.apiculture77.fr/gdsa/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>GDSA 77</a></strong>, entièrement dédiés à la protection de cette espèce, nous avons conçu un rucher à Samoreau (77).
-                                <strong>Nous récupérons les essaims</strong> gratuitement dans la plupart des cas, avec tout le matériel nécessaire (ruchettes, enfumoir, cadres de ruches...), pour les réinstaller en ruche.
-                            </p>
-                        </div>
-
                     </div>
 
                     <div className={styles.sidebar}>
@@ -151,15 +152,6 @@ export default function GuepesFrelonsPage() {
                                     <strong>Équipement de protection :</strong> Combinaisons intégrales professionnelles pour une sécurité totale.
                                 </li>
                             </ul>
-                        </div>
-
-                        <div className={styles.pricingBox}>
-                            <h3>Tarifs Destruction Nids</h3>
-                            <p className={styles.price}>À partir de 90€ TTC*</p>
-                            <p className={styles.priceNote}>*Prix variable selon la hauteur, l'accessibilité et le type de nid.</p>
-                            <Link href="/contact" className="btn btn-secondary" style={{ width: '100%', marginTop: '1rem' }}>
-                                Demander un tarif
-                            </Link>
                         </div>
 
                         <img src="/images/services/guepes-frelons/frelons-intervention.jpg" alt="Intervention Frelon" style={{ width: '100%', borderRadius: 'var(--radius-md)' }} />

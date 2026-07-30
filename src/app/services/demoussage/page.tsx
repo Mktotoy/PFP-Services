@@ -21,35 +21,6 @@ const jsonLd = {
                 "name": "Seine-et-Marne"
             },
             "description": "Nettoyage de toiture, démoussage et traitement hydrofuge pour prolonger la durée de vie de votre couverture."
-        },
-        {
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Pourquoi démousser sa toiture ?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "La mousse rend les tuiles poreuses et retient l'humidité, ce qui peut causer des fissures en cas de gel (gélifraction) et des infiltrations d'eau à long terme."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Quand faut-il nettoyer sa toiture ?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Il est recommandé de faire un contrôle et un entretien une fois par an. Le traitement hydrofuge permet ensuite d'espacer les nettoyages de plusieurs années."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Quelle technique utilisez-vous ?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Nous utilisons un grattage manuel pour le gros de la mousse, suivi d'un nettoyage basse pression pour ne pas abîmer le support, et finissons par l'application d'un fongicide et d'un hydrofuge."
-                    }
-                }
-            ]
         }
     ]
 };
@@ -70,13 +41,13 @@ export default function DemoussagePage() {
             />
             <section className={styles.hero}>
                 <div className="container">
-                    <h1 className={styles.title}>Nettoyage & Démoussage Toiture</h1>
+                    <h1 className={styles.title}>Nettoyage & démoussage toiture</h1>
                     <p className={styles.subtitle}>
                         Un toit propre, c'est une maison saine et durable.<br />
                         Redonnez de l'éclat à votre couverture et protégez-la contre les infiltrations.
                     </p>
                     <div className={styles.heroActions}>
-                        <a href="tel:0629953262" className="btn btn-primary">Devis Gratuit : 06 29 95 32 62</a>
+                        <Link href="/contact" className="btn btn-primary">Devis Gratuit</Link>
                     </div>
                 </div>
             </section>
@@ -86,19 +57,19 @@ export default function DemoussagePage() {
                     <div className={styles.content}>
                         <h2 className={styles.heading}>Pourquoi démousser sa toiture ?</h2>
                         <img
-                            src="/images/services/demoussage/toiture-mousse.jpg"
-                            alt="Toiture envahie par la mousse"
+                            src="/images/services/demoussage/camion-pfp-services-devant-maison.jpg"
+                            alt="Camion PFP Services devant une maison à traiter"
                             className={styles.contentImage}
                             style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
                         />
 
                         <p>
-                            Avec le temps, les toitures subissent les assauts des intempéries, de l'humidité et de la pollution. Ces conditions favorisent l'apparition de mousses, algues, lichens, voire champignons.
+                            Avec le temps, les toitures subissent les assauts des intempéries, de l'humidité et de la pollution. Ces conditions favorisent l'apparition de mousses, algues, lichens, champignons.
                         </p>
-                        <p><strong>Outre leur aspect inesthétique, ces végétations peuvent provoquer :</strong></p>
+                        <p><strong>Outre leur aspect inesthétique, un mauvais entretien de sa toiture peut provoquer :</strong></p>
 
                         <ul className={styles.list}>
-                            <li>Des infiltrations d'eau (les tuiles deviennent poreuses).</li>
+                            <li>Des infiltrations d'eau.</li>
                             <li>Des dégradations de tuiles ou ardoises (éclatement par le gel).</li>
                             <li>Une perte d'étanchéité globale.</li>
                             <li>Des défauts d'isolation thermique.</li>
@@ -106,49 +77,41 @@ export default function DemoussagePage() {
                         </ul>
 
                         <div style={{ background: '#fef3c7', padding: '20px', borderRadius: '8px', borderLeft: '4px solid #d97706', margin: '20px 0' }}>
-                            <strong>Important :</strong> Un démoussage régulier préserve l'intégrité de votre toiture et permet d'éviter des travaux de réparation lourds et coûteux (remplacement de couverture).
+                            Un bon entretien de votre toiture permet d'éviter des travaux de réparation lourds et coûteux, comme le remplacement total de votre couverture.
                         </div>
 
                         <h2 className={styles.heading}>Nos techniques de nettoyage</h2>
-                        <p>
-                            Pour éviter l'apparition de mousses qui peuvent endommager durablement les matériaux de couverture (tuiles, ardoises, fibrociment), nous recommandons un contrôle annuel.
-                        </p>
                         <p>Nous procédons en différentes étapes pour une rénovation complète :</p>
 
-                        <ol style={{ marginLeft: '20px', marginBottom: '20px', lineHeight: '1.8' }}>
-                            <li><strong>Brossage mécanique</strong> des tuiles pour éliminer l'accumulation de mousse.</li>
-                            <li>Enlèvement soigneux des résidus de mousse et nettoyage des gouttières.</li>
-                            <li><strong>Nettoyage basse pression</strong> pour éliminer les derniers débris et lichens sans abîmer le support.</li>
-                            <li>Pulvérisation d'un <strong>fongicide professionnel</strong> (traitement curatif).</li>
-                            <li>Application d'un <strong>traitement hydrofuge</strong> (imprégnateur) pour protéger durablement la toiture.</li>
-                        </ol>
+                        <ul className={styles.list}>
+                            <li>Brossage manuel des mousses</li>
+                            <li>Application d'un fongicide professionnel biocide pré-nettoyage</li>
+                            <li>Pas d'utilisation de produits chlorés</li>
+                            <li>Nettoyage basse ou moyenne pression selon la toiture</li>
+                            <li>Application d'un hydrofuge professionnel post-traitement</li>
+                            <li>Protection de l'environnement</li>
+                        </ul>
+
+                        <p>
+                            Chaque toiture étant différente, nous adaptons nos méthodes et produits en fonction de la nature de la tuile (ardoise, tuiles de pays, tuiles plates, tuiles mécaniques ondulées…), de la quantité de mousse et lichens présents et de l'accessibilité.
+                        </p>
 
                         <img
-                            src="/images/services/demoussage/toiture-nettoyage.jpg"
-                            alt="Nettoyage de toiture en cours"
+                            src="/images/services/demoussage/toiture-avant-apres-nettoyage.jpg"
+                            alt="Toiture avant et après nettoyage et démoussage"
                             className={styles.contentImage}
                             style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
                         />
 
-                        <h2 className={styles.heading}>Le Traitement Hydrofuge</h2>
+                        <h2 className={styles.heading}>Gouttières, Façades & Panneaux Photovoltaïques</h2>
                         <p>
-                            Une fois la mousse éliminée, l'application d'un traitement hydrofuge permet de repousser l'eau (effet perlant), limiter les infiltrations, ralentir le retour des végétaux et renforcer l'étanchéité de la toiture.
+                            En complément du démoussage de toiture, nous intervenons sur l'ensemble de l'enveloppe de votre bâtiment :
                         </p>
-                        <p>
-                            Cette opération est essentielle si vous souhaitez <strong>espacer les interventions</strong> et améliorer la résistance de vos matériaux face au gel, à la pluie ou à la pollution.
-                        </p>
-
-                        <div className={styles.faqSection}>
-                            <h2 className={styles.heading} style={{ fontSize: '1.5rem', marginTop: 0 }}>Questions Fréquentes</h2>
-                            <details className={styles.faqItem}>
-                                <summary>Mon toit est noir, est-ce de la saleté ou un champignon ?</summary>
-                                <p>C'est souvent un mélange de pollution et d'algues microscopiques. Un nettoyage simple ne suffit pas toujours, un traitement biocide est nécessaire pour tuer les racines.</p>
-                            </details>
-                            <details className={styles.faqItem}>
-                                <summary>L'hydrofuge colore-t-il les tuiles ?</summary>
-                                <p>Il existe des hydrofuges incolores qui préservent l'aspect naturel, et des hydrofuges colorés si vous souhaitez raviver la couleur de vos tuiles ternies.</p>
-                            </details>
-                        </div>
+                        <ul className={styles.list}>
+                            <li><strong>Gouttières</strong> : nettoyage toutes hauteurs et tous diamètres avec inspection caméra. Aspiration professionnelle des feuilles, branches, terre et débris, sans appui d'échelle sur la gouttière pour une sécurité maximale.</li>
+                            <li><strong>Panneaux photovoltaïques</strong> : nettoyage à la brosse professionnelle dédiée, à l'eau déminéralisée avec rinçage, pour préserver le rendement des panneaux.</li>
+                            <li><strong>Façades</strong> : traitement professionnel contre les algues rouges, algues vertes et traces noires.</li>
+                        </ul>
                     </div>
 
                     <div className={styles.sidebar}>

@@ -1,12 +1,13 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { caseStudies } from '@/data/caseStudies';
+import { realisationsSections } from '@/data/services-realisations';
+import { BeforeAfter } from '@/components/blocks/BeforeAfter';
 import styles from './realisations.module.css';
 
 export const metadata: Metadata = {
     title: "Nos Réalisations | Dératisation & Démoussage 77 | PFP Services",
     alternates: { canonical: '/realisations' },
-    description: "Découvrez nos dernières interventions en Seine-et-Marne : nettoyage de toiture, destruction de nids de frelons, dératisation. Preuve de notre savoir-faire.",
+    description: "Découvrez nos dernières interventions en Seine-et-Marne, regroupées par service : nettoyage de toiture, destruction de nids de frelons, ramonage, rongeurs, chenilles et taupes.",
 };
 
 const FRENCH_MONTHS: Record<string, string> = {
@@ -22,8 +23,8 @@ function parseFrenchDate(date: string): string | null {
     return `${year}-${mm}-01`;
 }
 
-const parsedDates = caseStudies
-    .map((study) => parseFrenchDate(study.date))
+const parsedDates = realisationsSections
+    .map((section) => section.example ? parseFrenchDate(section.example.date) : null)
     .filter((d): d is string => d !== null)
     .sort();
 
@@ -52,31 +53,50 @@ export default function RealisationsListingPage() {
                 <div className="container">
                     <h1 className={styles.title}>Nos Dernières Interventions</h1>
                     <p className={styles.subtitle}>
-                        Retrouvez en images nos travaux de démoussage, dératisation et désinsectisation dans le 77.
+                        Retrouvez en images nos travaux de démoussage, dératisation et désinsectisation dans le 77, classés par service.
                     </p>
                 </div>
             </section>
 
-            <section className="container section">
-                <div className={styles.grid}>
-                    {caseStudies.map((study) => (
-                        <div key={study.id} className={styles.card}>
-                            <div className={styles.imageWrapper}>
-                                <img src={study.mainImage} alt={study.title} className={styles.image} />
-                                <span className={styles.badge}>{study.category}</span>
-                            </div>
-                            <div className={styles.cardContent}>
-                                <span className={styles.location}>{study.location}</span>
-                                <h3>{study.title}</h3>
-                                <p>{study.summary}</p>
-                                <Link href={`/realisations/${study.slug}`} className="btn btn-outline" style={{ border: '1px solid var(--primary)', color: 'var(--primary)', marginTop: 'auto' }}>
-                                    Voir le cas client
-                                </Link>
-                            </div>
+            {realisationsSections.map((sectionData) => (
+                <section key={sectionData.slug} className={`container section ${styles.serviceSection}`}>
+                    <div className={styles.serviceHeader}>
+                        <h2>{sectionData.title}</h2>
+                        <p>{sectionData.intro}</p>
+                        {sectionData.serviceHref && (
+                            <Link href={sectionData.serviceHref} className="btn btn-outline" style={{ border: '1px solid var(--primary)', color: 'var(--primary)' }}>
+                                Voir la prestation
+                            </Link>
+                        )}
+                    </div>
+
+                    {sectionData.beforeAfter?.map((pair, index) => (
+                        <div key={index} className={styles.beforeAfterWrapper}>
+                            <BeforeAfter
+                                beforeImg={pair.beforeImg}
+                                afterImg={pair.afterImg}
+                                altText={pair.altText}
+                                city={pair.city}
+                            />
                         </div>
                     ))}
-                </div>
-            </section>
+
+                    {sectionData.example && (
+                        <div className={styles.exampleBox}>
+                            <span className={styles.exampleMeta}>{sectionData.example.location} · {sectionData.example.date}</span>
+                            <p>{sectionData.example.text}</p>
+                        </div>
+                    )}
+
+                    <div className={styles.photoGrid}>
+                        {sectionData.photos.map((photo) => (
+                            <div key={photo.src} className={styles.photoCard}>
+                                <img src={photo.src} alt={photo.alt} className={styles.photoImage} loading="lazy" />
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            ))}
         </main>
     );
 }

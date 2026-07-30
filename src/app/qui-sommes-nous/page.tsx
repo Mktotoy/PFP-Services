@@ -47,7 +47,7 @@ export default function AboutPage() {
                         </p>
 
                         <p>
-                            Enfin, nous sommes également équipés afin de vous proposer des prestations de démoussage de toiture, ramonage et débistrage de vos conduits.
+                            Enfin, nous sommes également équipés afin de vous proposer des prestations de démoussage de toiture, ramonage et débistrage de vos conduits, en conformité avec les normes <strong>COSTIC</strong>.
                         </p>
 
                         <div className={styles.contactSection}>
@@ -76,6 +76,7 @@ export default function AboutPage() {
                             <a href="https://certibiocide.din.developpement-durable.gouv.fr/" target="_blank" rel="noopener noreferrer" className={styles.certBadge} style={{ textDecoration: 'none', color: 'inherit' }}>Certibiocide</a>
                             <a href="https://www.apiculture77.fr/gdsa/" target="_blank" rel="noopener noreferrer" className={styles.certBadge} style={{ textDecoration: 'none', color: 'inherit' }}>GDSA 77</a>
                             <a href="https://fredon.fr/" target="_blank" rel="noopener noreferrer" className={styles.certBadge} style={{ textDecoration: 'none', color: 'inherit' }}>FREDON IDF</a>
+                            <span className={styles.certBadge} style={{ color: 'inherit' }}>COSTIC</span>
                         </div>
                     </div>
                 </div>

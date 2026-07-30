@@ -1,7 +1,7 @@
 .hero {
     position: relative;
     /* Modern clean gradient since I don't have the image yet, but mimicking the dark look */
-    background: linear-gradient(135deg, var(--primary-dark) 0%, #002600 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: var(--white);
     padding: 4rem 0;
     min-height: 420px;
@@ -28,7 +28,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at center, rgba(1, 91, 0, 0.55) 0%, rgba(0, 42, 0, 0.85) 100%);
+    background: radial-gradient(circle at center, rgba(5, 156, 33, 0.55) 0%, rgba(4, 109, 23, 0.85) 100%);
     z-index: 2;
 }
 
@@ -122,5 +122,3 @@
 
     .content {
         padding: 0 var(--spacing-xs);
-    }
-}

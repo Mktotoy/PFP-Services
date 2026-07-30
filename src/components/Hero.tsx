@@ -58,10 +58,9 @@ export default function Hero() {
                             {services[currentIndex]}
                         </span>
                         <br />
-                        dans le 77, 91 & Sud Ile-de-France
+                        en Seine-et-Marne et départements limitrophes
                     </h1>
                     <p className={styles.subtitle}>
-                        Démoussage de toiture, Hydrofuge & Dératisation professionnelle.<br />
                         <strong>PFP Services</strong> : l'expertise au service de votre habitat et de votre santé.
                     </p>
                 </div>

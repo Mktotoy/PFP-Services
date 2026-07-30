@@ -4,7 +4,7 @@
 }
 
 .hero {
-    background: linear-gradient(rgba(0, 42, 0, 0.7), rgba(0, 42, 0, 0.7)), url('/images/services/demoussage/toiture-nettoyage.jpg');
+    background: linear-gradient(rgba(4, 109, 23, 0.7), rgba(4, 109, 23, 0.7)), url('/images/services/demoussage/toiture-tuiles-propres-hero.jpg');
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -169,34 +169,4 @@
 
 .contentImage:hover {
     transform: scale(1.02);
-}
-
-.faqSection {
-    margin-top: var(--spacing-lg);
-    background: var(--gray-50);
-    padding: var(--spacing-md);
-    border-radius: var(--radius-md);
-}
-
-.faqItem {
-    margin-bottom: 15px;
-    border-bottom: 1px solid var(--gray-200);
-    padding-bottom: 15px;
-}
-
-.faqItem:last-child {
-    border-bottom: none;
-}
-
-.faqItem summary {
-    font-weight: 700;
-    cursor: pointer;
-    color: var(--gray-800);
-    margin-bottom: 10px;
-}
-
-.faqItem p {
-    font-size: 0.95rem;
-    color: var(--gray-600);
-    margin-left: 20px;
 }

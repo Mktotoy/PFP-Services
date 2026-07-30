@@ -120,6 +120,15 @@
     color: var(--primary);
 }
 
+.dropdownItemSubtitle {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: var(--gray-500, #6b7280);
+    text-transform: none;
+    margin-top: 2px;
+}
+
 .actions {
     display: flex;
     align-items: center;
@@ -223,6 +232,13 @@
 
 .drawerSectionTitle:first-child {
     margin-top: 0;
+}
+
+.drawerSubtitle {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: var(--gray-500, #6b7280);
+    margin: -0.3rem 0 0.5rem;
 }
 
 .drawerLink {

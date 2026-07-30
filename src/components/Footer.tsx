@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import styles from './Footer.module.css';
 
 function FacebookIcon() {
@@ -18,26 +18,20 @@ export default function Footer() {
                     <div className={styles.column}>
                         <h3>PFP Services</h3>
                         <p style={{ opacity: 0.8, lineHeight: 1.6 }}>
-                            Expert en dératisation et lutte anti-nuisibles en Seine-et-Marne (77).
-                            Intervention rapide pour particuliers et professionnels.
+                            Expert en démoussage, entretien des toitures, ramonage et lutte anti-nuisibles, nous intervenons rapidement en Seine-et-Marne et départements limitrophes.
                         </p>
-                        <div style={{ marginTop: '15px' }}>
-                            <a href="https://www.facebook.com/PFP.Services77" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: 'var(--white)', opacity: 0.9 }}>
-                                <FacebookIcon /> Suivez-nous sur Facebook
-                            </a>
-                        </div>
                     </div>
 
                     <div className={styles.column}>
                         <h3>Nos Services</h3>
                         <ul>
-                            <li><Link href="/services/rongeurs">Rats & Souris</Link></li>
-                            <li><Link href="/services/guepes-frelons">Guêpes & Frelons</Link></li>
-                            <li><Link href="/services/cafards">Cafards & Blattes</Link></li>
-                            <li><Link href="/services/chenilles">Chenilles Processionnaires</Link></li>
-                            <li><Link href="/services/taupes">Anti-Taupes</Link></li>
-                            <li><Link href="/services/ramonage">Ramonage & Débistrage</Link></li>
-                            <li><Link href="/services/demoussage">Nettoyage Toiture</Link></li>
+                            <li><Link href="/services/demoussage">Nettoyage de toiture</Link></li>
+                            <li><Link href="/services/ramonage">Ramonage / débistrage</Link></li>
+                            <li><Link href="/services/guepes-frelons">Guêpes et frelons</Link></li>
+                            <li><Link href="/services/rongeurs">Rats / souris</Link></li>
+                            <li><Link href="/services/cafards">Cafards / blattes</Link></li>
+                            <li><Link href="/services/chenilles">Chenilles processionnaires</Link></li>
+                            <li><Link href="/services/taupes">Taupes</Link></li>
                         </ul>
                     </div>
 
@@ -60,9 +54,13 @@ export default function Footer() {
                     <div className={styles.column}>
                         <h3>Contact</h3>
                         <ul className={styles.contactInfo}>
-                            <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><MapPin size={16} /> 22 Rue de la Salle, 77930 Cély</li>
                             <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Phone size={16} /> <a href="tel:0629953262">06 29 95 32 62</a></li>
                             <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Mail size={16} /> <a href="mailto:contact@pfp-services.fr">contact@pfp-services.fr</a></li>
+                            <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                <a href="https://www.facebook.com/PFP.Services77" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: 'inherit' }}>
+                                    <FacebookIcon /> Suivez-nous sur Facebook
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

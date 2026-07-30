@@ -83,6 +83,15 @@
     left: 0;
 }
 
+.contentImage {
+    display: block;
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    margin: var(--spacing-md) auto;
+    border-radius: var(--radius-md);
+}
+
 .imagePlaceholder {
     width: 100%;
     height: 250px;
