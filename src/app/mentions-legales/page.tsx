@@ -2,6 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Mentions Légales | PFP Services",
+    alternates: { canonical: '/mentions-legales' },
     description: "Mentions légales, informations juridiques et coordonnées de la société PFP Services.",
 };
 

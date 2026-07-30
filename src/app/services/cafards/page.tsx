@@ -4,6 +4,7 @@ import styles from './page.module.css';
 
 export const metadata: Metadata = {
     title: "Destruction Cafards & Blattes 77 | Désinsectisation | PFP Services",
+    alternates: { canonical: '/services/cafards' },
     description: "Éradication de cafards et blattes en Seine-et-Marne (Melun, Fontainebleau). Intervention rapide, contrats annuels pour pros et particuliers. Devis gratuit.",
 };
 

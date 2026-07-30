@@ -5,6 +5,7 @@ import ServiceCard from '@/components/ServiceCard';
 
 export const metadata: Metadata = {
     title: "Dératisation & Nettoyage Toiture Yonne (89) | PFP Services",
+    alternates: { canonical: '/zones/89-yonne' },
     description: "Intervention rapide dans l'Yonne (89). Expert en démoussage de toiture et lutte anti-nuisibles à Sens, Auxerre et alentours. Devis gratuit sous 24h.",
 };
 

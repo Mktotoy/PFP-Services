@@ -6,6 +6,7 @@ import { caseStudies } from '@/data/caseStudies';
 
 export const metadata: Metadata = {
     title: "Nos Réalisations & Cas Clients | PFP Services 77",
+    alternates: { canonical: '/cas-clients' },
     description: "Découvrez nos interventions en photos et nos études de cas : dératisation, destruction de nids de frelons et ramonage en Seine-et-Marne.",
 };
 

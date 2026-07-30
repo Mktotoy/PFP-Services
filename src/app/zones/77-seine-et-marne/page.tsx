@@ -5,6 +5,7 @@ import ServiceCard from '@/components/ServiceCard';
 
 export const metadata: Metadata = {
     title: "Dératisation & Démoussage Seine-et-Marne (77) | PFP Services",
+    alternates: { canonical: '/zones/77-seine-et-marne' },
     description: "Entreprise de proximité intervenant dans toute la Seine-et-Marne (77). Dératisation, destruction nids de guêpes, nettoyage de toiture à Melun, Meaux, Chelles, Pontault-Combault.",
 };
 

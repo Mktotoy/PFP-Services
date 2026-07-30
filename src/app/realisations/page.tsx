@@ -5,6 +5,7 @@ import styles from './realisations.module.css';
 
 export const metadata: Metadata = {
     title: "Nos Réalisations | Dératisation & Démoussage 77 | PFP Services",
+    alternates: { canonical: '/realisations' },
     description: "Découvrez nos dernières interventions en Seine-et-Marne : nettoyage de toiture, destruction de nids de frelons, dératisation. La preuve de notre savoir-faire en images.",
 };
 

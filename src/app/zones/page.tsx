@@ -5,6 +5,7 @@ import InteractiveMap from '@/components/InteractiveMap';
 
 export const metadata: Metadata = {
     title: "Zones d'Intervention | Dératisation 77, 91, 89, 45",
+    alternates: { canonical: '/zones' },
     description: "Intervention rapide pour dératisation et nuisibles en Seine-et-Marne (Melun, Fontainebleau), Essonne, Yonne et Loiret.",
 };
 

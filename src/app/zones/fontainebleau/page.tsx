@@ -5,6 +5,7 @@ import { BeforeAfter } from '@/components/blocks/BeforeAfter';
 
 export const metadata: Metadata = {
     title: "Démoussage Toiture Fontainebleau | Nettoyage Expert 77300",
+    alternates: { canonical: '/zones/fontainebleau' },
     description: "PFP Services : Expert local du démoussage de toiture à Fontainebleau. Brossage manuel et traitement protecteur pour les toitures du Pays de Fontainebleau.",
 };
 

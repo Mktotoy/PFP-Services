@@ -5,6 +5,7 @@ import ServiceCard from '@/components/ServiceCard';
 
 export const metadata: Metadata = {
     title: "Démoussage Toiture & Dératisation Loiret (45) | PFP Services",
+    alternates: { canonical: '/zones/45-loiret' },
     description: "PFP Services intervient dans le Loiret (45). Nettoyage de toiture, hydrofuge et lutte contre les nuisibles à Montargis, Gien et environs. Devis gratuit.",
 };
 

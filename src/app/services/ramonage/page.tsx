@@ -5,6 +5,7 @@ import styles from './page.module.css';
 
 export const metadata: Metadata = {
     title: "Ramonage & Débistrage 77 (Seine-et-Marne) | PFP Services",
+    alternates: { canonical: '/services/ramonage' },
     description: "Ramonage certifié cheminée, poêle, insert et chaudière. Débistrage et entretien dans le 77. Attestation assurance fournie.",
 };
 

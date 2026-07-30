@@ -5,6 +5,7 @@ import styles from './page.module.css';
 
 export const metadata: Metadata = {
     title: "Nos Solutions & Méthodologie | PFP Services 77",
+    alternates: { canonical: '/services' },
     description: "Découvrez notre méthodologie d'intervention (Diagnostic, Traitement, Suivi) et l'ensemble de nos services de dératisation et désinsectisation.",
 };
 

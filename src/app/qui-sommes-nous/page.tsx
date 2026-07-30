@@ -5,6 +5,7 @@ import styles from './page.module.css';
 
 export const metadata: Metadata = {
     title: "Qui Sommes-Nous ? | PFP Services - Expert Anti-Nuisibles 77",
+    alternates: { canonical: '/qui-sommes-nous' },
     description: "Découvrez l'histoire de PFP Services, d'apiculteurs passionnés à experts en dératisation et désinsectisation en Seine-et-Marne.",
 };
 

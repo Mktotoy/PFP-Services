@@ -1,6 +1,7 @@
 import { Phone, MessageSquare, MessageCircle } from 'lucide-react';
 export const metadata = {
     title: "Contactez PFP Services | Devis Gratuit Dératisation 77",
+    alternates: { canonical: '/contact' },
     description: "Contactez PFP Services pour une intervention rapide à Melun, Fontainebleau et dans le 77. Devis gratuit pour dératisation, désinsectisation.",
 };
 

@@ -13,8 +13,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PFP Services | Dératisation & Nuisibles 77 | Melun & Fontainebleau",
-  description: "Expert en dératisation et lutte contre les nuisibles dans le 77 (Seine-et-Marne), Melun, Fontainebleau. Rats, souris, guêpes, frelons, punaises. Intervention rapide.",
+  metadataBase: new URL('https://pfp-services.fr'),
+  title: "PFP Services | Dératisation & Nuisibles Seine-et-Marne",
+  description: "Expert dératisation et lutte anti-nuisibles en Seine-et-Marne (77), Melun, Fontainebleau. Rats, souris, guêpes, frelons, punaises. Intervention rapide.",
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/images/favicon-pfp.jpeg',
   },

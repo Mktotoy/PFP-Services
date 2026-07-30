@@ -4,6 +4,7 @@ import styles from './page.module.css';
 
 export const metadata: Metadata = {
     title: "Dératisation Rats & Souris 77 | PFP Services",
+    alternates: { canonical: '/services/rongeurs' },
     description: "Extermination de rats, souris et mulots en Seine-et-Marne (Melun, Fontainebleau). Intervention rapide et discrète. Devis gratuit.",
 };
 

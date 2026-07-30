@@ -4,6 +4,7 @@ import styles from './page.module.css';
 
 export const metadata: Metadata = {
     title: "Chenilles Processionnaires du Pin 77 | Traitement & Écopièges",
+    alternates: { canonical: '/services/chenilles' },
     description: "Lutte contre les chenilles processionnaires en Seine-et-Marne. Enlèvement de cocons, écopièges et traitement biologique. Intervention pour particuliers et collectivités.",
 };
 

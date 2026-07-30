@@ -5,6 +5,7 @@ import ServiceCard from '@/components/ServiceCard';
 
 export const metadata: Metadata = {
     title: "Nettoyage Toiture & Dératisation Essonne (91) | PFP Services",
+    alternates: { canonical: '/zones/91-essonne' },
     description: "Intervention rapide dans l'Essonne (91) pour vos problèmes de nuisibles et l'entretien de votre toiture. Expert local à Évry, Corbeil-Essonnes, Étampes.",
 };
 
