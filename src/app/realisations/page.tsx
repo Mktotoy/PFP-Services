@@ -36,7 +36,7 @@ const realisationsJsonLd = {
     "@id": "https://pfp-services.fr/realisations#collectionpage",
     url: "https://pfp-services.fr/realisations",
     name: "Nos Réalisations",
-    isPartOf: { "@id": "https://pfp-services.fr/#organization" },
+    isPartOf: { "@id": "https://pfp-services.fr/#website" },
     ...(earliestDate ? { datePublished: earliestDate } : {}),
     ...(latestDate ? { dateModified: latestDate } : {}),
 };

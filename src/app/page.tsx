@@ -18,7 +18,7 @@ const homeJsonLd = {
     "@id": "https://pfp-services.fr/#webpage",
     url: "https://pfp-services.fr",
     name: "PFP Services | Dératisation, Nuisibles & Toiture 77",
-    isPartOf: { "@id": "https://pfp-services.fr/#organization" },
+    isPartOf: { "@id": "https://pfp-services.fr/#website" },
     about: { "@id": "https://pfp-services.fr/#organization" },
     mainEntity: {
         "@type": "ItemList",
