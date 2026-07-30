@@ -13,11 +13,12 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { slug } = await params;
     const study = caseStudies.find((s) => s.slug === slug);
-    if (!study) return { title: "Cas Client Non Trouvé | PFP Services" };
+    if (!study) return { title: "Cas Client Non Trouvé | PFP Services", alternates: { canonical: '/realisations' } };
 
     return {
-        title: `${study.title} | Cas Client PFP Services`,
+        title: `${study.title} | PFP Services`,
         description: study.summary,
+        alternates: { canonical: `/realisations/${slug}` },
     };
 }
 

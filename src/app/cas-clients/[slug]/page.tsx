@@ -1,23 +1,31 @@
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import styles from '../page.module.css'; // Reusing styles from parent or keep separate
 import { caseStudies } from '@/data/caseStudies';
 
-// Need to define generateStaticParams for static export if needed, 
+// Need to define generateStaticParams for static export if needed,
 // but for now standard dynamic route is fine.
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-    const study = caseStudies.find(s => s.slug === params.slug);
-    if (!study) return { title: 'Cas Client Non Trouvé' };
+interface PageProps {
+    params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { slug } = await params;
+    const study = caseStudies.find(s => s.slug === slug);
+    if (!study) return { title: 'Cas Client Non Trouvé', alternates: { canonical: '/realisations' } };
 
     return {
-        title: `${study.title} | Cas Client PFP Services`,
+        title: `${study.title} | PFP Services`,
         description: study.summary,
+        alternates: { canonical: `/realisations/${slug}` },
     };
 }
 
-export default function CaseStudyDetail({ params }: { params: { slug: string } }) {
-    const study = caseStudies.find(s => s.slug === params.slug);
+export default async function CaseStudyDetail({ params }: PageProps) {
+    const { slug } = await params;
+    const study = caseStudies.find(s => s.slug === slug);
 
     if (!study) {
         notFound();
