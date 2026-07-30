@@ -13,7 +13,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { slug } = await params;
     const study = caseStudies.find((s) => s.slug === slug);
-    if (!study) return { title: "Cas Client Non Trouvé" };
+    if (!study) return { title: "Cas Client Non Trouvé | PFP Services" };
 
     return {
         title: `${study.title} | Cas Client PFP Services`,

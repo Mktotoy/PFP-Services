@@ -4,9 +4,9 @@ import ServiceZoneCheck from '@/components/ServiceZoneCheck';
 import InteractiveMap from '@/components/InteractiveMap';
 
 export const metadata: Metadata = {
-    title: "Zones d'Intervention | Dératisation 77, 91, 89, 45",
+    title: "Zones d'Intervention 77-91-89-45 | PFP Services",
     alternates: { canonical: '/zones' },
-    description: "Intervention rapide pour dératisation et nuisibles en Seine-et-Marne (Melun, Fontainebleau), Essonne, Yonne et Loiret.",
+    description: "Intervention rapide pour dératisation et lutte anti-nuisibles en Seine-et-Marne, Essonne, Yonne et Loiret. Devis gratuit, déplacement sous 24h.",
 };
 
 const jsonLd = {

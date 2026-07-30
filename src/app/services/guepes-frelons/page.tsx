@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-    title: "Destruction Nids Guêpes & Frelons 77 | Récupération Essaims Abeilles",
+    title: "Nids Guêpes & Frelons 77 | PFP Services",
     alternates: { canonical: '/services/guepes-frelons' },
     description: "Intervention rapide pour nids de guêpes et frelons asiatiques en Seine-et-Marne (Melun, Fontainebleau). Apiculteurs certifiés pour la sauvegarde des abeilles.",
 };

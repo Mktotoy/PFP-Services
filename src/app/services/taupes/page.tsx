@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-    title: "Anti-Taupes & Taupiers 77 | Dératisation & Piégeage Mécanique",
+    title: "Anti-Taupes & Taupiers 77 | PFP Services",
     alternates: { canonical: '/services/taupes' },
     description: "Service professionnel de chasseur de taupes (taupier) en Seine-et-Marne. Piégeage traditionnel mécanique sans poison. Intervention rapide.",
 };

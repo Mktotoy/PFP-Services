@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-    title: "Démoussage & Nettoyage de Toiture 77 | Traitement Hydrofuge",
+    title: "Démoussage & Nettoyage Toiture 77 | PFP Services",
     alternates: { canonical: '/services/demoussage' },
     description: "Expert en démoussage et nettoyage de toiture en Seine-et-Marne. Traitement anti-mousse, hydrofuge et nettoyage basse pression pour tuiles et ardoises.",
 };

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Mentions Légales | PFP Services",
     alternates: { canonical: '/mentions-legales' },
-    description: "Mentions légales, informations juridiques et coordonnées de la société PFP Services.",
+    description: "Mentions légales, informations juridiques, éditeur et hébergeur du site PFP Services, entreprise de dératisation et nuisibles en Seine-et-Marne.",
 };
 
 export default function MentionsLegales() {
