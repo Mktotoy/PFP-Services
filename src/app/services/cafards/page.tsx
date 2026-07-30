@@ -14,20 +14,7 @@ const jsonLd = {
         {
             "@type": "Service",
             "serviceType": "Désinsectisation Cafards et Blattes",
-            "provider": {
-                "@type": "LocalBusiness",
-                "name": "PFP Services",
-                "telephone": "06 29 95 32 62",
-                "image": "https://deratisation-77.com/logo.png",
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "22 Rue de la Salle",
-                    "addressLocality": "Cély",
-                    "postalCode": "77930",
-                    "addressCountry": "FR"
-                },
-                "priceRange": "Sur devis (dès 145€)"
-            },
+            "provider": { "@id": "https://pfp-services.fr/#organization" },
             "areaServed": {
                 "@type": "AdministrativeArea",
                 "name": "Seine-et-Marne"
@@ -70,10 +57,6 @@ const jsonLd = {
 export default function CafardsPage() {
     return (
         <main className={styles.main}>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

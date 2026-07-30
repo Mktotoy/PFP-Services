@@ -14,7 +14,7 @@ const jsonLd = {
         {
             "@type": "Service",
             "serviceType": "Démoussage de Toiture",
-            "provider": { "@id": "https://deratisation-77.com/#organization" },
+            "provider": { "@id": "https://pfp-services.fr/#organization" },
             "areaServed": {
                 "@type": "AdministrativeArea",
                 "name": "Seine-et-Marne"
