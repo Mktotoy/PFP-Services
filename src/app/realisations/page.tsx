@@ -9,9 +9,45 @@ export const metadata: Metadata = {
     description: "Découvrez nos dernières interventions en Seine-et-Marne : nettoyage de toiture, destruction de nids de frelons, dératisation. Preuve de notre savoir-faire.",
 };
 
+const FRENCH_MONTHS: Record<string, string> = {
+    'Janvier': '01', 'Février': '02', 'Mars': '03', 'Avril': '04',
+    'Mai': '05', 'Juin': '06', 'Juillet': '07', 'Août': '08',
+    'Septembre': '09', 'Octobre': '10', 'Novembre': '11', 'Décembre': '12',
+};
+
+function parseFrenchDate(date: string): string | null {
+    const [month, year] = date.split(' ');
+    const mm = FRENCH_MONTHS[month];
+    if (!mm || !year) return null;
+    return `${year}-${mm}-01`;
+}
+
+const parsedDates = caseStudies
+    .map((study) => parseFrenchDate(study.date))
+    .filter((d): d is string => d !== null)
+    .sort();
+
+const latestDate = parsedDates[parsedDates.length - 1] ?? undefined;
+const earliestDate = parsedDates[0] ?? undefined;
+
+const realisationsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://pfp-services.fr/realisations#collectionpage",
+    url: "https://pfp-services.fr/realisations",
+    name: "Nos Réalisations",
+    isPartOf: { "@id": "https://pfp-services.fr/#organization" },
+    ...(earliestDate ? { datePublished: earliestDate } : {}),
+    ...(latestDate ? { dateModified: latestDate } : {}),
+};
+
 export default function RealisationsListingPage() {
     return (
         <main className={styles.main}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(realisationsJsonLd) }}
+            />
             <section className={styles.hero}>
                 <div className="container">
                     <h1 className={styles.title}>Nos Dernières Interventions</h1>
