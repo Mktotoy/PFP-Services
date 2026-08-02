@@ -23,8 +23,8 @@ const homeJsonLd = {
         itemListElement: [
             { "@type": "ListItem", position: 1, name: "Démoussage Toiture", url: "https://pfp-services.fr/services/demoussage" },
             { "@type": "ListItem", position: 2, name: "Ramonage", url: "https://pfp-services.fr/services/ramonage" },
-            { "@type": "ListItem", position: 3, name: "Rongeurs", url: "https://pfp-services.fr/services/rongeurs" },
-            { "@type": "ListItem", position: 4, name: "Guêpes / Frelons", url: "https://pfp-services.fr/services/guepes-frelons" },
+            { "@type": "ListItem", position: 3, name: "Guêpes / Frelons", url: "https://pfp-services.fr/services/guepes-frelons" },
+            { "@type": "ListItem", position: 4, name: "Rongeurs", url: "https://pfp-services.fr/services/rongeurs" },
             { "@type": "ListItem", position: 5, name: "Cafards", url: "https://pfp-services.fr/services/cafards" },
             { "@type": "ListItem", position: 6, name: "Chenilles Processionnaires", url: "https://pfp-services.fr/services/chenilles" },
             { "@type": "ListItem", position: 7, name: "Taupes", url: "https://pfp-services.fr/services/taupes" },
@@ -49,8 +49,8 @@ export default function Home() {
           <div className={styles.grid}>
             <ServiceCard title="Démoussage Toiture" slug="/services/demoussage" image="/images/services/demoussage/toiture-nettoyage.jpg" />
             <ServiceCard title="Ramonage" slug="/services/ramonage" image="/images/services/ramonage/ramonage-poele-allume.jpg" />
-            <ServiceCard title="Rongeurs" slug="/services/rongeurs" image="/images/services/rongeurs/rongeurs-infestation.jpg" />
             <ServiceCard title="Guêpes / Frelons" slug="/services/guepes-frelons" image="/images/services/guepes-frelons/frelons-arbre.jpg" />
+            <ServiceCard title="Rongeurs" slug="/services/rongeurs" image="/images/services/rongeurs/rongeurs-infestation.jpg" />
             {/* TODO: photo cafards manquante (aucune disponible au 29/07/2026), placeholder gradient en attendant */}
             <ServiceCard title="Cafards" slug="/services/cafards" />
             <ServiceCard title="Chenilles Processionnaires" slug="/services/chenilles" image="/images/services/chenilles/chenilles-intervention.jpg" />

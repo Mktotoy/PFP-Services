@@ -40,8 +40,8 @@ function MobileDrawer({ isOpen, close }: { isOpen: boolean; close: () => void })
                     <Link href="/services/ramonage" className={styles.drawerLink} onClick={close}>Ramonage</Link>
 
                     <p className={styles.drawerSectionTitle}>Nuisibles</p>
-                    <Link href="/services/rongeurs" className={styles.drawerLink} onClick={close}>Rongeurs</Link>
                     <Link href="/services/guepes-frelons" className={styles.drawerLink} onClick={close}>Guêpes & Frelons</Link>
+                    <Link href="/services/rongeurs" className={styles.drawerLink} onClick={close}>Rongeurs</Link>
                     <Link href="/services/cafards" className={styles.drawerLink} onClick={close}>Cafards</Link>
                     <Link href="/services/chenilles" className={styles.drawerLink} onClick={close}>Chenilles</Link>
                     <Link href="/services/taupes" className={styles.drawerLink} onClick={close}>Taupes</Link>
@@ -97,8 +97,8 @@ export default function Header() {
                             Nuisibles <span style={{ fontSize: '0.7em', marginLeft: '4px' }}>▼</span>
                         </Link>
                         <div className={styles.dropdownMenu}>
-                            <Link href="/services/rongeurs" className={styles.dropdownItem}>Rongeurs</Link>
                             <Link href="/services/guepes-frelons" className={styles.dropdownItem}>Guêpes & Frelons</Link>
+                            <Link href="/services/rongeurs" className={styles.dropdownItem}>Rongeurs</Link>
                             <Link href="/services/cafards" className={styles.dropdownItem}>Cafards</Link>
                             <Link href="/services/chenilles" className={styles.dropdownItem}>Chenilles</Link>
                             <Link href="/services/taupes" className={styles.dropdownItem}>Taupes</Link>
