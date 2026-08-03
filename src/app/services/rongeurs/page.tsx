@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
-import Link from 'next/link';
-import { MessageCircle, Phone } from 'lucide-react';
+import { ServiceHero } from '@/components/blocks/ServiceHero';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -61,27 +60,11 @@ export default function RongeursPage() {
                     { name: 'Rongeurs', url: 'https://pfp-services.fr/services/rongeurs' },
                 ]}
             />
-            <section className={styles.hero}>
-                <div className="container">
-                    <h1 className={styles.title}>Dératisation : Rats, Souris et Mulots</h1>
-                    <p className={styles.subtitle}>
-                        Nous vous venons en aide face à l'invasion de rongeurs.<br />
-                        Intervention rapide et efficace.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <a href="tel:0629953262" className="btn btn-primary">
-                            <Phone size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
-                            Appeler : 06 29 95 32 62
-                        </a>
-                        <a href="sms:0629953262" className="btn btn-secondary">Envoyer un SMS</a>
-                        <a href="https://wa.me/33629953262" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                            <MessageCircle size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
-                            WhatsApp
-                        </a>
-                        <Link href="/contact" className="btn btn-secondary">Devis Gratuit</Link>
-                    </div>
-                </div>
-            </section>
+            <ServiceHero
+                title="Dératisation : Rats, Souris et Mulots"
+                subtitle={<>Nous vous venons en aide face à l'invasion de rongeurs.<br />Intervention rapide et efficace.</>}
+                image="/images/services/rongeurs/rongeurs-infestation.jpg"
+            />
 
             <section className="container section">
                 <div className={styles.grid}>

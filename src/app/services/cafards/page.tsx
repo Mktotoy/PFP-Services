@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
 import Link from 'next/link';
 import { Phone, MessageSquare, MessageCircle } from 'lucide-react';
+import { ServiceHero } from '@/components/blocks/ServiceHero';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -63,19 +64,10 @@ export default function CafardsPage() {
                 ]}
             />
 
-            <section className={styles.hero}>
-                <div className="container">
-                    <h1 className={styles.title}>Désinsectisation : Cafards & Blattes</h1>
-                    <p className={styles.subtitle}>
-                        Débarrassez-vous définitivement des cafards avec PFP Services.<br />
-                        Intervention rapide et discrète.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <a href="tel:0629953262" className="btn btn-primary">Urgence 7j/7 : 06 29 95 32 62</a>
-                        <Link href="/contact" className="btn btn-secondary">Devis Gratuit</Link>
-                    </div>
-                </div>
-            </section>
+            <ServiceHero
+                title="Désinsectisation : Cafards & Blattes"
+                subtitle={<>Débarrassez-vous définitivement des cafards avec PFP Services.<br />Intervention rapide et discrète.</>}
+            />
 
             <section className="container section">
                 <div className={styles.grid}>

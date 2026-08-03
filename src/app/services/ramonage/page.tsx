@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
-import { ShieldCheck, MessageCircle, Phone } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
+import { ServiceHero } from '@/components/blocks/ServiceHero';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -81,26 +82,11 @@ export default function RamonagePage() {
                     { name: 'Ramonage', url: 'https://pfp-services.fr/services/ramonage' },
                 ]}
             />
-            <section className={styles.hero}>
-                <div className="container">
-                    <h1 className={styles.title}>Ramonage & Débistrage</h1>
-                    <p className={styles.subtitle}>
-                        Entretien de vos conduits de cheminée, poêles et inserts.<br />
-                        <strong>Sécurité - Conformité Assurances</strong>
-                    </p>
-                    <div className={styles.heroActions}>
-                        <a href="tel:0629953262" className="btn btn-primary">
-                            <Phone size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
-                            Appeler : 06 29 95 32 62
-                        </a>
-                        <a href="sms:0629953262" className="btn btn-secondary">Envoyer un SMS</a>
-                        <a href="https://wa.me/33629953262" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                            <MessageCircle size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
-                            WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </section>
+            <ServiceHero
+                title="Ramonage & Débistrage"
+                subtitle={<>Entretien de vos conduits de cheminée, poêles et inserts.<br /><strong>Sécurité - Conformité Assurances</strong></>}
+                image="/images/services/ramonage/ramonage-poele-allume.jpg"
+            />
 
             <section className="container section">
                 <div className={styles.grid}>

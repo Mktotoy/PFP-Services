@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
 import Link from 'next/link';
+import { ServiceHero } from '@/components/blocks/ServiceHero';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -39,18 +40,11 @@ export default function DemoussagePage() {
                     { name: 'Démoussage', url: 'https://pfp-services.fr/services/demoussage' },
                 ]}
             />
-            <section className={styles.hero}>
-                <div className="container">
-                    <h1 className={styles.title}>Nettoyage & démoussage toiture</h1>
-                    <p className={styles.subtitle}>
-                        Un toit propre, c'est une maison saine et durable.<br />
-                        Redonnez de l'éclat à votre couverture et protégez-la contre les infiltrations.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/contact" className="btn btn-primary">Devis Gratuit</Link>
-                    </div>
-                </div>
-            </section>
+            <ServiceHero
+                title="Nettoyage & démoussage toiture"
+                subtitle={<>Un toit propre, c'est une maison saine et durable.<br />Redonnez de l'éclat à votre couverture et protégez-la contre les infiltrations.</>}
+                image="/images/services/demoussage/toiture-tuiles-propres-hero.jpg"
+            />
 
             <section className="container section">
                 <div className={styles.grid}>

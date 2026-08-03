@@ -3,35 +3,6 @@
     background-color: var(--white);
 }
 
-.hero {
-    background: linear-gradient(rgba(4, 109, 23, 0.7), rgba(4, 109, 23, 0.7)), url('/images/services/taupes/taupiniere.png');
-    background-size: cover;
-    background-position: center;
-    color: var(--white);
-    padding: 5rem 0;
-    text-align: center;
-}
-
-.title {
-    font-size: 3rem;
-    margin-bottom: var(--spacing-sm);
-    color: var(--white);
-}
-
-.subtitle {
-    font-size: 1.3rem;
-    opacity: 0.9;
-    font-weight: 300;
-    margin-bottom: var(--spacing-md);
-}
-
-.heroActions {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-sm);
-    flex-wrap: wrap;
-}
-
 .grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -43,13 +14,6 @@
         grid-template-columns: 1fr;
     }
 
-    .title {
-        font-size: 2rem;
-    }
-
-    .hero {
-        padding: 3rem var(--spacing-md);
-    }
 }
 
 .content {

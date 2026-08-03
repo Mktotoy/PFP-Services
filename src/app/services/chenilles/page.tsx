@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
-import { Phone, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
+import { ServiceHero } from '@/components/blocks/ServiceHero';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -63,27 +63,11 @@ export default function ChenillesPage() {
                 ]}
             />
 
-            <section className={styles.hero}>
-                <div className="container">
-                    <h1 className={styles.title}>Chenilles Processionnaires</h1>
-                    <p className={styles.subtitle}>
-                        Nous luttons contre l'invasion des chenilles du pin et du chêne.<br />
-                        Traitement, Écopièges et Enlèvement de nids.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <a href="tel:0629953262" className="btn btn-primary">
-                            <Phone size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
-                            Appeler : 06 29 95 32 62
-                        </a>
-                        <a href="sms:0629953262" className="btn btn-secondary">Envoyer un SMS</a>
-                        <a href="https://wa.me/33629953262" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                            <MessageCircle size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
-                            WhatsApp
-                        </a>
-                        <Link href="/contact" className="btn btn-secondary">Devis Gratuit</Link>
-                    </div>
-                </div>
-            </section>
+            <ServiceHero
+                title="Chenilles Processionnaires"
+                subtitle={<>Nous luttons contre l'invasion des chenilles du pin et du chêne.<br />Traitement, Écopièges et Enlèvement de nids.</>}
+                image="/images/services/chenilles/chenilles-intervention.jpg"
+            />
 
             <section className="container section">
                 <div className={styles.grid}>

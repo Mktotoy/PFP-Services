@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
-import { Info, Phone, MessageCircle } from 'lucide-react';
-import Link from 'next/link';
+import { Info } from 'lucide-react';
+import { ServiceHero } from '@/components/blocks/ServiceHero';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -61,27 +61,11 @@ export default function GuepesFrelonsPage() {
                     { name: 'Guêpes & Frelons', url: 'https://pfp-services.fr/services/guepes-frelons' },
                 ]}
             />
-            <section className={styles.hero}>
-                <div className="container">
-                    <h1 className={styles.title}>Guêpes, Frelons & Abeilles</h1>
-                    <p className={styles.subtitle}>
-                        Destruction de nids de guêpes et frelons en toute sécurité.<br />
-                        Récupération d'essaims d'abeilles par des apiculteurs certifiés.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <a href="tel:0629953262" className="btn btn-primary">
-                            <Phone size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
-                            Appeler : 06 29 95 32 62
-                        </a>
-                        <a href="sms:0629953262" className="btn btn-secondary">Envoyer un SMS</a>
-                        <a href="https://wa.me/33629953262" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                            <MessageCircle size={16} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '6px' }} />
-                            WhatsApp
-                        </a>
-                        <Link href="/contact" className="btn btn-secondary">Devis Gratuit</Link>
-                    </div>
-                </div>
-            </section>
+            <ServiceHero
+                title="Guêpes, Frelons & Abeilles"
+                subtitle={<>Destruction de nids de guêpes et frelons en toute sécurité.<br />Récupération d'essaims d'abeilles par des apiculteurs certifiés.</>}
+                image="/images/services/guepes-frelons/frelons-intervention.jpg"
+            />
 
             <section className="container section">
                 <div className={styles.beeBox}>
