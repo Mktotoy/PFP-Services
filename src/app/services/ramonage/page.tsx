@@ -170,9 +170,14 @@ export default function RamonagePage() {
 
                     <div className={styles.sidebar}>
                         <img
+                            src="/images/services/ramonage/conduit-cheminee-sale-avant.jpg"
+                            alt="Conduit de cheminée encrassé avant ramonage"
+                            style={{ borderRadius: 'var(--radius-md)', width: '100%', height: 'auto' }}
+                        />
+                        <img
                             src="/images/services/ramonage/ramonage-poele-installe.jpg"
                             alt="Poêle à bois allumé après ramonage PFP Services"
-                            style={{ borderRadius: 'var(--radius-md)', width: '100%', height: 'auto' }}
+                            style={{ borderRadius: 'var(--radius-md)', width: '100%', height: 'auto', marginTop: '1rem' }}
                         />
                         <img
                             src="/images/services/ramonage/ramonage-poele-allume.jpg"

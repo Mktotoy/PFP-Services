@@ -91,7 +91,7 @@ export default function DemoussagePage() {
                         </p>
 
                         <img
-                            src="/images/services/demoussage/toiture-avant-apres-nettoyage.jpg"
+                            src="/images/services/demoussage/toiture-avant-apres-collage.jpg"
                             alt="Toiture avant et après nettoyage et démoussage"
                             className={styles.contentImage}
                             style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
@@ -106,6 +106,20 @@ export default function DemoussagePage() {
                             <li><strong>Panneaux photovoltaïques</strong> : nettoyage à la brosse professionnelle dédiée, à l'eau déminéralisée avec rinçage, pour préserver le rendement des panneaux.</li>
                             <li><strong>Façades</strong> : traitement professionnel contre les algues rouges, algues vertes et traces noires.</li>
                         </ul>
+
+                        <img
+                            src="/images/services/demoussage/facade-avant-apres-collage-4.jpg"
+                            alt="Façade avant et après traitement anti-algues"
+                            className={styles.contentImage}
+                            style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
+                        />
+
+                        <img
+                            src="/images/services/demoussage/chantier-toiture-chimney-chateau-nacelle.png"
+                            alt="Chantier de démoussage toiture et cheminées sur bâtiment de caractère"
+                            className={styles.contentImage}
+                            style={{ width: '100%', borderRadius: 'var(--radius-md)', marginTop: '20px' }}
+                        />
                     </div>
 
                     <div className={styles.sidebar}>

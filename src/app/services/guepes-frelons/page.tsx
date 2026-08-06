@@ -73,6 +73,11 @@ export default function GuepesFrelonsPage() {
                     <p>
                         Attention : Les abeilles et les bourdons ne sont pas considérés comme des nuisibles et sont même essentiels à l'environnement. Ils mangent du nectar et collectent du pollen pour nourrir leurs compagnons. En tant qu'apiculteurs entièrement dédiés à la protection de cette espèce, nous avons conçu un rucher à Samoreau (77). Nous récupérons les essaims gratuitement, avec tout le matériel nécessaire (ruchettes, enfumoir, cadres de ruches...), pour les réinstaller en ruche.
                     </p>
+                    <img
+                        src="/images/services/guepes-frelons/equipe-apiculteur-selfie-essaim.jpg"
+                        alt="Apiculteur PFP Services lors d'une récupération d'essaim d'abeilles"
+                        style={{ width: '100%', maxWidth: '500px', borderRadius: 'var(--radius-md)', marginTop: '15px', display: 'block' }}
+                    />
                 </div>
             </section>
 
@@ -84,7 +89,12 @@ export default function GuepesFrelonsPage() {
                             Il est crucial de bien identifier l'insecte avant d'intervenir. Si vous avez un doute, ne prenez pas de risque et contactez-nous pour une identification.
                         </p>
 
-                        {/* TODO: remplacer par un bandeau unique avec une seule image montrant les 4 especes (abeille/frelon asiatique/frelon europeen/guepe) - generation IA a faire, demande Thomas 29/07/2026 */}
+                        <img
+                            src="/images/services/guepes-frelons/bandeau-comparatif-4-especes.png"
+                            alt="Comparatif Abeille, Guêpe, Frelon Asiatique et Frelon Européen"
+                            style={{ width: '100%', borderRadius: 'var(--radius-sm)', marginBottom: '20px' }}
+                        />
+
                         <div className={styles.insectCard}>
                             <h3>Le Frelon Asiatique</h3>
                             <p>

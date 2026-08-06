@@ -67,6 +67,7 @@ export default function CafardsPage() {
             <ServiceHero
                 title="Désinsectisation : Cafards & Blattes"
                 subtitle={<>Débarrassez-vous définitivement des cafards avec PFP Services.<br />Intervention rapide et discrète.</>}
+                image="/images/services/cafards/cafard-blanc-identification.png"
             />
 
             <section className="container section">
@@ -86,10 +87,12 @@ export default function CafardsPage() {
                             <strong>Attention :</strong> L'infestation peut être très rapide. Une seule femelle peut engendrer des milliers de descendants très rapidement !
                         </div>
 
-                        {/* TODO: photo cafard/blatte manquante - aucune disponible dans les sources locales au 29/07/2026, prevoir photo IA ou shooting terrain */}
-                        <div className={styles.imagePlaceholder}>
-                            <span>Photo: Cafard / Blatte (Identification)</span>
-                        </div>
+                        <img
+                            src="/images/services/cafards/cafards-essaim-mur.png"
+                            alt="Infestation de cafards sur un mur"
+                            className={styles.contentImage}
+                            style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
+                        />
 
                         <h2 className={styles.heading}>Risques & Nuisances</h2>
                         <p>
@@ -165,10 +168,11 @@ export default function CafardsPage() {
                             </Link>
                         </div>
 
-                        {/* TODO: photo cafard/blatte manquante - aucune disponible dans les sources locales au 29/07/2026, prevoir photo IA ou shooting terrain */}
-                        <div className={styles.imagePlaceholder} style={{ height: '300px' }}>
-                            <span>Photo: Application de gel anti-cafards</span>
-                        </div>
+                        <img
+                            src="/images/services/cafards/cafard-technicien-pulverisation.png"
+                            alt="Technicien PFP Services en intervention anti-cafards"
+                            style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
+                        />
                     </div>
                 </div>
             </section>
