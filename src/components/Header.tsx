@@ -78,17 +78,7 @@ export default function Header() {
                 </Link>
 
                 <nav className={styles.nav}>
-                    <div className={styles.dropdownParent}>
-                        <Link href="/services/demoussage" className={styles.link}>
-                            Nettoyage Toiture <span style={{ fontSize: '0.7em', marginLeft: '4px' }}>▼</span>
-                        </Link>
-                        <div className={styles.dropdownMenu}>
-                            <Link href="/services/demoussage" className={styles.dropdownItem}>
-                                Démoussage
-                                <span className={styles.dropdownItemSubtitle}>Expert en démoussage</span>
-                            </Link>
-                        </div>
-                    </div>
+                    <Link href="/services/demoussage" className={styles.link}>Nettoyage Toiture</Link>
 
                     <Link href="/services/ramonage" className={styles.link}>Ramonage</Link>
 

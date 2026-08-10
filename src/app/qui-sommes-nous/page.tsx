@@ -52,7 +52,7 @@ export default function AboutPage() {
 
                         <div className={styles.contactSection}>
                             <p>
-                                Nous sommes joignables <strong>7j/7</strong>, aussi bien par téléphone que par mail ou via nos réseaux sociaux. N'hésitez d'ailleurs pas à nous suivre : <strong>PFP Services77</strong>
+                                Nous sommes joignables <strong>7j/7</strong>, aussi bien par téléphone que par mail ou via nos réseaux sociaux. N'hésitez d'ailleurs pas à nous suivre : <a href="https://www.facebook.com/PFP.Services77" target="_blank" rel="noopener noreferrer"><strong>PFP Services77</strong></a>
                             </p>
                             <p>A bientôt ! <br /> <em>L'équipe PFP Services.</em></p>
 

@@ -62,7 +62,6 @@ export default function RealisationsListingPage() {
                 <section key={sectionData.slug} className={`container section ${styles.serviceSection}`}>
                     <div className={styles.serviceHeader}>
                         <h2>{sectionData.title}</h2>
-                        <p>{sectionData.intro}</p>
                         {sectionData.serviceHref && (
                             <Link href={sectionData.serviceHref} className="btn btn-outline" style={{ border: '1px solid var(--primary)', color: 'var(--primary)' }}>
                                 Voir la prestation
@@ -80,13 +79,6 @@ export default function RealisationsListingPage() {
                             />
                         </div>
                     ))}
-
-                    {sectionData.example && (
-                        <div className={styles.exampleBox}>
-                            <span className={styles.exampleMeta}>{sectionData.example.location} · {sectionData.example.date}</span>
-                            <p>{sectionData.example.text}</p>
-                        </div>
-                    )}
 
                     <div className={styles.photoGrid}>
                         {sectionData.photos.map((photo) => (
