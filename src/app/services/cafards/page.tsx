@@ -67,7 +67,7 @@ export default function CafardsPage() {
             <ServiceHero
                 title="Désinsectisation : Cafards & Blattes"
                 subtitle={<>Débarrassez-vous définitivement des cafards avec PFP Services.<br />Intervention rapide et discrète.</>}
-                image="/images/services/cafards/cafard-blanc-identification.png"
+                image="/images/services/cafards/cafard-sur-pain-1.png"
             />
 
             <section className="container section">
@@ -88,8 +88,8 @@ export default function CafardsPage() {
                         </div>
 
                         <img
-                            src="/images/services/cafards/cafards-essaim-mur.png"
-                            alt="Infestation de cafards sur un mur"
+                            src="/images/services/cafards/banniere-cafard-large.png"
+                            alt="Cafard, identification"
                             className={styles.contentImage}
                             style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
                         />

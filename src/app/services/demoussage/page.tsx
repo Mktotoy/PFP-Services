@@ -115,8 +115,8 @@ export default function DemoussagePage() {
                         />
 
                         <img
-                            src="/images/services/demoussage/chantier-toiture-chimney-chateau-nacelle.png"
-                            alt="Chantier de démoussage toiture et cheminées sur bâtiment de caractère"
+                            src="/images/services/demoussage/camionnette-pfp-toiture-propre.jpg"
+                            alt="Camionnette PFP Services devant une toiture nettoyée"
                             className={styles.contentImage}
                             style={{ width: '100%', borderRadius: 'var(--radius-md)', marginTop: '20px' }}
                         />
