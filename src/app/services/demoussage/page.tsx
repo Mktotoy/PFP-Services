@@ -108,7 +108,7 @@ export default function DemoussagePage() {
                         </ul>
 
                         <img
-                            src="/images/services/demoussage/facade-avant-apres-collage-4.jpg"
+                            src="/images/services/demoussage/facade-avant-apres-verif.jpg"
                             alt="Façade avant et après traitement anti-algues"
                             className={styles.contentImage}
                             style={{ width: '100%', borderRadius: 'var(--radius-md)' }}

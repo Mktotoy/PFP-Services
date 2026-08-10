@@ -81,7 +81,7 @@ export default function TaupesPage() {
                         </p>
 
                         <img
-                            src="/images/services/taupes/taupe-intervention-creusage.jpg"
+                            src="/images/services/taupes/taupe-intervention-retrait-verifie.jpg"
                             alt="Intervention PFP Services pour retrait d'une taupe"
                             className={styles.contentImage}
                             style={{ borderRadius: 'var(--radius-md)', width: '100%', maxWidth: '600px', height: 'auto', display: 'block', margin: '30px auto' }}

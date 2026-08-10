@@ -170,7 +170,7 @@ export default function RamonagePage() {
 
                     <div className={styles.sidebar}>
                         <img
-                            src="/images/services/ramonage/conduit-cheminee-sale-avant.jpg"
+                            src="/images/services/ramonage/conduit-cheminee-sale-avant-v2.jpg"
                             alt="Conduit de cheminée encrassé avant ramonage"
                             style={{ borderRadius: 'var(--radius-md)', width: '100%', height: 'auto' }}
                         />
