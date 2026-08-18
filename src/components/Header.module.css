@@ -15,6 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: var(--spacing-lg);
 }
 
 .logo {
@@ -22,6 +23,7 @@
     align-items: center;
     gap: 12px;
     line-height: 1;
+    flex-shrink: 0;
 }
 
 .siteTitle {
