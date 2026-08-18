@@ -74,7 +74,7 @@ export default function Header() {
         <header className={styles.header}>
             <div className={`container ${styles.container}`}>
                 <Link href="/" className={styles.logo} onClick={close}>
-                    <img src="/images/logos/logo.png" alt="PFP Services" style={{ height: '60px', width: 'auto' }} />
+                    <img src="/images/logos/pfp-services-logo.webp" alt="PFP Services" style={{ height: '60px', width: 'auto' }} />
                 </Link>
 
                 <nav className={styles.nav}>

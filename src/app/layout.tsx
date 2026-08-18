@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: "Expert dératisation et lutte anti-nuisibles en Seine-et-Marne (77), Melun, Fontainebleau. Rats, souris, guêpes, frelons, punaises. Intervention rapide.",
     images: [
       {
-        url: '/images/logos/logo.png',
+        url: '/images/logos/pfp-services-logo.webp',
         width: 512,
         height: 512,
         alt: 'PFP Services',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary',
     title: "PFP Services | Dératisation & Nuisibles Seine-et-Marne",
     description: "Expert dératisation et lutte anti-nuisibles en Seine-et-Marne (77), Melun, Fontainebleau. Rats, souris, guêpes, frelons, punaises. Intervention rapide.",
-    images: ['/images/logos/logo.png'],
+    images: ['/images/logos/pfp-services-logo.webp'],
   },
   icons: {
     icon: '/images/favicon-pfp.jpeg',

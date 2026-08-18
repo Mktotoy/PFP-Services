@@ -37,8 +37,8 @@ export const LocalBusinessSchema = ({
     url: "https://pfp-services.fr",
     telephone: "06 29 95 32 62",
     email: "contact@pfp-services.fr",
-    image: "https://pfp-services.fr/images/logos/logo.png",
-    logo: "https://pfp-services.fr/images/logos/logo.png",
+    image: "https://pfp-services.fr/images/logos/pfp-services-logo.webp",
+    logo: "https://pfp-services.fr/images/logos/pfp-services-logo.webp",
     address: {
       "@type": "PostalAddress",
       addressRegion: region,
