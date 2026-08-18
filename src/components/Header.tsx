@@ -75,6 +75,10 @@ export default function Header() {
             <div className={`container ${styles.container}`}>
                 <Link href="/" className={styles.logo} onClick={close}>
                     <img src="/images/logos/pfp-services-logo.webp" alt="PFP Services" style={{ height: '60px', width: 'auto' }} />
+                    <span className={styles.siteTitle}>
+                        <span className={styles.logoMain}>PFP Services</span>
+                        <span className={styles.logoSub}>Toiture &amp; Nuisibles</span>
+                    </span>
                 </Link>
 
                 <nav className={styles.nav}>
