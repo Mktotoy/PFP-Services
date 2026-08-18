@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
 }
 
 .logo {
@@ -56,8 +56,9 @@
 
 .nav {
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 .link {
@@ -69,6 +70,7 @@
     padding: 10px 0;
     position: relative;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .link:hover {
@@ -158,6 +160,7 @@
     align-items: center;
     gap: 0.5rem;
     font-size: 1.1rem;
+    white-space: nowrap;
 }
 
 /* Burger button - hidden on desktop */

@@ -107,7 +107,7 @@ export default function Header() {
                     <a href="tel:0629953262" className={styles.phoneLink}>
                         <span className={styles.icon}><Phone size={18} /></span> 06 29 95 32 62
                     </a>
-                    <Link href="/contact" className="btn btn-primary">
+                    <Link href="/contact" className="btn btn-primary" style={{ whiteSpace: 'nowrap' }}>
                         Contact & Devis
                     </Link>
                 </div>
