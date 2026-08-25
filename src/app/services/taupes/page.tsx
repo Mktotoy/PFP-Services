@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
 import { ServiceHero } from '@/components/blocks/ServiceHero';
+import { ServiceContact } from '@/components/blocks/ServiceContact';
+import { ServiceDevis } from '@/components/blocks/ServiceDevis';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -69,7 +71,7 @@ export default function TaupesPage() {
             <section className="container section">
                 <div className={styles.grid}>
                     <div className={styles.content}>
-                        <h2 className={styles.heading}>Les Taupes</h2>
+                        <h2 className={styles.heading}>Les taupes</h2>
                         <p>
                             Petits mammifères à l'odorat surdéveloppé, les taupes vivent à environ 20 cm de profondeur et se reproduisent tous les ans (4 à 6 naissances).
                         </p>
@@ -87,7 +89,7 @@ export default function TaupesPage() {
                             style={{ borderRadius: 'var(--radius-md)', width: '100%', maxWidth: '600px', height: 'auto', display: 'block', margin: '30px auto' }}
                         />
 
-                        <h2 className={styles.heading}>Les Nuisances</h2>
+                        <h2 className={styles.heading}>Les nuisances</h2>
                         <p>
                             Ennemies des jardiniers, elles peuvent très rapidement causer de nombreux dégâts.
                         </p>
@@ -113,7 +115,7 @@ export default function TaupesPage() {
 
                     <div className={styles.sidebar}>
                         <div className={styles.techniqueBox}>
-                            <h3>Nos Techniques d'Intervention</h3>
+                            <h3>Nos techniques d'intervention</h3>
                             <p>
                                 Nous intervenons rapidement afin de limiter les dégâts dans votre jardin.
                             </p>
@@ -127,6 +129,15 @@ export default function TaupesPage() {
                                 Cette méthode est écologique (sans poison) et évite de polluer les sols ou de mettre en danger vos animaux domestiques.
                             </p>
                         </div>
+
+                        <ServiceContact />
+
+                        <ServiceDevis
+                            title="Tarifs détaupisation"
+                            note="Selon la surface du terrain et l'étendue des galeries."
+                            intro="Chaque terrain est différent. Nous évaluons gratuitement :"
+                            criteria={["La surface concernée", "Le nombre de taupinières actives", "La durée de piégeage à prévoir"]}
+                        />
                     </div>
                 </div>
             </section>

@@ -28,10 +28,11 @@ export const BeforeAfter: React.FC<BeforeAfterProps> = ({
   return (
     <div className={styles.container}>
       <div className={styles.imageWrapper}>
-        <Image 
-          src={afterImg} 
-          alt={`${fullAltText} - Après`} 
-          fill 
+        <Image
+          src={afterImg}
+          alt={`${fullAltText} - Après`}
+          fill
+          priority
           className={styles.image}
           style={{ objectFit: 'cover' }}
         />

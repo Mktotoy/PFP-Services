@@ -113,3 +113,8 @@
     margin-top: var(--spacing-md);
     margin-bottom: var(--spacing-xs);
 }
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}

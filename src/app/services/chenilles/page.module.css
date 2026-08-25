@@ -130,3 +130,8 @@
 .content p {
     margin-bottom: var(--spacing-sm);
 }
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}
