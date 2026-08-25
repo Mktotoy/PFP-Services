@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
-import Link from 'next/link';
 import { ServiceHero } from '@/components/blocks/ServiceHero';
+import { ServiceContact } from '@/components/blocks/ServiceContact';
+import { ServiceDevis } from '@/components/blocks/ServiceDevis';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -64,15 +65,15 @@ export default function ChenillesPage() {
             />
 
             <ServiceHero
-                title="Chenilles Processionnaires"
-                subtitle={<>Nous luttons contre l'invasion des chenilles du pin et du chêne.<br />Traitement, Écopièges et Enlèvement de nids.</>}
+                title="Chenilles processionnaires"
+                subtitle={<>Nous luttons contre l'invasion des chenilles du pin et du chêne.<br />Traitement, écopièges et enlèvement de nids.</>}
                 image="/images/services/chenilles/chenilles-intervention.jpg"
             />
 
             <section className="container section">
                 <div className={styles.grid}>
                     <div className={styles.content}>
-                        <h2 className={styles.heading}>C'est quoi une chenille processionnaire ?</h2>
+                        <h2 className={styles.heading}>Qu'est-ce qu'une chenille processionnaire ?</h2>
                         <p>
                             La <strong>chenille processionnaire du pin</strong> est la larve d’un papillon de nuit. Elle mesure près de 40 mm et se reconnaît à sa couleur brune/noire avec des tâches rougeâtres.
                         </p>
@@ -88,15 +89,15 @@ export default function ChenillesPage() {
                         />
 
                         <div className={styles.alertBox}>
-                            <strong>Danger Sanitaire :</strong> elles sont couvertes de poils microscopiques ultra-urticants et allergisants, qu'elles libèrent dans l'air. Ces derniers sont nocifs pour l'Homme et très dangereux pour vos animaux domestiques.
+                            <strong>Danger sanitaire :</strong> elles sont couvertes de poils microscopiques ultra-urticants et allergisants, qu'elles libèrent dans l'air. Ces derniers sont nocifs pour l'homme et très dangereux pour vos animaux domestiques.
                         </div>
 
-                        <h2 className={styles.heading}>Risques & Nuisances</h2>
+                        <h2 className={styles.heading}>Risques et nuisances</h2>
                         <p>
                             La chaleur favorise leur prolifération rapide dans les jardins et les parcs.
                         </p>
 
-                        <h3>Pour l'Homme :</h3>
+                        <h3>Pour l'homme :</h3>
                         <ul className={styles.list}>
                             <li>Fortes démangeaisons et plaques rouges (urticaire géant).</li>
                             <li>Lésions oculaires graves si contact avec les yeux.</li>
@@ -111,7 +112,7 @@ export default function ChenillesPage() {
                         </p>
 
                         <div className={styles.faqSection}>
-                            <h2 className={styles.heading}>Questions Fréquentes</h2>
+                            <h2 className={styles.heading}>Questions fréquentes</h2>
                             <details className={styles.faqItem}>
                                 <summary>Mon arbre va-t-il mourir ?</summary>
                                 <p>Les chenilles affaiblissent l'arbre en mangeant ses aiguilles, ce qui ralentit sa croissance et le rend vulnérable à d'autres maladies, mais le tue rarement directement sauf infestation massive répétée.</p>
@@ -125,7 +126,7 @@ export default function ChenillesPage() {
 
                     <div className={styles.sidebar}>
                         <div className={styles.techniqueBox}>
-                            <h3>Nos Techniques d'Intervention</h3>
+                            <h3>Nos techniques d'intervention</h3>
                             <p>
                                 Nous intervenons dans les plus brefs délais en adaptant nos protocoles à la saison et au cycle de l'insecte :
                             </p>
@@ -134,7 +135,7 @@ export default function ChenillesPage() {
                                     <strong>Échenillage mécanique :</strong> Découpe des nids (cocons) à l'aide de perches et incinération contrôlée.
                                 </li>
                                 <li>
-                                    <strong>Pose d'Écopièges :</strong> Capture écologique lors de la procession de descente.
+                                    <strong>Pose d'écopièges :</strong> Capture écologique lors de la procession de descente.
                                 </li>
                                 <li>
                                     <strong>Piégeage par phéromones :</strong> Pour capturer les papillons mâles l'été et limiter la reproduction.
@@ -151,9 +152,18 @@ export default function ChenillesPage() {
                             </ul>
                         </div>
 
+                        <ServiceContact />
+
+                        <ServiceDevis
+                            title="Tarifs traitement"
+                            note="Selon la hauteur et le nombre de nids."
+                            intro="Chaque jardin est différent. Nous évaluons gratuitement :"
+                            criteria={["Le nombre de nids à traiter", "La hauteur et l'accès aux arbres", "La méthode adaptée (échenillage, écopiège)"]}
+                        />
+
                         <img
                             src="/images/services/chenilles/chenilles-intervention.jpg"
-                            alt="Intervention Chenilles"
+                            alt="Intervention chenilles"
                             style={{ width: '100%', borderRadius: 'var(--radius-md)', maxHeight: '300px', objectFit: 'cover' }}
                         />
                     </div>

@@ -27,8 +27,6 @@
 
 .insectCard {
     margin-bottom: var(--spacing-lg);
-    border-left: 4px solid var(--gray-200);
-    padding-left: var(--spacing-md);
 }
 
 .insectCard h3 {
@@ -37,18 +35,62 @@
     margin-bottom: var(--spacing-sm);
 }
 
+/* Vignettes des sections insectes : volontairement petites */
+.cardImage {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: var(--radius-sm);
+    margin-top: 10px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
 .beeBox {
-    background-color: #fffbeb;
-    /* Amber-50 */
-    border: 2px solid #fbbf24;
-    border-radius: var(--radius-md);
-    padding: var(--spacing-md);
+    background: #fef3c7;
+    border-left: 4px solid #d97706;
+    border-radius: 8px;
+    padding: 20px;
     margin-top: var(--spacing-lg);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.beeText {
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .beeBox h3 {
     color: #b45309;
     /* Amber-700 */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.beeImage {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    border-radius: var(--radius-md);
+}
+
+@media (max-width: 700px) {
+    .beeBox {
+        flex-direction: column;
+    }
+
+    .beeImage {
+        align-self: center;
+    }
 }
 
 .imagePlaceholder {
@@ -122,4 +164,12 @@
     font-size: 0.8rem;
     opacity: 0.8;
     margin-bottom: var(--spacing-sm);
+}
+.content p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.content h3 {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
 }

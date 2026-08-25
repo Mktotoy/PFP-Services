@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
-import Link from 'next/link';
-import { Phone, MessageSquare, MessageCircle } from 'lucide-react';
 import { ServiceHero } from '@/components/blocks/ServiceHero';
+import { ServiceContact } from '@/components/blocks/ServiceContact';
+import { ServiceDevis } from '@/components/blocks/ServiceDevis';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -65,7 +65,7 @@ export default function CafardsPage() {
             />
 
             <ServiceHero
-                title="Désinsectisation : Cafards & Blattes"
+                title="Désinsectisation : cafards et blattes"
                 subtitle={<>Débarrassez-vous définitivement des cafards avec PFP Services.<br />Intervention rapide et discrète.</>}
                 image="/images/services/cafards/cafard-sur-pain-1.png"
             />
@@ -73,7 +73,7 @@ export default function CafardsPage() {
             <section className="container section">
                 <div className={styles.grid}>
                     <div className={styles.content}>
-                        <h2 className={styles.heading}>Les Cafards & Blattes</h2>
+                        <h2 className={styles.heading}>Les cafards et blattes</h2>
                         <p>
                             La plupart des cafards sont ailés et de couleur noirâtre ou brunâtre.
                             Ils possèdent un long corps aplati de forme ovale et de longues antennes.
@@ -94,7 +94,7 @@ export default function CafardsPage() {
                             style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
                         />
 
-                        <h2 className={styles.heading}>Risques & Nuisances</h2>
+                        <h2 className={styles.heading}>Risques et nuisances</h2>
                         <p>
                             Les cafards sont un danger notable pour l'hygiène et la santé. Ils souillent les plans de travail et contaminent les denrées alimentaires.
                         </p>
@@ -107,7 +107,7 @@ export default function CafardsPage() {
                         </ul>
 
                         <div className={styles.faqSection}>
-                            <h2 className={styles.heading}>Questions Fréquentes (FAQ)</h2>
+                            <h2 className={styles.heading}>Questions fréquentes (FAQ)</h2>
                             <details className={styles.faqItem}>
                                 <summary>Pourquoi faire appel à un professionnel ?</summary>
                                 <p>Les produits du commerce sont souvent inefficaces sur les œufs. Nos produits professionnels (gels biocides) permettent une éradication totale de la colonie par effet domino.</p>
@@ -121,7 +121,7 @@ export default function CafardsPage() {
 
                     <div className={styles.sidebar}>
                         <div className={styles.techniqueBox}>
-                            <h3>nos techniques d'intervention</h3>
+                            <h3>Nos techniques d'intervention</h3>
                             <p>
                                 Nous utilisons différents procédés pour éliminer durablement ces nuisibles :
                             </p>
@@ -131,42 +131,14 @@ export default function CafardsPage() {
                             </ul>
                         </div>
 
-                        <div className={styles.pricingBox}>
-                            <h3>Nous Contacter</h3>
-                            <p>
-                                Réponse la plus rapide : contactez-nous directement par téléphone, SMS ou WhatsApp.
-                            </p>
+                        <ServiceContact />
 
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: 'var(--spacing-sm)' }}>
-                                <a
-                                    href="tel:0629953262"
-                                    className="btn btn-primary"
-                                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}
-                                >
-                                    <Phone size={20} /> Appeler le 06 29 95 32 62
-                                </a>
-                                <a
-                                    href="sms:0629953262"
-                                    className="btn btn-outline"
-                                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}
-                                >
-                                    <MessageSquare size={20} /> Envoyer un SMS
-                                </a>
-                                <a
-                                    href="https://wa.me/33629953262"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="btn btn-outline"
-                                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', borderColor: '#25D366', color: '#25D366' }}
-                                >
-                                    <MessageCircle size={20} /> WhatsApp
-                                </a>
-                            </div>
-
-                            <Link href="/contact" className="btn btn-secondary" style={{ width: '100%', marginTop: '1rem' }}>
-                                Demander un devis
-                            </Link>
-                        </div>
+                        <ServiceDevis
+                            title="Tarifs désinsectisation"
+                            note="Selon la surface et le niveau d'infestation."
+                            intro="Chaque logement est différent. Nous évaluons gratuitement :"
+                            criteria={["La surface à traiter", "Le niveau d'infestation", "Le nombre de passages nécessaires"]}
+                        />
 
                         <img
                             src="/images/services/cafards/cafard-technicien-pulverisation.png"

@@ -85,7 +85,7 @@ export default function ServicesPage() {
                         <Link href="/services/chenilles" className={styles.serviceCard}>
                             <div className={styles.cardImage} style={{ backgroundImage: "url('/images/services/chenilles/chenilles-nid.jpg')" }}></div>
                             <div className={styles.cardContent}>
-                                <h3>Chenilles Processionnaires</h3>
+                                <h3>Chenilles processionnaires</h3>
                                 <p>Échenillage et pose d'écopièges pour protéger vos arbres.</p>
                                 <span className={styles.learnMore}>En savoir plus →</span>
                             </div>

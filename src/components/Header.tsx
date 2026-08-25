@@ -33,14 +33,14 @@ function MobileDrawer({ isOpen, close }: { isOpen: boolean; close: () => void })
                 </button>
 
                 <nav className={styles.drawerNav}>
-                    <p className={styles.drawerSectionTitle}>Nettoyage Toiture</p>
+                    <p className={styles.drawerSectionTitle}>Nettoyage toiture</p>
                     <p className={styles.drawerSubtitle}>Expert en démoussage</p>
                     <Link href="/services/demoussage" className={styles.drawerLink} onClick={close}>Démoussage</Link>
 
                     <Link href="/services/ramonage" className={styles.drawerLink} onClick={close}>Ramonage</Link>
 
                     <p className={styles.drawerSectionTitle}>Nuisibles</p>
-                    <Link href="/services/guepes-frelons" className={styles.drawerLink} onClick={close}>Guêpes & Frelons</Link>
+                    <Link href="/services/guepes-frelons" className={styles.drawerLink} onClick={close}>Guêpes et frelons</Link>
                     <Link href="/services/rongeurs" className={styles.drawerLink} onClick={close}>Rongeurs</Link>
                     <Link href="/services/cafards" className={styles.drawerLink} onClick={close}>Cafards</Link>
                     <Link href="/services/chenilles" className={styles.drawerLink} onClick={close}>Chenilles</Link>
@@ -48,12 +48,11 @@ function MobileDrawer({ isOpen, close }: { isOpen: boolean; close: () => void })
 
                     <div className={styles.drawerDivider} />
 
-                    <Link href="/services" className={styles.drawerLink} onClick={close}>Toutes nos prestations</Link>
-                    <Link href="/zones" className={styles.drawerLink} onClick={close}>Zones d&apos;Intervention</Link>
-                    <Link href="/realisations" className={styles.drawerLink} onClick={close}>Réalisations</Link>
-                    <Link href="/galerie" className={styles.drawerLink} onClick={close}>Galerie Photo</Link>
-                    <Link href="/qui-sommes-nous" className={styles.drawerLink} onClick={close}>Qui Sommes-Nous</Link>
-                    <Link href="/contact" className={styles.drawerLink} onClick={close}>Contact & Devis</Link>
+                    <Link href="/services" className={styles.drawerLink} onClick={close}>Nos prestations</Link>
+                    <Link href="/zones" className={styles.drawerLink} onClick={close}>Zones d&apos;intervention</Link>
+                    <Link href="/galerie" className={styles.drawerLink} onClick={close}>Galerie photos</Link>
+                    <Link href="/qui-sommes-nous" className={styles.drawerLink} onClick={close}>Qui sommes-nous</Link>
+                    <Link href="/contact" className={styles.drawerLink} onClick={close}>Contact et devis</Link>
 
                     <a href="tel:0629953262" className={styles.drawerPhone} onClick={close}>
                         <Phone size={18} style={{ display: 'inline', verticalAlign: '-3px', marginRight: '4px' }} /> 06 29 95 32 62
@@ -82,7 +81,7 @@ export default function Header() {
                 </Link>
 
                 <nav className={styles.nav}>
-                    <Link href="/services/demoussage" className={styles.link}>Nettoyage Toiture</Link>
+                    <Link href="/services/demoussage" className={styles.link}>Nettoyage toiture</Link>
 
                     <Link href="/services/ramonage" className={styles.link}>Ramonage</Link>
 
@@ -91,7 +90,7 @@ export default function Header() {
                             Nuisibles <span style={{ fontSize: '0.7em', marginLeft: '4px' }}>▼</span>
                         </Link>
                         <div className={styles.dropdownMenu}>
-                            <Link href="/services/guepes-frelons" className={styles.dropdownItem}>Guêpes & Frelons</Link>
+                            <Link href="/services/guepes-frelons" className={styles.dropdownItem}>Guêpes et frelons</Link>
                             <Link href="/services/rongeurs" className={styles.dropdownItem}>Rongeurs</Link>
                             <Link href="/services/cafards" className={styles.dropdownItem}>Cafards</Link>
                             <Link href="/services/chenilles" className={styles.dropdownItem}>Chenilles</Link>
@@ -99,8 +98,8 @@ export default function Header() {
                         </div>
                     </div>
 
-                    <Link href="/realisations" className={styles.link}>Réalisations</Link>
-                    <Link href="/qui-sommes-nous" className={styles.link}>Qui Sommes-Nous</Link>
+                    <Link href="/galerie" className={styles.link}>Galerie photos</Link>
+                    <Link href="/qui-sommes-nous" className={styles.link}>Qui sommes-nous</Link>
                 </nav>
 
                 <div className={styles.actions}>
@@ -108,7 +107,7 @@ export default function Header() {
                         <span className={styles.icon}><Phone size={18} /></span> 06 29 95 32 62
                     </a>
                     <Link href="/contact" className="btn btn-primary" style={{ whiteSpace: 'nowrap' }}>
-                        Contact & Devis
+                        Contact et devis
                     </Link>
                 </div>
 

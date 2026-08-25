@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
-import Link from 'next/link';
 import { ServiceHero } from '@/components/blocks/ServiceHero';
+import { ServiceContact } from '@/components/blocks/ServiceContact';
+import { ServiceDevis } from '@/components/blocks/ServiceDevis';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-    title: "Démoussage & Nettoyage Toiture 77 | PFP Services",
+    title: "Démoussage & nettoyage toiture 77 | PFP Services",
     alternates: { canonical: '/services/demoussage' },
     description: "Expert en démoussage et nettoyage de toiture en Seine-et-Marne. Traitement anti-mousse, hydrofuge et nettoyage basse pression pour tuiles et ardoises.",
 };
@@ -97,7 +98,7 @@ export default function DemoussagePage() {
                             style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
                         />
 
-                        <h2 className={styles.heading}>Gouttières, Façades & Panneaux Photovoltaïques</h2>
+                        <h2 className={styles.heading}>Gouttières, façades & panneaux photovoltaïques</h2>
                         <p>
                             En complément du démoussage de toiture, nous intervenons sur l'ensemble de l'enveloppe de votre bâtiment :
                         </p>
@@ -133,24 +134,14 @@ export default function DemoussagePage() {
                             </ul>
                         </div>
 
-                        <div className={styles.pricingBox}>
-                            <h3>Tarifs Toiture</h3>
-                            <p className={styles.price}>Sur Devis</p>
-                            <p className={styles.priceNote}>Selon surface (m²) et état.</p>
+                        <ServiceContact />
 
-                            <p style={{ marginTop: '15px' }}>
-                                Chaque toiture est différente. Nous réalisons un diagnostic gratuit pour évaluer :
-                            </p>
-                            <ul style={{ textAlign: 'left', fontSize: '0.9rem', margin: '10px 0 10px 20px' }}>
-                                <li>La surface à traiter</li>
-                                <li>La difficulté d'accès</li>
-                                <li>Le type de tuile/ardoise</li>
-                            </ul>
-
-                            <Link href="/contact" className="btn btn-secondary" style={{ width: '100%', marginTop: '1rem' }}>
-                                Demander mon devis
-                            </Link>
-                        </div>
+                        <ServiceDevis
+                            title="Tarifs toiture"
+                            note="Selon surface (m²) et état."
+                            intro="Chaque toiture est différente. Nous réalisons un diagnostic gratuit pour évaluer :"
+                            criteria={["La surface à traiter", "La difficulté d'accès", "Le type de tuile ou d'ardoise"]}
+                        />
                     </div>
                 </div>
             </section>

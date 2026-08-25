@@ -65,7 +65,7 @@ export default function Zone77Page() {
             <section className="container section">
                 <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Nos Services en Seine-et-Marne</h2>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
-                    <ServiceCard title="Démoussage Toiture" slug="/services/demoussage" image="/images/services/demoussage/toiture-nettoyage.jpg" />
+                    <ServiceCard title="Démoussage toiture" slug="/services/demoussage" image="/images/services/demoussage/toiture-nettoyage.jpg" />
                     <ServiceCard title="Dératisation" slug="/services/rongeurs" image="/images/services/rongeurs/rongeurs-infestation.jpg" />
                     <ServiceCard title="Nids de Guêpes" slug="/services/guepes-frelons" image="/images/services/guepes-frelons/frelons-arbre.jpg" />
                 </div>

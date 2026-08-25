@@ -1,93 +1,131 @@
-import { Phone, MessageSquare, MessageCircle, Mail } from 'lucide-react';
-// import ContactForm from '@/components/ContactForm'; // mis de cote 29/07/2026, pas de backend d'envoi reel
+import { Phone } from 'lucide-react';
+import Image from 'next/image';
+import { ServiceHero } from '@/components/blocks/ServiceHero';
+import styles from './page.module.css';
+
 export const metadata = {
-    title: "Contactez PFP Services | Devis Gratuit Dératisation 77",
+    title: "Contactez PFP Services | Devis gratuit dératisation 77",
     alternates: { canonical: '/contact' },
     description: "Contactez PFP Services pour une intervention rapide à Melun, Fontainebleau et dans le 77. Devis gratuit pour dératisation, désinsectisation.",
 };
 
 export default function ContactPage() {
     return (
-        <main className="section container">
-            <h1 className="text-center" style={{ marginBottom: 'var(--spacing-lg)' }}>
-                Contactez PFP Services
-            </h1>
+        <main>
+            <div className={styles.heroWrap}>
+                <ServiceHero
+                    title="Contactez-nous"
+                    subtitle="Devis gratuit, réponse rapide, 7j/7 en Seine-et-Marne et départements limitrophes."
+                    ctaLabel="Appeler le 06 29 95 32 62"
+                    ctaHref="tel:0629953262"
+                />
+                <Image
+                    src="/images/logos/pfp-services-logo.webp"
+                    alt="Logo PFP Services"
+                    width={499}
+                    height={500}
+                    className={styles.heroLogo}
+                    priority
+                />
+            </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--spacing-lg)' }}>
-                <div>
-                    <h2 style={{ marginBottom: 'var(--spacing-md)' }}>Nos Coordonnées</h2>
-                    <p style={{ marginBottom: 'var(--spacing-sm)' }}>
-                        <strong>PFP Services</strong>
-                    </p>
-                    <p style={{ marginBottom: 'var(--spacing-sm)' }}>
-                        <strong>Téléphone :</strong> <a href="tel:0629953262" style={{ color: 'var(--primary)', fontWeight: 'bold' }}>06 29 95 32 62</a>
-                    </p>
-                    <p style={{ marginBottom: 'var(--spacing-sm)' }}>
-                        <strong>Email :</strong> <a href="mailto:contact@pfp-services.fr">contact@pfp-services.fr</a>
-                    </p>
-                    <p style={{ marginBottom: 'var(--spacing-md)' }}>
-                        <strong>Facebook :</strong>{' '}
-                        <a
-                            href="https://www.facebook.com/PFP.Services77"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ color: 'var(--primary)', fontWeight: 'bold' }}
-                        >
-                            PFP.Services77
-                        </a>
-                    </p>
+            <section className="container section">
+                <div className={styles.grid}>
+                    <div>
+                        <h2 className={styles.heading}>Nos coordonnées</h2>
+                        <ul className={styles.coordinates}>
+                            <li><strong>PFP Services</strong></li>
+                            <li>
+                                <strong>Téléphone :</strong>{' '}
+                                <a href="tel:0629953262" className={styles.link}>06 29 95 32 62</a>
+                            </li>
+                            <li>
+                                <strong>Email :</strong> contact@pfp-services.fr
+                            </li>
+                            <li>
+                                <strong>Facebook :</strong>{' '}
+                                <a
+                                    href="https://www.facebook.com/PFP.Services77"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.link}
+                                >
+                                    PFP.Services77
+                                </a>
+                            </li>
+                        </ul>
 
-                    <div style={{ background: 'var(--gray-light)', padding: 'var(--spacing-md)', borderRadius: 'var(--radius-md)' }}>
-                        <h3>Zone d'Intervention</h3>
-                        <p>
-                            Nous intervenons en Seine-et-Marne et départements limitrophes, mais sommes également en capacité d'intervenir bien plus loin. Nous contacter, peu importe votre localisation, pour un devis gratuit.
-                        </p>
+                        <div className={styles.zoneBox}>
+                            <h3 className={styles.zoneTitle}>Zone d’intervention</h3>
+                            <p>
+                                Nous intervenons en Seine-et-Marne et départements limitrophes, mais sommes également en capacité d’intervenir bien plus loin. Nous contacter, peu importe votre localisation, pour un devis gratuit.
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-                <div>
-                    <h2 style={{ marginBottom: 'var(--spacing-md)' }}>Demander un Devis Gratuit</h2>
-                    <p style={{ marginBottom: 'var(--spacing-md)', color: 'var(--gray-500, #666)' }}>
-                        Réponse la plus rapide : contactez-nous directement par téléphone, SMS ou WhatsApp.
-                    </p>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: 'var(--spacing-lg)' }}>
-                        <a
-                            href="tel:0629953262"
-                            className="btn btn-primary"
-                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '1rem', fontSize: '1.1rem' }}
-                        >
+                    <div>
+                        <h2 className={styles.heading}>Demander un devis gratuit</h2>
+
+                        <a href="tel:0629953262" className={`btn btn-primary ${styles.callButton}`}>
                             <Phone size={20} /> Appeler le 06 29 95 32 62
                         </a>
-                        <a
-                            href="sms:0629953262"
-                            className="btn btn-outline"
-                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '1rem', fontSize: '1.1rem' }}
+
+                        <form
+                            action="mailto:contact@pfp-services.fr"
+                            method="post"
+                            encType="text/plain"
+                            className={styles.form}
                         >
-                            <MessageSquare size={20} /> Envoyer un SMS
-                        </a>
-                        <a
-                            href="https://wa.me/33629953262"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-outline"
-                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '1rem', fontSize: '1.1rem', borderColor: '#25D366', color: '#25D366' }}
-                        >
-                            <MessageCircle size={20} /> WhatsApp
-                        </a>
-                        <a
-                            href="mailto:contact@pfp-services.fr"
-                            className="btn btn-outline"
-                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '1rem', fontSize: '1.1rem' }}
-                        >
-                            <Mail size={20} /> Nous écrire
-                        </a>
-                        <p style={{ textAlign: 'center', margin: 0, fontSize: '0.9rem', color: 'var(--gray-500, #666)' }}>
-                            Réponse rapide par email
+                            <label className={styles.label} htmlFor="nom">Votre nom</label>
+                            <input
+                                className={styles.input}
+                                id="nom"
+                                name="Nom"
+                                type="text"
+                                autoComplete="name"
+                                required
+                            />
+
+                            <label className={styles.label} htmlFor="email">Votre email</label>
+                            <input
+                                className={styles.input}
+                                id="email"
+                                name="Email"
+                                type="email"
+                                autoComplete="email"
+                                required
+                            />
+
+                            <label className={styles.label} htmlFor="telephone">Votre téléphone</label>
+                            <input
+                                className={styles.input}
+                                id="telephone"
+                                name="Telephone"
+                                type="tel"
+                                autoComplete="tel"
+                                required
+                            />
+
+                            <label className={styles.label} htmlFor="message">Votre message</label>
+                            <textarea
+                                className={styles.textarea}
+                                id="message"
+                                name="Message"
+                                rows={5}
+                                required
+                            />
+
+                            <button type="submit" className="btn btn-primary" style={{ padding: '0.9rem', fontSize: '1rem' }}>
+                                Envoyer ma demande
+                            </button>
+                        </form>
+
+                        <p className={styles.formNote}>
+                            L’envoi ouvre votre logiciel de messagerie avec la demande pré-remplie, à destination de contact@pfp-services.fr. Si rien ne se passe, appelez-nous directement au 06 29 95 32 62.
                         </p>
                     </div>
-
                 </div>
-            </div>
+            </section>
         </main>
     );
 }

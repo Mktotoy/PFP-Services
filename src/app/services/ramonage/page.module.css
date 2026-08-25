@@ -152,3 +152,12 @@
     font-weight: 600;
     margin: var(--spacing-md) 0;
 }
+
+.content p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.content h3 {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
+}

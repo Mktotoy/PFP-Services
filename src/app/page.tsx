@@ -21,12 +21,12 @@ const homeJsonLd = {
     mainEntity: {
         "@type": "ItemList",
         itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Démoussage Toiture", url: "https://pfp-services.fr/services/demoussage" },
+            { "@type": "ListItem", position: 1, name: "Démoussage toiture", url: "https://pfp-services.fr/services/demoussage" },
             { "@type": "ListItem", position: 2, name: "Ramonage", url: "https://pfp-services.fr/services/ramonage" },
-            { "@type": "ListItem", position: 3, name: "Guêpes / Frelons", url: "https://pfp-services.fr/services/guepes-frelons" },
+            { "@type": "ListItem", position: 3, name: "Guêpes et frelons", url: "https://pfp-services.fr/services/guepes-frelons" },
             { "@type": "ListItem", position: 4, name: "Rongeurs", url: "https://pfp-services.fr/services/rongeurs" },
             { "@type": "ListItem", position: 5, name: "Cafards", url: "https://pfp-services.fr/services/cafards" },
-            { "@type": "ListItem", position: 6, name: "Chenilles Processionnaires", url: "https://pfp-services.fr/services/chenilles" },
+            { "@type": "ListItem", position: 6, name: "Chenilles processionnaires", url: "https://pfp-services.fr/services/chenilles" },
             { "@type": "ListItem", position: 7, name: "Taupes", url: "https://pfp-services.fr/services/taupes" },
         ],
     },
@@ -47,18 +47,18 @@ export default function Home() {
             Nos domaines d'expertise
           </h2>
           <div className={styles.grid}>
-            <ServiceCard title="Démoussage Toiture" slug="/services/demoussage" image="/images/services/demoussage/toiture-nettoyage.jpg" />
+            <ServiceCard title="Démoussage toiture" slug="/services/demoussage" image="/images/services/demoussage/toiture-nettoyage.jpg" />
             <ServiceCard title="Ramonage" slug="/services/ramonage" image="/images/services/ramonage/ramonage-poele-allume.jpg" />
-            <ServiceCard title="Guêpes / Frelons" slug="/services/guepes-frelons" image="/images/services/guepes-frelons/frelons-arbre.jpg" />
+            <ServiceCard title="Guêpes et frelons" slug="/services/guepes-frelons" image="/images/services/guepes-frelons/frelons-arbre.jpg" />
             <ServiceCard title="Rongeurs" slug="/services/rongeurs" image="/images/services/rongeurs/rongeurs-infestation.jpg" />
             <ServiceCard title="Cafards" slug="/services/cafards" image="/images/services/cafards/cafard-sur-pain-1.png" />
-            <ServiceCard title="Chenilles Processionnaires" slug="/services/chenilles" image="/images/services/chenilles/chenilles-intervention.jpg" />
+            <ServiceCard title="Chenilles processionnaires" slug="/services/chenilles" image="/images/services/chenilles/chenilles-intervention.jpg" />
             <ServiceCard title="Taupes" slug="/services/taupes" image="/images/services/taupes/taupiniere.png" />
           </div>
         </div>
       </section>
 
-      <section className="section container">
+      <section className={`section container ${styles.engagements}`}>
         <h2 className={styles.sectionTitle}>Nos engagements</h2>
         <div className={styles.features}>
           <div className={styles.feature}>
@@ -72,14 +72,14 @@ export default function Home() {
         </div>
       </section>
 
-      <LocalReviews category="toiture" title="Avis de nos clients Toiture" />
+      <LocalReviews category="toiture" title="Avis de nos clients toiture" />
 
       <section className="section container">
-        <h2 className={styles.sectionTitle}>Nos Points Forts & Engagements</h2>
+        <h2 className={styles.sectionTitle}>Nos points forts et engagements</h2>
         <div className={styles.features}>
           <div className={styles.feature}>
             <div className={styles.featureIcon}>⚡</div>
-            <h4>Intervention Rapide</h4>
+            <h4>Intervention rapide</h4>
             <p>Nous comprenons l'urgence. Intervention possible le <strong>week-end et jours fériés</strong> pour vos problèmes de nuisibles ou de toiture, nous nous adaptons à votre organisation pour vous proposer une intervention dans les plus brefs délais.</p>
           </div>
           <div className={styles.feature}>
@@ -89,7 +89,7 @@ export default function Home() {
           </div>
           <div className={styles.feature}>
             <div className={styles.featureIcon}>🐾</div>
-            <h4>Intervention Sécurisée</h4>
+            <h4>Interventions sécurisées</h4>
             <p>Nos interventions se font dans le respect de l'environnement, afin de protéger votre jardin et vos animaux.</p>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Mentions Légales | PFP Services",
+    title: "Mentions légales | PFP Services",
     alternates: { canonical: '/mentions-legales' },
     description: "Mentions légales, informations juridiques, éditeur et hébergeur du site PFP Services, entreprise de dératisation et nuisibles en Seine-et-Marne.",
 };
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function MentionsLegales() {
     return (
         <main className="container section" style={{ maxWidth: '800px', margin: '0 auto', padding: '4rem 1rem' }}>
-            <h1 style={{ fontSize: '2.5rem', marginBottom: '2rem', color: 'var(--primary)', textAlign: 'center' }}>Mentions Légales</h1>
+            <h1 style={{ fontSize: '2.5rem', marginBottom: '2rem', color: 'var(--primary)', textAlign: 'center' }}>Mentions légales</h1>
 
             <section style={{ marginBottom: '3rem' }}>
                 <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', borderBottom: '2px solid var(--secondary)', paddingBottom: '0.5rem' }}>Identification de l'entreprise</h2>
@@ -19,7 +19,7 @@ export default function MentionsLegales() {
                     <li><strong>Capital social :</strong> 3 000,00 €</li>
                     <li><strong>SIREN :</strong> 900 125 980</li>
                     <li><strong>SIRET (siège) :</strong> 900 125 980 00012</li>
-                    <li><strong>Numéro de TVA Intracommunautaire :</strong> FR93900125980</li>
+                    <li><strong>Numéro de TVA intracommunautaire :</strong> FR93900125980</li>
                     <li><strong>RCS :</strong> 900 125 980 R.C.S. Melun (Inscrit le 08/06/2021)</li>
                     <li><strong>Dirigeant :</strong> M. Pierre-Francois BAZOUGE</li>
                 </ul>
@@ -38,13 +38,16 @@ export default function MentionsLegales() {
             <section style={{ marginBottom: '3rem' }}>
                 <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', borderBottom: '2px solid var(--secondary)', paddingBottom: '0.5rem' }}>Hébergement du site</h2>
                 <p>
-                    Ce site est hébergé par Google Cloud (Google App Engine).<br />
-                    Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irlande.
+                    Ce site est hébergé par :<br />
+                    Replit, Inc.<br />
+                    767 Bryant St #203<br />
+                    San Francisco, CA 94107<br />
+                    États-Unis
                 </p>
             </section>
 
             <section style={{ marginBottom: '3rem' }}>
-                <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', borderBottom: '2px solid var(--secondary)', paddingBottom: '0.5rem' }}>Propriété Intellectuelle</h2>
+                <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', borderBottom: '2px solid var(--secondary)', paddingBottom: '0.5rem' }}>Propriété intellectuelle</h2>
                 <p>
                     L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
                 </p>

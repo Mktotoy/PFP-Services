@@ -131,3 +131,12 @@
 .contentImage:hover {
     transform: scale(1.02);
 }
+
+.content p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.content h3 {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
+}

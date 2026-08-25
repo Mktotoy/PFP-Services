@@ -2,12 +2,14 @@ import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
 import { ShieldCheck } from 'lucide-react';
 import { ServiceHero } from '@/components/blocks/ServiceHero';
+import { ServiceContact } from '@/components/blocks/ServiceContact';
+import { ServiceDevis } from '@/components/blocks/ServiceDevis';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-    title: "Ramonage & Débistrage 77 (Seine-et-Marne) | PFP Services",
+    title: "Ramonage & débistrage 77 (Seine-et-Marne) | PFP Services",
     alternates: { canonical: '/services/ramonage' },
-    description: "Ramonage certifié cheminée, poêle et insert. Débistrage et entretien dans le 77. Certificat de conformité fourni pour votre assurance.",
+    description: "Ramonage certifié cheminée, poêle et insert. Débistrage et entretien de conduits dans le 77. Certificat de conformité fourni pour votre assurance.",
 };
 
 const jsonLd = {
@@ -83,8 +85,8 @@ export default function RamonagePage() {
                 ]}
             />
             <ServiceHero
-                title="Ramonage & Débistrage"
-                subtitle={<>Entretien de vos conduits de cheminée, poêles et inserts.<br /><strong>Sécurité - Conformité Assurances</strong></>}
+                title="Ramonage & débistrage"
+                subtitle={<>Entretien de vos conduits de cheminée, poêles et inserts.<br /><strong>Sécurité - Conformité assurance</strong></>}
                 image="/images/services/ramonage/ramonage-poele-allume.jpg"
             />
 
@@ -102,7 +104,7 @@ export default function RamonagePage() {
                         </p>
                         <p style={{ fontStyle: 'italic', fontSize: '0.9rem' }}>Le nombre de ramonages est fixé par le Règlement Sanitaire Départemental.</p>
 
-                        <h2 className={styles.heading} style={{ marginTop: '2rem' }}>Le Débistrage</h2>
+                        <h2 className={styles.heading} style={{ marginTop: '2rem' }}>Le débistrage</h2>
                         <p>
                             Le débistrage est une action mécanique qui consiste à enlever par martèlement le goudron durci (bistre) à l'aide de masselottes rotatives.
                             Le <strong>bistre</strong> est très inflammable et sa présence est la cause principale des feux de cheminée.
@@ -144,7 +146,7 @@ export default function RamonagePage() {
                         </div>
 
                         <div className={styles.faqBox}>
-                            <h3>Questions Fréquentes</h3>
+                            <h3>Questions fréquentes</h3>
                             <details>
                                 <summary>Quelle est la meilleure période de l'année pour ramoner ma cheminée ?</summary>
                                 <p>Le printemps est la période préférée pour le nettoyage de son conduit, car la période de chauffage est généralement juste terminée. Son installation peut également être maintenue en été. En revanche, il est conseillé de ne pas attendre l'automne, car les ramoneurs sont davantage sollicités en raison du retour du froid.</p>
@@ -169,6 +171,15 @@ export default function RamonagePage() {
                     </div>
 
                     <div className={styles.sidebar}>
+                        <ServiceContact />
+
+                        <ServiceDevis
+                            title="Tarifs ramonage"
+                            note="Selon le type de conduit et l'accès."
+                            intro="Chaque installation est différente. Nous évaluons gratuitement :"
+                            criteria={["Le type d'appareil (cheminée, poêle, insert)", "L'état et la longueur du conduit", "La nécessité d'un débistrage"]}
+                        />
+
                         <img
                             src="/images/services/ramonage/conduit-cheminee-sale-avant-v2.jpg"
                             alt="Conduit de cheminée encrassé avant ramonage"

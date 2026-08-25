@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
       { source: "/chenilles", destination: "/services/chenilles", permanent: true },
       { source: "/cafards", destination: "/services/cafards", permanent: true },
       { source: "/taupes", destination: "/services/taupes", permanent: true },
+      { source: "/realisations", destination: "/galerie", permanent: true },
     ];
   },
 };

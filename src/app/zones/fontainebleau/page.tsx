@@ -22,7 +22,7 @@ export default function FontainebleauPage() {
             
             <section className={styles.hero} style={{ background: '#374151' }}>
                 <div className="container">
-                    <h1 className={styles.title}>Démoussage Toiture à Fontainebleau</h1>
+                    <h1 className={styles.title}>Démoussage toiture à Fontainebleau</h1>
                     <p className={styles.subtitle}>
                         L'entretien haute qualité pour les belles demeures du Pays de Fontainebleau.
                     </p>

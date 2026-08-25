@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-    title: "Qui Sommes-Nous ? | PFP Services - Expert Anti-Nuisibles 77",
+    title: "Qui sommes-nous ? | PFP Services - Expert anti-nuisibles 77",
     alternates: { canonical: '/qui-sommes-nous' },
     description: "Découvrez l'histoire de PFP Services, d'apiculteurs passionnés à experts en dératisation et désinsectisation en Seine-et-Marne.",
 };
@@ -43,7 +43,7 @@ export default function AboutPage() {
                         </p>
 
                         <p>
-                            Nos certifications au <strong><a href="https://www.apiculture77.fr/gdsa/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>GDSA 77</a></strong> et <strong><a href="https://fredon.fr/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>FREDON Île-de-France</a></strong> sont une garantie de la qualité de notre travail.
+                            Notre certification <strong><a href="https://fredon.fr/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>FREDON Île-de-France</a></strong> est une garantie de la qualité de notre travail.
                         </p>
 
                         <p>
@@ -74,7 +74,6 @@ export default function AboutPage() {
 
                         <div className={styles.certifications}>
                             <a href="https://certibiocide.din.developpement-durable.gouv.fr/" target="_blank" rel="noopener noreferrer" className={styles.certBadge} style={{ textDecoration: 'none', color: 'inherit' }}>Certibiocide</a>
-                            <a href="https://www.apiculture77.fr/gdsa/" target="_blank" rel="noopener noreferrer" className={styles.certBadge} style={{ textDecoration: 'none', color: 'inherit' }}>GDSA 77</a>
                             <a href="https://fredon.fr/" target="_blank" rel="noopener noreferrer" className={styles.certBadge} style={{ textDecoration: 'none', color: 'inherit' }}>FREDON IDF</a>
                             <span className={styles.certBadge} style={{ color: 'inherit' }}>COSTIC</span>
                         </div>

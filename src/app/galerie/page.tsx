@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import GalleryClient from "@/components/gallery/GalleryClient";
 
 export const metadata: Metadata = {
-    title: "Galerie Photo Interventions 77 | PFP Services",
-    description: "Galerie photo des interventions PFP Services en Seine-et-Marne : dératisation, nids de guêpes et frelons, chenilles, ramonage et démoussage de toiture.",
+    title: "Galerie photos | PFP Services",
+    description: "Galerie photos des interventions PFP Services : nettoyage de toiture, ramonage, guêpes et frelons, rongeurs, cafards, chenilles et taupes.",
     alternates: { canonical: '/galerie' },
 };
 

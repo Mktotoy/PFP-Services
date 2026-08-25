@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
 import { ServiceHero } from '@/components/blocks/ServiceHero';
+import { ServiceContact } from '@/components/blocks/ServiceContact';
+import { ServiceDevis } from '@/components/blocks/ServiceDevis';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -61,7 +63,7 @@ export default function RongeursPage() {
                 ]}
             />
             <ServiceHero
-                title="Dératisation : Rats, Souris et Mulots"
+                title="Dératisation : rats, souris et mulots"
                 subtitle={<>Nous vous venons en aide face à l'invasion de rongeurs.<br />Intervention rapide et efficace.</>}
                 image="/images/services/rongeurs/rongeurs-infestation.jpg"
             />
@@ -69,7 +71,7 @@ export default function RongeursPage() {
             <section className="container section">
                 <div className={styles.grid}>
                     <div className={styles.content}>
-                        <h2 className={styles.heading}>Les Rongeurs</h2>
+                        <h2 className={styles.heading}>Les rongeurs</h2>
                         <p>
                             Qu'il s'agisse de souris ou de rats, ils vivent généralement dans des endroits humides. Ils creusent des passages dans les souterrains, les égouts et les abords immédiats des habitations.
                         </p>
@@ -83,7 +85,7 @@ export default function RongeursPage() {
                             className={styles.contentImage}
                         />
 
-                        <h2 className={styles.heading}>Les Nuisances</h2>
+                        <h2 className={styles.heading}>Les nuisances</h2>
                         <p>
                             Ces nuisibles peuvent ronger des câbles, des raccords de gaz, des fils électriques provoquant ainsi des pannes, des courts-circuits, un incendie ou même une explosion due à une fuite de gaz.
                         </p>
@@ -108,7 +110,7 @@ export default function RongeursPage() {
 
                     <div className={styles.sidebar}>
                         <div className={styles.techniqueBox}>
-                            <h3>Nos Techniques d'Intervention</h3>
+                            <h3>Nos techniques d'intervention</h3>
                             <ul className={styles.checkList}>
                                 <li>Traitement curatif</li>
                                 <li>Nuisibles ciblés : rats bruns, rats gris, souris, mulots, musaraignes…</li>
@@ -118,6 +120,15 @@ export default function RongeursPage() {
                                 <li>Possibilité de mise en place de contrats annuels pour un suivi préventif</li>
                             </ul>
                         </div>
+
+                        <ServiceContact />
+
+                        <ServiceDevis
+                            title="Tarifs dératisation"
+                            note="Selon la surface et le niveau d'infestation."
+                            intro="Chaque situation est différente. Nous évaluons gratuitement :"
+                            criteria={["L'étendue de l'infestation", "Les points d'entrée à reboucher", "Le nombre de passages nécessaires"]}
+                        />
 
                         <img
                             src="/images/team/tenue-pro.jpg"

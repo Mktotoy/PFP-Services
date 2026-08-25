@@ -1,0 +1,119 @@
+/* En-tete : bandeau vert coherent avec les autres pages,
+   logo PFP affiche a taille contenue (le logo est carre 499x500,
+   inutilisable en fond plein ecran "cover" sans etre rogne et pixelise). */
+.heroWrap {
+    background-color: var(--primary-dark);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroWrap>section {
+    width: 100%;
+}
+
+.heroLogo {
+    height: 140px;
+    width: auto;
+    margin-top: var(--spacing-md);
+}
+
+@media (min-width: 900px) {
+    .heroWrap {
+        flex-direction: row;
+        gap: var(--spacing-md);
+        padding-right: var(--spacing-md);
+    }
+
+    .heroWrap>section {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .heroLogo {
+        flex: 0 0 auto;
+        height: 230px;
+        margin-top: 0;
+    }
+}
+
+/* Corps de page */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+
+.heading {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary);
+}
+
+.coordinates {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-md);
+    line-height: 2;
+}
+
+.link {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.zoneBox {
+    background-color: var(--gray-50);
+    border-left: 4px solid var(--secondary);
+    padding: var(--spacing-md);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.zoneTitle {
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary);
+    font-size: 1.15rem;
+}
+
+.callButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: -6px;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    font: inherit;
+    background-color: var(--white);
+}
+
+.textarea {
+    resize: vertical;
+}
+
+.formNote {
+    margin-top: var(--spacing-sm);
+    font-size: 0.9rem;
+    color: var(--gray-500);
+}

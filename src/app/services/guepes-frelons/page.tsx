@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/JsonLd';
 import { Info } from 'lucide-react';
 import { ServiceHero } from '@/components/blocks/ServiceHero';
+import { ServiceContact } from '@/components/blocks/ServiceContact';
+import { ServiceDevis } from '@/components/blocks/ServiceDevis';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -62,24 +64,10 @@ export default function GuepesFrelonsPage() {
                 ]}
             />
             <ServiceHero
-                title="Guêpes, Frelons & Abeilles"
+                title="Guêpes, frelons et abeilles"
                 subtitle={<>Destruction de nids de guêpes et frelons en toute sécurité.<br />Récupération d'essaims d'abeilles par des apiculteurs certifiés.</>}
                 image="/images/services/guepes-frelons/frelons-intervention.jpg"
             />
-
-            <section className="container section">
-                <div className={styles.beeBox}>
-                    <h3 style={{display:'flex', alignItems:'center', gap:'8px'}}><Info size={20} /> Abeilles & bourdons : espèces protégées</h3>
-                    <p>
-                        Attention : Les abeilles et les bourdons ne sont pas considérés comme des nuisibles et sont même essentiels à l'environnement. Ils mangent du nectar et collectent du pollen pour nourrir leurs compagnons. En tant qu'apiculteurs entièrement dédiés à la protection de cette espèce, nous avons conçu un rucher à Samoreau (77). Nous récupérons les essaims gratuitement, avec tout le matériel nécessaire (ruchettes, enfumoir, cadres de ruches...), pour les réinstaller en ruche.
-                    </p>
-                    <img
-                        src="/images/services/guepes-frelons/equipe-apiculteur-selfie-essaim.jpg"
-                        alt="Apiculteur PFP Services lors d'une récupération d'essaim d'abeilles"
-                        style={{ width: '100%', maxWidth: '500px', borderRadius: 'var(--radius-md)', marginTop: '15px', display: 'block' }}
-                    />
-                </div>
-            </section>
 
             <section className="container section">
                 <div className={styles.grid}>
@@ -96,39 +84,51 @@ export default function GuepesFrelonsPage() {
                         />
 
                         <div className={styles.insectCard}>
-                            <h3>Le Frelon Asiatique</h3>
+                            <h3>Le frelon asiatique</h3>
                             <p>
                                 Noir au thorax, pattes jaunes. <strong>Très invasif et dangereux</strong> pour les abeilles et l'homme.
                                 Il construit souvent ses nids en hauteur (arbres) mais aussi sous les toits ou dans les haies.
                                 <strong>Intervention nécessaire et urgente.</strong>
                             </p>
-                            <img src="/images/services/guepes-frelons/frelons-arbre.jpg" alt="Nid de frelons asiatiques" style={{ width: '100%', borderRadius: 'var(--radius-sm)', marginTop: '10px' }} />
+                            <img
+                                src="/images/services/guepes-frelons/frelons-arbre.jpg"
+                                alt="Nid de frelons asiatiques"
+                                className={styles.cardImage}
+                            />
                         </div>
 
                         <div className={styles.insectCard}>
-                            <h3>Le Frelon Européen</h3>
+                            <h3>Le frelon européen</h3>
                             <p>
                                 Facilement identifiable par sa taille et son bruit de vol, il fait trois fois la taille d'une abeille classique.
                                 C'est un insecte carnivore qui mange principalement des mouches et qui est donc bénéfique pour l'environnement.
                                 Comme le nid de frelons asiatiques, son nid est construit d'écorces et de résineux, sauf que l'entrée se trouve sous le nid.
                                 Il peut tout de même représenter un danger s'il est proche de l'habitation : n'hésitez pas à nous contacter pour vous en débarrasser.
                             </p>
-                            <img src="/images/services/guepes-frelons/frelon-europeen-taille.jpg" alt="Nid de frelon européen, taille impressionnante" style={{ width: '100%', borderRadius: 'var(--radius-sm)', marginTop: '10px' }} />
+                            <img
+                                src="/images/services/guepes-frelons/frelon-europeen-taille.jpg"
+                                alt="Nid de frelon européen, taille impressionnante"
+                                className={styles.cardImage}
+                            />
                         </div>
 
                         <div className={styles.insectCard}>
-                            <h3>Les Guêpes</h3>
+                            <h3>Les guêpes</h3>
                             <p>
                                 Rayées jaune et noir, taille fine. Agressives si on s'approche du nid (sous les tuiles, dans le sol, caissons de volets).
                                 Leur piqûre est douloureuse et allergisante.
                             </p>
-                            <img src="/images/services/guepes-frelons/frelons-combles.jpg" alt="Nid sous toiture" style={{ width: '100%', borderRadius: 'var(--radius-sm)', marginTop: '10px' }} />
+                            <img
+                                src="/images/services/guepes-frelons/frelons-combles.jpg"
+                                alt="Nid sous toiture"
+                                className={styles.cardImage}
+                            />
                         </div>
                     </div>
 
                     <div className={styles.sidebar}>
                         <div className={styles.techniqueBox}>
-                            <h3>Nos Techniques d'Intervention</h3>
+                            <h3>Nos techniques d'intervention</h3>
                             <p style={{ marginBottom: '10px' }}>
                                 Spécialisés dans le traitement des hyménoptères (frelons, guêpes, bourdons), nous intervenons dans tous les milieux, dans un délai de <strong>48 heures</strong>. Référencés au FREDON Île-de-France et certifiés biocides, nous utilisons des produits comme le pyrèthre naturel.
                             </p>
@@ -148,8 +148,37 @@ export default function GuepesFrelonsPage() {
                             </ul>
                         </div>
 
-                        <img src="/images/services/guepes-frelons/frelons-intervention.jpg" alt="Intervention Frelon" style={{ width: '100%', borderRadius: 'var(--radius-md)' }} />
+                        <ServiceContact />
+
+                        <ServiceDevis
+                            title="Tarifs destruction de nid"
+                            note="Selon l'espèce, la hauteur et l'accès."
+                            intro="Chaque intervention est différente. Nous évaluons gratuitement :"
+                            criteria={["L'espèce concernée", "La hauteur et l'accessibilité du nid", "Le niveau d'urgence"]}
+                        />
+
+                        <img
+                            src="/images/services/guepes-frelons/frelons-intervention.jpg"
+                            alt="Intervention Frelon"
+                            style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
+                        />
                     </div>
+                </div>
+            </section>
+
+            <section className="container section">
+                <div className={styles.beeBox}>
+                    <div className={styles.beeText}>
+                        <h3><Info size={20} /> Abeilles et bourdons : espèces protégées</h3>
+                        <p>
+                            Attention : Les abeilles et les bourdons ne sont pas considérés comme des nuisibles et sont même essentiels à l'environnement. Ils mangent du nectar et collectent du pollen pour nourrir leurs compagnons. En tant qu'apiculteurs entièrement dédiés à la protection de cette espèce, nous avons conçu un rucher à Samoreau (77). Nous récupérons les essaims gratuitement, avec tout le matériel nécessaire (ruchettes, enfumoir, cadres de ruches...), pour les réinstaller en ruche.
+                        </p>
+                    </div>
+                    <img
+                        src="/images/services/guepes-frelons/equipe-apiculteur-selfie-essaim.jpg"
+                        alt="Apiculteur PFP Services lors d'une récupération d'essaim d'abeilles"
+                        className={styles.beeImage}
+                    />
                 </div>
             </section>
         </main>

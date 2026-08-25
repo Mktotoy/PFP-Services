@@ -103,29 +103,12 @@
     left: 0;
 }
 
-.pricingBox {
-    background: var(--primary);
-    color: var(--white);
-    padding: var(--spacing-md);
-    border-radius: var(--radius-md);
-    text-align: center;
-    box-shadow: var(--shadow-md);
-    margin-bottom: var(--spacing-md);
-}
 
-.pricingBox h3 {
-    color: var(--secondary);
-    margin-bottom: var(--spacing-xs);
-}
-
-.price {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 0;
-}
-
-.priceNote {
-    font-size: 0.8rem;
-    opacity: 0.8;
+.content p {
     margin-bottom: var(--spacing-sm);
+}
+
+.content h3 {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
 }

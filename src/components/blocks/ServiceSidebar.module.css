@@ -1,0 +1,89 @@
+.contactBox,
+.devisBox {
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    text-align: center;
+}
+
+.contactBox {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.contactBox h3 {
+    color: var(--secondary);
+    margin: 0;
+}
+
+.contactBox p {
+    margin: 0 0 var(--spacing-xs);
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+.devisBox {
+    background: var(--gray-50);
+    border-top: 4px solid var(--primary);
+}
+
+.devisBox h3 {
+    color: var(--primary);
+    margin: 0;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--primary-dark);
+}
+
+.priceNote {
+    font-size: 0.85rem;
+    opacity: 0.75;
+    margin: 0;
+}
+
+.devisIntro {
+    margin: var(--spacing-xs) 0 0;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.criteria {
+    list-style: none;
+    text-align: left;
+    font-size: 0.9rem;
+    margin: 0 0 var(--spacing-xs);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.criteria li {
+    position: relative;
+    padding-left: 1.1rem;
+}
+
+.criteria li::before {
+    content: '·';
+    position: absolute;
+    left: 0.3rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.fullBtn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+}

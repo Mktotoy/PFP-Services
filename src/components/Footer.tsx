@@ -23,7 +23,7 @@ export default function Footer() {
                     </div>
 
                     <div className={styles.column}>
-                        <h3>Nos Services</h3>
+                        <h3>Nos services</h3>
                         <ul>
                             <li><Link href="/services/demoussage">Nettoyage de toiture</Link></li>
                             <li><Link href="/services/ramonage">Ramonage / débistrage</Link></li>
@@ -36,18 +36,11 @@ export default function Footer() {
                     </div>
 
                     <div className={styles.column}>
-                        <h3>L&apos;Entreprise</h3>
+                        <h3>L&apos;entreprise</h3>
                         <ul>
-                            <li><Link href="/qui-sommes-nous">Qui Sommes-Nous</Link></li>
-                            <li><Link href="/services">Toutes nos prestations</Link></li>
-                            <li><Link href="/realisations">Réalisations</Link></li>
-                            <li><Link href="/galerie">Galerie Photo</Link></li>
-                            <li><Link href="/zones">Zones d&apos;Intervention</Link></li>
-                            <li><Link href="/zones/77-seine-et-marne">Seine-et-Marne (77)</Link></li>
-                            <li><Link href="/zones/91-essonne">Essonne (91)</Link></li>
-                            <li><Link href="/zones/89-yonne">Yonne (89)</Link></li>
-                            <li><Link href="/zones/45-loiret">Loiret (45)</Link></li>
-                            <li><Link href="/zones/fontainebleau">Fontainebleau</Link></li>
+                            <li><Link href="/qui-sommes-nous">Qui sommes-nous</Link></li>
+                            <li><Link href="/galerie">Galerie photos</Link></li>
+                            <li><Link href="/zones">Zones d&apos;intervention</Link></li>
                         </ul>
                     </div>
 
@@ -66,7 +59,7 @@ export default function Footer() {
                 </div>
 
                 <div className={styles.copyright}>
-                    © {new Date().getFullYear()} PFP Services. Tous droits réservés. <Link href="/mentions-legales" style={{ color: 'inherit', textDecoration: 'underline' }}>Mentions Légales</Link>.
+                    © {new Date().getFullYear()} PFP Services. Tous droits réservés. <Link href="/mentions-legales" style={{ color: 'inherit', textDecoration: 'underline' }}>Mentions légales</Link>.
                 </div>
             </div>
         </footer>
