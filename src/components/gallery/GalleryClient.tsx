@@ -66,7 +66,6 @@ export default function GalleryClient() {
                                     <span className={styles.itemCategory}>
                                         {getCategoryLabel(image.category)}
                                     </span>
-                                    <span className={styles.itemTitle}>{image.alt}</span>
                                 </div>
                             </div>
                         ))}

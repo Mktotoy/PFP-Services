@@ -76,7 +76,7 @@ export default function RongeursPage() {
                             Qu'il s'agisse de souris ou de rats, ils vivent généralement dans des endroits humides. Ils creusent des passages dans les souterrains, les égouts et les abords immédiats des habitations.
                         </p>
                         <p>
-                            Les rats ont tendance à vivre dans les parties supérieures des bâtiments TELS que les charpentes ou les plafonds des maisons/appartements. Cependant, le rat peut nicher n'importe où. Il se glisse aisément dans des faux plafonds, des doubles cloisons, dans des tiroirs, dans les combles, etc…
+                            Les rats ont tendance à vivre dans les parties supérieures des bâtiments tels que les charpentes ou les plafonds des maisons/appartements. Cependant, le rat peut nicher n'importe où. Il se glisse aisément dans des faux plafonds, des doubles cloisons, dans des tiroirs, dans les combles, etc…
                         </p>
 
                         <img

@@ -48,7 +48,7 @@
     white-space: nowrap;
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1280px) {
     .siteTitle {
         display: flex;
     }
@@ -150,7 +150,8 @@
 .actions {
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
+    flex-shrink: 0;
 }
 
 .phoneLink {
@@ -284,7 +285,7 @@
     border-radius: var(--radius-full);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1199px) {
     .nav {
         display: none;
     }

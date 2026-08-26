@@ -40,7 +40,8 @@ export default function ContactPage() {
                                 <a href="tel:0629953262" className={styles.link}>06 29 95 32 62</a>
                             </li>
                             <li>
-                                <strong>Email :</strong> contact@pfp-services.fr
+                                <strong>Email :</strong>{' '}
+                                <a href="mailto:contact@pfp-services.fr" className={styles.link}>contact@pfp-services.fr</a>
                             </li>
                             <li>
                                 <strong>Facebook :</strong>{' '}
@@ -121,7 +122,7 @@ export default function ContactPage() {
                         </form>
 
                         <p className={styles.formNote}>
-                            L’envoi ouvre votre logiciel de messagerie avec la demande pré-remplie, à destination de contact@pfp-services.fr. Si rien ne se passe, appelez-nous directement au 06 29 95 32 62.
+                            L’envoi ouvre votre logiciel de messagerie avec la demande pré-remplie, à destination de contact@pfp-services.fr. Si rien ne se passe, appelez-nous directement au <a href="tel:0629953262">06 29 95 32 62</a>.
                         </p>
                     </div>
                 </div>

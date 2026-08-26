@@ -22,7 +22,7 @@ export default function Zone89Page() {
             
             <section className={styles.hero} style={{ background: '#1e3a8a' }}>
                 <div className="container">
-                    <h1 className={styles.title}>Votre Expert Toiture & Nuisibles dans l'Yonne (89)</h1>
+                    <h1 className={styles.title}>Votre expert toiture et nuisibles dans l'Yonne (89)</h1>
                     <p className={styles.subtitle}>
                         Démoussage de toiture et dératisation professionnelle à Sens, Auxerre et tout le 89.
                     </p>
@@ -44,7 +44,7 @@ export default function Zone89Page() {
                             <li><strong>Nord-Yonne :</strong> Joigny, Migennes.</li>
                         </ul>
 
-                        <h3>Expertise Toiture en Milieu Rural</h3>
+                        <h3>Expertise toiture en milieu rural</h3>
                         <p>
                             Les habitations de l'Yonne sont souvent entourées de végétation, ce qui accélère la formation de mousse sur les toits. Notre technique de brossage manuel est idéale pour préserver le charme des maisons anciennes tout en assurant une protection hydrofuge durable.
                         </p>

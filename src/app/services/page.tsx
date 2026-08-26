@@ -4,7 +4,7 @@ import { Bug, Home } from 'lucide-react';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-    title: "Nos Solutions & Méthodologie | PFP Services 77",
+    title: "Nos solutions et méthodologie | PFP Services 77",
     alternates: { canonical: '/services' },
     description: "Découvrez notre méthodologie d'intervention (Diagnostic, Traitement, Suivi) et l'ensemble de nos services de dératisation et désinsectisation.",
 };
@@ -14,7 +14,7 @@ export default function ServicesPage() {
         <main className={styles.main}>
             <section className={styles.hero}>
                 <div className="container">
-                    <h1 className={styles.title}>Nos Solutions & Expertise</h1>
+                    <h1 className={styles.title}>Nos solutions et expertise</h1>
                     <p className={styles.subtitle}>
                         Une approche méthodique pour une éradication durable.<br />
                         Nous intervenons avec précision pour protéger votre habitat.
@@ -24,7 +24,7 @@ export default function ServicesPage() {
 
             <section className={styles.processSection}>
                 <div className="container">
-                    <h2 style={{ textAlign: 'center', marginBottom: '1rem', color: 'var(--primary)' }}>Notre Méthodologie</h2>
+                    <h2 style={{ textAlign: 'center', marginBottom: '1rem', color: 'var(--primary)' }}>Notre méthodologie</h2>
                     <p style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto', color: 'var(--gray-600)' }}>
                         Chaque intervention suit un protocole strict pour garantir efficacité et sécurité.
                     </p>
@@ -37,7 +37,7 @@ export default function ServicesPage() {
                         </div>
                         <div className={styles.processStep}>
                             <div className={styles.stepNumber}>2</div>
-                            <h3>Devis & Plan</h3>
+                            <h3>Devis et plan</h3>
                             <p>Proposition d'un traitement adapté (mécanique, chimique, préventif) et devis transparent.</p>
                         </div>
                         <div className={styles.processStep}>
@@ -56,12 +56,12 @@ export default function ServicesPage() {
 
             <section className="container section">
                 <div className={styles.categorySection}>
-                    <h2 className={styles.categoryTitle} style={{display:'flex', alignItems:'center', gap:'8px'}}><Bug size={22} /> Nuisibles & Parasites</h2>
+                    <h2 className={styles.categoryTitle} style={{display:'flex', alignItems:'center', gap:'8px'}}><Bug size={22} /> Nuisibles et parasites</h2>
                     <div className={styles.categoryGrid}>
                         <Link href="/services/rongeurs" className={styles.serviceCard}>
                             <div className={styles.cardImage} style={{ backgroundImage: "url('/images/services/rongeurs/rongeurs-infestation.jpg')" }}></div>
                             <div className={styles.cardContent}>
-                                <h3>Rats & Souris</h3>
+                                <h3>Rats et souris</h3>
                                 <p>Dératisation complète (préventif et curatif) pour stopper les dégâts.</p>
                                 <span className={styles.learnMore}>En savoir plus →</span>
                             </div>
@@ -69,15 +69,15 @@ export default function ServicesPage() {
                         <Link href="/services/guepes-frelons" className={styles.serviceCard}>
                             <div className={styles.cardImage} style={{ backgroundImage: "url('/images/services/guepes-frelons/frelons-arbre.jpg')" }}></div>
                             <div className={styles.cardContent}>
-                                <h3>Guêpes & Frelons</h3>
+                                <h3>Guêpes et frelons</h3>
                                 <p>Destruction de nids et récupération d'essaims d'abeilles.</p>
                                 <span className={styles.learnMore}>En savoir plus →</span>
                             </div>
                         </Link>
                         <Link href="/services/cafards" className={styles.serviceCard}>
-                            <div className={styles.cardImage} style={{ backgroundImage: "url('/images/services/rongeurs/rongeurs-pieges.jpg')" }}></div>
+                            <div className={styles.cardImage} style={{ backgroundImage: "url('/images/services/cafards/cafard-sur-pain-1.png')" }}></div>
                             <div className={styles.cardContent}>
-                                <h3>Cafards & Blattes</h3>
+                                <h3>Cafards et blattes</h3>
                                 <p>Traitement par gel et pulvérisation pour une éradication totale.</p>
                                 <span className={styles.learnMore}>En savoir plus →</span>
                             </div>
@@ -102,12 +102,12 @@ export default function ServicesPage() {
                 </div>
 
                 <div className={styles.categorySection}>
-                    <h2 className={styles.categoryTitle} style={{display:'flex', alignItems:'center', gap:'8px'}}><Home size={22} /> Entretien de l'Habitat</h2>
+                    <h2 className={styles.categoryTitle} style={{display:'flex', alignItems:'center', gap:'8px'}}><Home size={22} /> Entretien de l'habitat</h2>
                     <div className={styles.categoryGrid}>
                         <Link href="/services/ramonage" className={styles.serviceCard}>
                             <div className={styles.cardImage} style={{ backgroundImage: "url('/images/services/ramonage/ramonage-poele-allume.jpg')" }}></div>
                             <div className={styles.cardContent}>
-                                <h3>Ramonage & Débistrage</h3>
+                                <h3>Ramonage et débistrage</h3>
                                 <p>Entretien certifié de vos conduits de cheminée et poêles à bois.</p>
                                 <span className={styles.learnMore}>En savoir plus →</span>
                             </div>
@@ -115,7 +115,7 @@ export default function ServicesPage() {
                         <Link href="/services/demoussage" className={styles.serviceCard}>
                             <div className={styles.cardImage} style={{ backgroundImage: "url('/images/services/demoussage/toiture-nettoyage.jpg')" }}></div>
                             <div className={styles.cardContent}>
-                                <h3>Nettoyage Toiture</h3>
+                                <h3>Nettoyage toiture</h3>
                                 <p>Démoussage et traitement hydrofuge pour une toiture saine.</p>
                                 <span className={styles.learnMore}>En savoir plus →</span>
                             </div>

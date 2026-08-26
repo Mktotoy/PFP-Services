@@ -22,7 +22,7 @@ export default function Zone77Page() {
             
             <section className={styles.hero} style={{ background: '#1e3a8a' }}>
                 <div className="container">
-                    <h1 className={styles.title}>Intervention Rapide en Seine-et-Marne (77)</h1>
+                    <h1 className={styles.title}>Intervention rapide en Seine-et-Marne (77)</h1>
                     <p className={styles.subtitle}>
                         Votre expert local en Démoussage et Dératisation à Melun, Meaux et tout le département 77.
                     </p>
@@ -32,12 +32,12 @@ export default function Zone77Page() {
             <section className="container section">
                 <div className={styles.grid}>
                     <div className={styles.content}>
-                        <h2>PFP Services : Votre Partenaire de Proximité dans le 77</h2>
+                        <h2>PFP Services : votre partenaire de proximité dans le 77</h2>
                         <p>
                             Basée au cœur de la Seine-et-Marne, l'entreprise <strong>PFP Services</strong> connaît parfaitement les problématiques locales. Que vous habitiez une maison briarde nécessitant un démoussage de toiture ou que vous gériez un commerce à Melun confronté à des nuisibles, nous intervenons avec réactivité.
                         </p>
 
-                        <h3>Villes Desservies en Seine-et-Marne</h3>
+                        <h3>Villes desservies en Seine-et-Marne</h3>
                         <p>Nous couvrons l'intégralité du département, notamment :</p>
                         <ul className={styles.steps}>
                             <li><strong>Melun & Agglomération :</strong> Dammarie-les-Lys, Le Mée-sur-Seine.</li>
@@ -54,7 +54,7 @@ export default function Zone77Page() {
 
                     <div className={styles.sidebar}>
                         <div className={styles.quoteBox}>
-                            <h3>Intervention Express 77</h3>
+                            <h3>Intervention express 77</h3>
                             <p>Nous sommes déjà peut-être dans votre ville !</p>
                             <a href="tel:0629953262" className="btn btn-primary" style={{ width: '100%' }}>06 29 95 32 62</a>
                         </div>
@@ -63,11 +63,11 @@ export default function Zone77Page() {
             </section>
 
             <section className="container section">
-                <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Nos Services en Seine-et-Marne</h2>
+                <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Nos services en Seine-et-Marne</h2>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
                     <ServiceCard title="Démoussage toiture" slug="/services/demoussage" image="/images/services/demoussage/toiture-nettoyage.jpg" />
                     <ServiceCard title="Dératisation" slug="/services/rongeurs" image="/images/services/rongeurs/rongeurs-infestation.jpg" />
-                    <ServiceCard title="Nids de Guêpes" slug="/services/guepes-frelons" image="/images/services/guepes-frelons/frelons-arbre.jpg" />
+                    <ServiceCard title="Nids de guêpes" slug="/services/guepes-frelons" image="/images/services/guepes-frelons/frelons-arbre.jpg" />
                 </div>
             </section>
         </main>

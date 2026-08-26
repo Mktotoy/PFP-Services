@@ -22,7 +22,7 @@ export default function Zone91Page() {
             
             <section className={styles.hero} style={{ background: '#1e3a8a' }}>
                 <div className="container">
-                    <h1 className={styles.title}>Service Proxi dans l'Essonne (91)</h1>
+                    <h1 className={styles.title}>Service de proximité dans l'Essonne (91)</h1>
                     <p className={styles.subtitle}>
                         Démoussage de toiture et lutte anti-nuisibles à Évry, Étampes et Sud-Essonne.
                     </p>
@@ -32,7 +32,7 @@ export default function Zone91Page() {
             <section className="container section">
                 <div className={styles.grid}>
                     <div className={styles.content}>
-                        <h2>Votre Expert Démoussage & Nuisibles dans le 91</h2>
+                        <h2>Votre expert démoussage et nuisibles dans le 91</h2>
                         <p>
                             <strong>PFP Services</strong> étend son savoir-faire dans l'Essonne. Nous intervenons régulièrement dans le Sud-Essonne, autour de Milly-la-Forêt et Étampes, mais aussi dans les zones plus urbaines comme Évry-Courcouronnes.
                         </p>

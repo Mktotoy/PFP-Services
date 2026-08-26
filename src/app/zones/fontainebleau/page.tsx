@@ -4,7 +4,7 @@ import { BreadcrumbSchema } from '@/components/seo/JsonLd';
 import { BeforeAfter } from '@/components/blocks/BeforeAfter';
 
 export const metadata: Metadata = {
-    title: "Démoussage Toiture Fontainebleau | PFP Services",
+    title: "Démoussage toiture Fontainebleau | PFP Services",
     alternates: { canonical: '/zones/fontainebleau' },
     description: "PFP Services : Expert local du démoussage de toiture à Fontainebleau. Brossage manuel et traitement protecteur pour les toitures du Pays de Fontainebleau.",
 };
@@ -32,7 +32,7 @@ export default function FontainebleauPage() {
             <section className="container section">
                 <div className={styles.grid}>
                     <div className={styles.content}>
-                        <h2>Spécialiste Toiture à Fontainebleau (77300)</h2>
+                        <h2>Spécialiste toiture à Fontainebleau (77300)</h2>
                         <p>
                             À <strong>Fontainebleau</strong>, l'architecture et les matériaux de couverture exigent un soin particulier. Mousses et lichens se développent rapidement à cause de la proximité de la forêt et de l'humidité ambiante.
                         </p>
@@ -50,7 +50,7 @@ export default function FontainebleauPage() {
 
                     <div className={styles.sidebar}>
                         <div className={styles.quoteBox}>
-                            <h3>Expert Local Fontainebleau</h3>
+                            <h3>Expert local Fontainebleau</h3>
                             <p>Nous intervenons également à Avon, Samois-sur-Seine et Barbizon.</p>
                             <Link href="/contact" className="btn btn-primary" style={{ width: '100%' }}>Devis gratuit 77300</Link>
                         </div>

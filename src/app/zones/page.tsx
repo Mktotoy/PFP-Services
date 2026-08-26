@@ -54,36 +54,43 @@ export default function ZonesPage() {
 
                 <div className={styles.grid}>
                     {/* Seine-et-Marne */}
-                    <div className={styles.card}>
+                    <Link href="/zones/77-seine-et-marne" className={styles.card}>
                         <div className={styles.cardHeader}>
                             <span className={styles.deptCode}>77</span>
                             <h2>Seine-et-Marne</h2>
                         </div>
-                    </div>
+                    </Link>
 
                     {/* Essonne */}
-                    <div className={styles.card}>
+                    <Link href="/zones/91-essonne" className={styles.card}>
                         <div className={styles.cardHeader} style={{ background: 'linear-gradient(135deg, #1e3a8a, #3b82f6)' }}>
                             <span className={styles.deptCode}>91</span>
                             <h2>Essonne</h2>
                         </div>
-                    </div>
+                    </Link>
 
                     {/* Yonne */}
-                    <div className={styles.card}>
+                    <Link href="/zones/89-yonne" className={styles.card}>
                         <div className={styles.cardHeader} style={{ background: 'linear-gradient(135deg, #b45309, #d97706)' }}>
                             <span className={styles.deptCode}>89</span>
                             <h2>Yonne</h2>
                         </div>
-                    </div>
+                    </Link>
 
                     {/* Loiret */}
-                    <div className={styles.card}>
+                    <Link href="/zones/fontainebleau" className={styles.card}>
+                        <div className={styles.cardHeader} style={{ background: 'linear-gradient(135deg, #7c2d12, #ea580c)' }}>
+                            <span className={styles.deptCode}>77300</span>
+                            <h2>Fontainebleau</h2>
+                        </div>
+                    </Link>
+
+                    <Link href="/zones/45-loiret" className={styles.card}>
                         <div className={styles.cardHeader} style={{ background: 'linear-gradient(135deg, #047857, #10b981)' }}>
                             <span className={styles.deptCode}>45</span>
                             <h2>Loiret</h2>
                         </div>
-                    </div>
+                    </Link>
                 </div>
 
                 <div className={styles.callToAction}>

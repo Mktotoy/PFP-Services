@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function MentionsLegales() {
     return (
-        <main className="container section" style={{ maxWidth: '800px', margin: '0 auto', padding: '4rem 1rem' }}>
+        <main className="container section" style={{ maxWidth: '800px', margin: '0 auto', padding: '4rem 0' }}>
             <h1 style={{ fontSize: '2.5rem', marginBottom: '2rem', color: 'var(--primary)', textAlign: 'center' }}>Mentions légales</h1>
 
             <section style={{ marginBottom: '3rem' }}>
@@ -29,8 +29,8 @@ export default function MentionsLegales() {
                 <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', borderBottom: '2px solid var(--secondary)', paddingBottom: '0.5rem' }}>Coordonnées</h2>
                 <ul style={{ listStyle: 'none', padding: 0, lineHeight: '1.8' }}>
                     <li><strong>Adresse du siège social :</strong> 22 Rue de la Salle, 77930 Cély</li>
-                    <li><strong>Téléphone :</strong> 06 29 95 32 62</li>
-                    <li><strong>Email :</strong> contact@pfp-services.fr</li>
+                    <li><strong>Téléphone :</strong> <a href="tel:0629953262">06 29 95 32 62</a></li>
+                    <li><strong>Email :</strong> <a href="mailto:contact@pfp-services.fr">contact@pfp-services.fr</a></li>
                     <li><strong>Activité :</strong> Désinfection, désinsectisation, dératisation</li>
                 </ul>
             </section>
