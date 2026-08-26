@@ -1,6 +1,6 @@
 import { Phone } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
+import ContactForm from '@/components/contact/ContactForm';
 import { ServiceHero } from '@/components/blocks/ServiceHero';
 import styles from './page.module.css';
 
@@ -72,67 +72,7 @@ export default function ContactPage() {
                             <Phone size={20} /> Appeler le 06 29 95 32 62
                         </a>
 
-                        <form
-                            action="mailto:contact@pfp-services.fr"
-                            method="post"
-                            encType="text/plain"
-                            className={styles.form}
-                        >
-                            <label className={styles.label} htmlFor="nom">Votre nom</label>
-                            <input
-                                className={styles.input}
-                                id="nom"
-                                name="Nom"
-                                type="text"
-                                autoComplete="name"
-                                required
-                            />
-
-                            <label className={styles.label} htmlFor="email">Votre email</label>
-                            <input
-                                className={styles.input}
-                                id="email"
-                                name="Email"
-                                type="email"
-                                autoComplete="email"
-                                required
-                            />
-
-                            <label className={styles.label} htmlFor="telephone">Votre téléphone</label>
-                            <input
-                                className={styles.input}
-                                id="telephone"
-                                name="Telephone"
-                                type="tel"
-                                autoComplete="tel"
-                                required
-                            />
-
-                            <label className={styles.label} htmlFor="message">Votre message</label>
-                            <textarea
-                                className={styles.textarea}
-                                id="message"
-                                name="Message"
-                                rows={5}
-                                required
-                            />
-
-                            <button type="submit" className="btn btn-primary" style={{ padding: '0.9rem', fontSize: '1rem' }}>
-                                Envoyer ma demande
-                            </button>
-                        </form>
-
-                        <p className={styles.formNote}>
-                            L’envoi ouvre votre logiciel de messagerie avec la demande pré-remplie, à destination de contact@pfp-services.fr. Si rien ne se passe, appelez-nous directement au <a href="tel:0629953262">06 29 95 32 62</a>.
-                        </p>
-
-                        <p className={styles.formNote}>
-                            Les informations que vous saisissez (nom, email, téléphone, message) servent uniquement à
-                            traiter votre demande de devis et à vous répondre. Elles sont conservées 3 ans après notre
-                            dernier échange, ne sont jamais transmises à des tiers à des fins commerciales, et vous
-                            pouvez demander à les consulter ou à les supprimer à tout moment. Détail dans nos{' '}
-                            <Link href="/mentions-legales#donnees-personnelles">mentions légales</Link>.
-                        </p>
+                        <ContactForm />
                     </div>
                 </div>
             </section>

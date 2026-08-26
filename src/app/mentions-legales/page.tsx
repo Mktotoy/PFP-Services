@@ -24,7 +24,7 @@ export default function MentionsLegales() {
             <h1 style={{ fontSize: '2.5rem', marginBottom: '2rem', color: 'var(--primary-dark)', textAlign: 'center' }}>Mentions légales</h1>
 
             <section style={sectionStyle}>
-                <h2 style={titleStyle}>Identification de l'entreprise</h2>
+                <h2 style={titleStyle}>Identification de l’entreprise</h2>
                 <ul style={listStyle}>
                     <li><strong>Raison sociale :</strong> PFP SERVICES</li>
                     <li><strong>Forme juridique :</strong> SARL (Société à Responsabilité Limitée)</li>
@@ -79,8 +79,8 @@ export default function MentionsLegales() {
                         nécessaires pour vous répondre et pour évaluer votre demande.
                     </li>
                     <li>
-                        <strong>La mesure d'audience du site</strong> : les pages consultées, la date et l'heure de
-                        consultation, le type d'appareil et de navigateur, ainsi que votre adresse IP.
+                        <strong>La mesure d’audience du site</strong> : les pages consultées, la date et l’heure de
+                        consultation, le type d’appareil et de navigateur, ainsi que votre adresse IP.
                     </li>
                 </ul>
                 <p>
@@ -91,12 +91,12 @@ export default function MentionsLegales() {
                 <h3 style={{ fontSize: '1.1rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>Pourquoi et sur quelle base</h3>
                 <ul style={{ lineHeight: '1.8', paddingLeft: '1.2rem' }}>
                     <li>
-                        <strong>Répondre à votre demande et établir un devis.</strong> Base légale : l'exécution de
+                        <strong>Répondre à votre demande et établir un devis.</strong> Base légale : l’exécution de
                         mesures précontractuelles prises à votre demande (article 6.1.b du RGPD).
                     </li>
                     <li>
-                        <strong>Mesurer la fréquentation du site</strong> afin de l'améliorer. Base légale : notre
-                        intérêt légitime à connaître l'usage de notre site.
+                        <strong>Mesurer la fréquentation du site</strong> afin de l’améliorer. Base légale : notre
+                        intérêt légitime à connaître l’usage de notre site.
                     </li>
                 </ul>
                 <p>
@@ -108,12 +108,12 @@ export default function MentionsLegales() {
                 <p>
                     Seuls les gérants et les intervenants de PFP SERVICES accèdent aux demandes reçues, dans la
                     limite de ce qui leur est utile pour traiter votre dossier. Nous faisons appel à des
-                    prestataires techniques qui, du fait de leur rôle, sont susceptibles d'héberger ces données :
+                    prestataires techniques qui, du fait de leur rôle, sont susceptibles d’héberger ces données :
                 </p>
                 <ul style={{ lineHeight: '1.8', paddingLeft: '1.2rem' }}>
                     <li><strong>Replit, Inc.</strong> (États-Unis) : hébergement du site.</li>
                     <li><strong>Microsoft Ireland Operations Ltd</strong> : messagerie professionnelle Microsoft 365, qui reçoit et conserve les demandes envoyées via le formulaire.</li>
-                    <li><strong>Google Ireland Ltd</strong> : mesure d'audience du site.</li>
+                    <li><strong>Google Ireland Ltd</strong> : mesure d’audience du site.</li>
                 </ul>
                 <p>
                     Certains de ces prestataires sont établis aux États-Unis ou peuvent y transférer des données.
@@ -133,21 +133,21 @@ export default function MentionsLegales() {
                         et contractuels (10 ans pour les pièces comptables).
                     </li>
                     <li>
-                        <strong>Données de mesure d'audience :</strong> 14 mois au maximum.
+                        <strong>Données de mesure d’audience :</strong> 14 mois au maximum.
                     </li>
                 </ul>
 
                 <h3 style={{ fontSize: '1.1rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>Vos droits</h3>
                 <p>
-                    Vous disposez d'un droit d'accès, de rectification, d'effacement et de portabilité de vos
-                    données, ainsi que d'un droit de limitation et d'opposition à leur traitement. Vous pouvez
+                    Vous disposez d’un droit d’accès, de rectification, d’effacement et de portabilité de vos
+                    données, ainsi que d’un droit de limitation et d’opposition à leur traitement. Vous pouvez
                     également définir des directives relatives à leur sort après votre décès.
                 </p>
                 <p>
                     Pour exercer ces droits, écrivez à{' '}
                     <a href="mailto:contact@pfp-services.fr">contact@pfp-services.fr</a> ou à PFP SERVICES,
-                    22 Rue de la Salle, 77930 Cély. Nous vous répondons dans un délai d'un mois. Une preuve
-                    d'identité pourra vous être demandée en cas de doute raisonnable sur l'identité du demandeur.
+                    22 Rue de la Salle, 77930 Cély. Nous vous répondons dans un délai d’un mois. Une preuve
+                    d’identité pourra vous être demandée en cas de doute raisonnable sur l’identité du demandeur.
                 </p>
                 <p>
                     Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez
@@ -159,8 +159,8 @@ export default function MentionsLegales() {
             <section style={sectionStyle} id="cookies">
                 <h2 style={titleStyle}>Cookies</h2>
                 <p>
-                    Ce site n'utilise ni cookie publicitaire, ni cookie de réseau social, ni traceur destiné à
-                    suivre votre navigation sur d'autres sites.
+                    Ce site n’utilise ni cookie publicitaire, ni cookie de réseau social, ni traceur destiné à
+                    suivre votre navigation sur d’autres sites.
                 </p>
                 <p>
                     Il utilise Google Analytics pour mesurer la fréquentation des pages. Cet outil dépose des
@@ -168,7 +168,7 @@ export default function MentionsLegales() {
                     unes des autres. Les données ainsi produites sont conservées 14 mois.
                 </p>
                 <p>
-                    Vous pouvez vous opposer à cette mesure d'audience en activant l'option « Ne pas me pister »
+                    Vous pouvez vous opposer à cette mesure d’audience en activant l’option « Ne pas me pister »
                     (Do Not Track) de votre navigateur, en installant le{' '}
                     <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">
                         module de désactivation fourni par Google
@@ -179,7 +179,7 @@ export default function MentionsLegales() {
             <section style={sectionStyle}>
                 <h2 style={titleStyle}>Propriété intellectuelle</h2>
                 <p>
-                    L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
+                    L’ensemble de ce site relève de la législation française et internationale sur le droit d’auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
                 </p>
                 <p>
                     Sauf mention contraire, les photographies présentées sur ce site ont été prises par PFP SERVICES
