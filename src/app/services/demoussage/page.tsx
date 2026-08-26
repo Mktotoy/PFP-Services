@@ -44,7 +44,7 @@ export default function DemoussagePage() {
             <ServiceHero
                 title="Nettoyage & démoussage toiture"
                 subtitle={<>Un toit propre, c'est une maison saine et durable.<br />Redonnez de l'éclat à votre couverture et protégez-la contre les infiltrations.</>}
-                image="/images/services/demoussage/toiture-propre-hero.jpg"
+                image="/images/services/demoussage/perche-telescopique-manoir.jpg"
             />
 
             <section className="container section">
@@ -52,8 +52,8 @@ export default function DemoussagePage() {
                     <div className={styles.content}>
                         <h2 className={styles.heading}>Pourquoi démousser sa toiture ?</h2>
                         <img
-                            src="/images/services/demoussage/camion-pfp-services-devant-maison.jpg"
-                            alt="Camion PFP Services devant une maison à traiter"
+                            src="/images/services/demoussage/perche-telescopique-manoir.jpg"
+                            alt="Nettoyage à la perche télescopique sur une grande demeure"
                             className={styles.contentImage}
                             style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
                         />
