@@ -1,5 +1,6 @@
 import { Phone } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ServiceHero } from '@/components/blocks/ServiceHero';
 import styles from './page.module.css';
 
@@ -123,6 +124,14 @@ export default function ContactPage() {
 
                         <p className={styles.formNote}>
                             L’envoi ouvre votre logiciel de messagerie avec la demande pré-remplie, à destination de contact@pfp-services.fr. Si rien ne se passe, appelez-nous directement au <a href="tel:0629953262">06 29 95 32 62</a>.
+                        </p>
+
+                        <p className={styles.formNote}>
+                            Les informations que vous saisissez (nom, email, téléphone, message) servent uniquement à
+                            traiter votre demande de devis et à vous répondre. Elles sont conservées 3 ans après notre
+                            dernier échange, ne sont jamais transmises à des tiers à des fins commerciales, et vous
+                            pouvez demander à les consulter ou à les supprimer à tout moment. Détail dans nos{' '}
+                            <Link href="/mentions-legales#donnees-personnelles">mentions légales</Link>.
                         </p>
                     </div>
                 </div>
