@@ -92,13 +92,6 @@ export default function DemoussagePage() {
                             Chaque toiture étant différente, nous adaptons nos méthodes et produits en fonction de la nature de la tuile (ardoise, tuiles de pays, tuiles plates, tuiles mécaniques ondulées…), de la quantité de mousse et lichens présents et de l'accessibilité.
                         </p>
 
-                        <img
-                            src="/images/services/demoussage/perche-telescopique-manoir.jpg"
-                            alt="Nettoyage à la perche télescopique sur une grande demeure"
-                            className={styles.contentImage}
-                            style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
-                        />
-
                         <h2 className={styles.heading}>Gouttières, façades & panneaux photovoltaïques</h2>
                         <p>
                             En complément du démoussage de toiture, nous intervenons sur l'ensemble de l'enveloppe de votre bâtiment :
@@ -108,6 +101,13 @@ export default function DemoussagePage() {
                             <li><strong>Panneaux photovoltaïques</strong> : nettoyage à la brosse professionnelle dédiée, à l'eau déminéralisée avec rinçage, pour préserver le rendement des panneaux.</li>
                             <li><strong>Façades</strong> : traitement professionnel contre les algues rouges, algues vertes et traces noires.</li>
                         </ul>
+
+                        <img
+                            src="/images/services/demoussage/perche-telescopique-manoir.jpg"
+                            alt="Nettoyage de gouttières à la perche télescopique sur une grande demeure"
+                            className={styles.contentImage}
+                            style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
+                        />
 
                         <img
                             src="/images/services/demoussage/facade-avant-apres-verif.jpg"
