@@ -44,7 +44,7 @@ export default function DemoussagePage() {
             <ServiceHero
                 title="Nettoyage & démoussage toiture"
                 subtitle={<>Un toit propre, c'est une maison saine et durable.<br />Redonnez de l'éclat à votre couverture et protégez-la contre les infiltrations.</>}
-                image="/images/services/demoussage/toiture-avant-apres-hero.jpg"
+                image="/images/services/demoussage/toiture-avant-apres-photo.jpg"
                 overlay="linear-gradient(rgba(4, 109, 23, 0.18) 0%, rgba(3, 74, 16, 0.34) 42%, rgba(4, 109, 23, 0.16) 100%)"
             />
 
