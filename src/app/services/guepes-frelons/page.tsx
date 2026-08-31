@@ -66,7 +66,8 @@ export default function GuepesFrelonsPage() {
             <ServiceHero
                 title="Guêpes, frelons et abeilles"
                 subtitle={<>Destruction de nids de guêpes et frelons en toute sécurité.<br />Récupération d'essaims d'abeilles par des apiculteurs certifiés.</>}
-                image="/images/services/guepes-frelons/frelons-intervention.jpg"
+                image="/images/services/guepes-frelons/technicien-grand-nid-frelons-hero.jpg"
+                overlay="linear-gradient(rgba(4, 109, 23, 0.30) 0%, rgba(3, 74, 16, 0.55) 42%, rgba(4, 109, 23, 0.28) 100%)"
             />
 
             <section className="container section">
