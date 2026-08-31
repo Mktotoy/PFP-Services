@@ -168,8 +168,8 @@ export default function GuepesFrelonsPage() {
             </section>
 
             <section className="container section">
-                <div className={styles.beeBox}>
-                    <div className={styles.beeText}>
+                <div className={styles.beeLayout}>
+                    <div className={styles.beeBox}>
                         <h3><Info size={20} /> Abeilles et bourdons : espèces protégées</h3>
                         <p>
                             Attention : Les abeilles et les bourdons ne sont pas considérés comme des nuisibles et sont même essentiels à l'environnement. Ils mangent du nectar et collectent du pollen pour nourrir leurs compagnons. En tant qu'apiculteurs entièrement dédiés à la protection de cette espèce, nous avons conçu un rucher à Samoreau (77). Nous récupérons les essaims gratuitement, avec tout le matériel nécessaire (ruchettes, enfumoir, cadres de ruches...), pour les réinstaller en ruche.

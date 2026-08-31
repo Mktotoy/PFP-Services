@@ -105,12 +105,6 @@ export default function TaupesPage() {
                             </li>
                         </ul>
 
-                        <img
-                            src="/images/services/taupes/taupiniere.png"
-                            alt="Jardin envahi de taupinières"
-                            className={styles.contentImage}
-                            style={{ borderRadius: 'var(--radius-md)', width: '100%', height: 'auto', display: 'block', marginTop: '30px' }}
-                        />
                     </div>
 
                     <div className={styles.sidebar}>

@@ -50,41 +50,55 @@
     flex-direction: column;
 }
 
+/*
+ * La photo est posee A COTE du bloc jaune, pas dedans : le bandeau ne porte
+ * que le texte, l'image lui repond en colonne voisine.
+ */
+.beeLayout {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
 .beeBox {
+    flex: 1 1 auto;
+    min-width: 0;
     background: #fef3c7;
     border-left: 4px solid #d97706;
     border-radius: 8px;
     padding: 20px;
-    margin-top: var(--spacing-lg);
-    display: flex;
-    align-items: flex-start;
-    gap: var(--spacing-md);
-}
-
-.beeText {
-    flex: 1 1 auto;
-    min-width: 0;
 }
 
 .beeBox h3 {
     color: #b45309;
-    /* Amber-700 */
     display: flex;
     align-items: center;
     gap: 8px;
     margin-bottom: var(--spacing-sm);
 }
 
+.beeBox p {
+    margin: 0;
+}
+
+/*
+ * Format portrait conserve : l'essaim occupe le haut gauche et le visage le
+ * bas droit, un recadrage en paysage couperait l'un ou l'autre. On limite
+ * donc la largeur pour contenir le debordement sous le bloc jaune.
+ */
 .beeImage {
     flex: 0 0 auto;
     width: 100%;
-    max-width: 260px;
+    max-width: 240px;
     height: auto;
     border-radius: var(--radius-md);
 }
 
+
+
 @media (max-width: 700px) {
-    .beeBox {
+    .beeLayout {
         flex-direction: column;
     }
 
