@@ -89,7 +89,7 @@ export default function ZonesPage() {
                                 </div>
                             </div>
                             <span className={styles.cardAction}>
-                                Voir nos interventions
+                                En savoir +
                                 <span className={styles.cardArrow} aria-hidden="true">&rarr;</span>
                             </span>
                         </Link>
