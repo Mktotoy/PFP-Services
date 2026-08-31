@@ -113,9 +113,6 @@ export default function TaupesPage() {
                             <p>
                                 Nous intervenons rapidement afin de limiter les dégâts dans votre jardin.
                             </p>
-                            <div style={{ margin: '20px 0', textAlign: 'center' }}>
-                                <img src="/images/services/taupes/piege-taupe.png" alt="Piège mécanique taupe" style={{ maxWidth: '100%', borderRadius: 'var(--radius-sm)' }} />
-                            </div>
                             <p>
                                 Notre <strong>taupier expert</strong> travaille avec des <strong>pièges mécaniques</strong> (type Putange) qui consistent à neutraliser rapidement les taupes directement au sein de leurs galeries.
                             </p>

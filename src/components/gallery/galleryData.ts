@@ -138,7 +138,6 @@ export const galleryImages: GalleryImage[] = [
     { src: '/images/gallery/rongeurs/rebouchage-anti-rongeurs-gaines-mur-01.jpg', alt: 'Rebouchage des gaines murales contre les rongeurs', category: 'rongeurs' },
 
     // --- Cafards ---
-    { src: '/images/services/cafards/cafard-technicien-pulverisation.png', alt: 'Technicien PFP Services en intervention anti-cafards', category: 'cafards' },
 
     // --- Chenilles ---
     { src: '/images/gallery/chenilles/chenilles-amas-pelote-herbe-01.jpg', alt: "Amas de chenilles en pelote dans l'herbe", category: 'chenilles' },
