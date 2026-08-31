@@ -11,6 +11,7 @@ import { validateContact } from '@/lib/contact/validate';
 import { checkHoneypot, checkTiming, scoreContent } from '@/lib/contact/spam';
 import { checkRateLimit, clientIp } from '@/lib/contact/rateLimit';
 import { buildContactMail } from '@/lib/contact/message';
+import { createContactSubmission, updateContactSubmission } from '@/lib/contact/submissions';
 import { MailError, mailboxes, resolveProvider } from '@/lib/mail';
 
 export const runtime = 'nodejs';
@@ -32,28 +33,63 @@ function silentAccept(reason: string, ip: string) {
 
 export async function POST(request: Request) {
     const ip = clientIp(request.headers);
+    const userAgent = request.headers.get('user-agent');
+    let submissionId: string | null = null;
+
+    const markSubmission = async (update: Parameters<typeof updateContactSubmission>[1]) => {
+        if (!submissionId) return;
+
+        try {
+            await updateContactSubmission(submissionId, update);
+        } catch (error) {
+            // La persistance ne doit pas empecher une demande legitime d'etre
+            // transmise, mais sa panne doit rester visible dans les logs.
+            console.error('[contact] échec de mise à jour BDD :', error);
+        }
+    };
 
     let body: Record<string, unknown>;
     try {
         body = await request.json();
     } catch {
+        try {
+            submissionId = await createContactSubmission({ body: {}, ip, userAgent });
+            await markSubmission({ status: 'invalid', reason: 'json-invalide' });
+        } catch (error) {
+            console.error('[contact] échec d’enregistrement BDD :', error);
+        }
         return NextResponse.json(
             { ok: false, error: 'Requête illisible.' },
             { status: 400 },
         );
     }
 
+    // Enregistrement avant tous les filtres : les soumissions spam restent
+    // disponibles pour analyse sans jamais être envoyées à O365.
+    try {
+        submissionId = await createContactSubmission({ body, ip, userAgent });
+    } catch (error) {
+        console.error('[contact] échec d’enregistrement BDD :', error);
+    }
+
     const honeypot = checkHoneypot(body.company);
-    if (honeypot.spam) return silentAccept(honeypot.reason, ip);
+    if (honeypot.spam) {
+        await markSubmission({ status: 'spam', reason: honeypot.reason });
+        return silentAccept(honeypot.reason, ip);
+    }
 
     const timing = checkTiming(body.startedAt, Date.now());
-    if (timing.spam) return silentAccept(timing.reason, ip);
+    if (timing.spam) {
+        await markSubmission({ status: 'spam', reason: timing.reason });
+        return silentAccept(timing.reason, ip);
+    }
 
     const validation = validateContact(body);
     if (!validation.ok) {
         // Volontairement avant la limite de debit : une faute de frappe sur son
         // email ne doit pas consommer le quota d'un visiteur legitime. Rejeter
         // une saisie invalide ne coute qu'un peu de calcul, aucun mail n'est emis.
+        await markSubmission({ status: 'invalid', reason: `validation:${validation.field}` });
         return NextResponse.json(
             { ok: false, error: validation.reason, field: validation.field },
             { status: 422 },
@@ -61,11 +97,15 @@ export async function POST(request: Request) {
     }
 
     const content = scoreContent(validation.value);
-    if (content.spam) return silentAccept(content.reason, ip);
+    if (content.spam) {
+        await markSubmission({ status: 'spam', reason: content.reason });
+        return silentAccept(content.reason, ip);
+    }
 
     // Dernier verrou avant la seule operation couteuse, l'envoi lui-meme.
     const limit = checkRateLimit(ip);
     if (!limit.allowed) {
+        await markSubmission({ status: 'rate_limited', reason: 'limite-debit' });
         return NextResponse.json(
             {
                 ok: false,
@@ -75,8 +115,12 @@ export async function POST(request: Request) {
         );
     }
 
+    await markSubmission({ status: 'sending' });
+
+    let providerName: string | undefined;
     try {
         const provider = resolveProvider();
+        providerName = provider.name;
         const { sender, recipient } = mailboxes();
 
         await provider.send(
@@ -88,9 +132,19 @@ export async function POST(request: Request) {
             }),
         );
 
+        await markSubmission({
+            status: 'sent',
+            provider: provider.name,
+            sentAt: new Date(),
+        });
         console.info(`[contact] demande transmise via ${provider.name} pour ${validation.value.email}`);
         return NextResponse.json({ ok: true }, { status: 200 });
     } catch (error) {
+        await markSubmission({
+            status: 'failed',
+            provider: providerName,
+            errorMessage: error instanceof Error ? error.message : 'erreur-inconnue',
+        });
         if (error instanceof MailError && error.configuration) {
             // Panne de configuration : secret expire, consentement manquant,
             // domaine non verifie. A rendre bruyant, sinon elle passe inapercue.
