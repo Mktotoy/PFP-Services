@@ -3,8 +3,15 @@
     background-color: var(--gray-50);
 }
 
+/* ---------- En-tete ---------- */
+
+/*
+ * --primary-dark (#046d17) et non --primary (#059c21) : avec du texte blanc,
+ * --primary ne donne que 3,63:1, sous le minimum AA de 4,5:1 pour du texte
+ * courant. --primary-dark monte a 6,55:1.
+ */
 .hero {
-    background: var(--primary);
+    background: var(--primary-dark);
     color: var(--white);
     padding: var(--spacing-lg) 0;
     text-align: center;
@@ -18,7 +25,7 @@
 
 .subtitle {
     font-size: 1.2rem;
-    opacity: 0.9;
+    opacity: 0.95;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -31,53 +38,114 @@
     line-height: 1.6;
 }
 
+/* ---------- Grille des departements ---------- */
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
 }
 
+/*
+ * La carte est elle-meme le conteneur flex, il n'y a plus de bloc d'en-tete
+ * colore pose sur un fond de carte blanc. Le pied (.cardAction) porte
+ * margin-top: auto : quand la grille etire une carte a la hauteur de la
+ * rangee, c'est le contenu qui absorbe la difference, plus le fond nu.
+ * C'etait la cause de la bande blanche residuelle.
+ */
 .card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
     background: var(--white);
+    border: 1px solid var(--gray-200);
     border-radius: var(--radius-md);
-    overflow: hidden;
     box-shadow: var(--shadow-sm);
-    transition: transform 0.2s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
 }
 
-.cardHeader {
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    padding: var(--spacing-md);
-    color: var(--white);
+.card:focus-visible {
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 3px;
+}
+
+.cardTop {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
 }
 
+/* 3rem de haut : cible tactile confortable, au-dela des 44px requis */
 .deptCode {
-    font-size: 1.5rem;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3rem;
+    height: 3rem;
+    padding: 0 0.5rem;
+    border-radius: var(--radius-sm);
+    background: var(--primary-dark);
+    color: var(--white);
+    font-size: 1.25rem;
     font-weight: 800;
-    opacity: 0.5;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    padding: 5px 10px;
-    border-radius: 8px;
+    line-height: 1;
+    letter-spacing: -0.02em;
 }
 
-.card h2 {
-    color: var(--white);
-    margin: 0;
-    font-size: 1.5rem;
+/* min-width: 0 pour autoriser le retour a la ligne des noms longs */
+.cardTitles {
+    min-width: 0;
 }
+
+.deptName {
+    margin: 0;
+    color: var(--gray-800);
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+.deptCities {
+    margin: 0.25rem 0 0;
+    color: var(--gray-600);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.cardAction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-xs);
+    margin-top: auto;
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--gray-100);
+    color: var(--primary-dark);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.cardArrow {
+    transition: transform 0.2s ease;
+}
+
+.card:hover .cardArrow {
+    transform: translateX(4px);
+}
+
+/* ---------- Appel a l'action ---------- */
 
 .callToAction {
     text-align: center;
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    background: var(--primary-dark);
     color: var(--white);
     padding: var(--spacing-lg) var(--spacing-md);
     border-radius: var(--radius-md);
@@ -96,16 +164,29 @@
     margin: 0;
 }
 
+.ctaButton {
+    margin-top: var(--spacing-sm);
+}
+
 @media (max-width: 768px) {
     .hero {
-        padding: var(--spacing-md);
+        padding: var(--spacing-md) 0;
     }
 
     .title {
         font-size: 2rem;
     }
+}
 
-    .grid {
-        grid-template-columns: 1fr;
+@media (prefers-reduced-motion: reduce) {
+
+    .card,
+    .cardArrow {
+        transition: none;
+    }
+
+    .card:hover,
+    .card:hover .cardArrow {
+        transform: none;
     }
 }

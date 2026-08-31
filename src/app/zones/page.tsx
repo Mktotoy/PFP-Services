@@ -24,6 +24,28 @@ const jsonLd = {
     ]
 };
 
+type Departement = {
+    code: string;
+    slug: string;
+    name: string;
+    cities: string;
+};
+
+/*
+ * Departements uniquement. Fontainebleau est une ville, pas un departement :
+ * sa carte a ete retiree de cette grille sur demande du client. La page
+ * /zones/fontainebleau existe toujours et reste dans le sitemap, mais elle n'a
+ * plus aucun lien entrant depuis le site ; le flechage des zones sera repris
+ * ulterieurement.
+ * Villes reprises des metadonnees de chaque page de zone (source interne).
+ */
+const DEPARTEMENTS: Departement[] = [
+    { code: '77', slug: '77-seine-et-marne', name: 'Seine-et-Marne', cities: 'Melun, Meaux, Chelles' },
+    { code: '91', slug: '91-essonne', name: 'Essonne', cities: 'Évry, Corbeil-Essonnes, Étampes' },
+    { code: '89', slug: '89-yonne', name: 'Yonne', cities: 'Sens, Auxerre' },
+    { code: '45', slug: '45-loiret', name: 'Loiret', cities: 'Montargis, Gien' },
+];
+
 export default function ZonesPage() {
     return (
         <main className={styles.main}>
@@ -53,50 +75,31 @@ export default function ZonesPage() {
                 </div>
 
                 <div className={styles.grid}>
-                    {/* Seine-et-Marne */}
-                    <Link href="/zones/77-seine-et-marne" className={styles.card}>
-                        <div className={styles.cardHeader}>
-                            <span className={styles.deptCode}>77</span>
-                            <h2>Seine-et-Marne</h2>
-                        </div>
-                    </Link>
-
-                    {/* Essonne */}
-                    <Link href="/zones/91-essonne" className={styles.card}>
-                        <div className={styles.cardHeader} style={{ background: 'linear-gradient(135deg, #1e3a8a, #3b82f6)' }}>
-                            <span className={styles.deptCode}>91</span>
-                            <h2>Essonne</h2>
-                        </div>
-                    </Link>
-
-                    {/* Yonne */}
-                    <Link href="/zones/89-yonne" className={styles.card}>
-                        <div className={styles.cardHeader} style={{ background: 'linear-gradient(135deg, #b45309, #d97706)' }}>
-                            <span className={styles.deptCode}>89</span>
-                            <h2>Yonne</h2>
-                        </div>
-                    </Link>
-
-                    {/* Loiret */}
-                    <Link href="/zones/fontainebleau" className={styles.card}>
-                        <div className={styles.cardHeader} style={{ background: 'linear-gradient(135deg, #7c2d12, #ea580c)' }}>
-                            <span className={styles.deptCode}>77300</span>
-                            <h2>Fontainebleau</h2>
-                        </div>
-                    </Link>
-
-                    <Link href="/zones/45-loiret" className={styles.card}>
-                        <div className={styles.cardHeader} style={{ background: 'linear-gradient(135deg, #047857, #10b981)' }}>
-                            <span className={styles.deptCode}>45</span>
-                            <h2>Loiret</h2>
-                        </div>
-                    </Link>
+                    {DEPARTEMENTS.map((dept) => (
+                        <Link
+                            key={dept.slug}
+                            href={`/zones/${dept.slug}`}
+                            className={styles.card}
+                        >
+                            <div className={styles.cardTop}>
+                                <span className={styles.deptCode}>{dept.code}</span>
+                                <div className={styles.cardTitles}>
+                                    <h2 className={styles.deptName}>{dept.name}</h2>
+                                    <p className={styles.deptCities}>{dept.cities}</p>
+                                </div>
+                            </div>
+                            <span className={styles.cardAction}>
+                                Voir nos interventions
+                                <span className={styles.cardArrow} aria-hidden="true">&rarr;</span>
+                            </span>
+                        </Link>
+                    ))}
                 </div>
 
                 <div className={styles.callToAction}>
                     <h3>Vous habitez encore plus loin ?</h3>
                     <p>Nous intervenons quand même !</p>
-                    <Link href="/contact" className="btn btn-secondary" style={{ marginTop: '1rem' }}>
+                    <Link href="/contact" className={`btn btn-secondary ${styles.ctaButton}`}>
                         Contactez-nous
                     </Link>
                 </div>
