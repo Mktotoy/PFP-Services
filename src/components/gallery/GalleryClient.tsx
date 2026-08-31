@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Lightbox from './Lightbox';
 import styles from '../../app/galerie/page.module.css';
 import {
     galleryImages,
@@ -13,6 +14,9 @@ type Filter = 'all' | GalleryCategoryId;
 
 export default function GalleryClient() {
     const [filter, setFilter] = useState<Filter>('all');
+    // Position dans la liste FILTREE : le visualiseur ne navigue que dans
+    // les photos visibles, pas dans les 96 du fonds.
+    const [opened, setOpened] = useState<number | null>(null);
 
     // Les categories vides sont masquees tant qu'aucune photo ne leur est associee.
     const categories = getNonEmptyCategories();
@@ -37,7 +41,8 @@ export default function GalleryClient() {
                     <button
                         type="button"
                         className={`${styles.filterBtn} ${filter === 'all' ? styles.active : ''}`}
-                        onClick={() => setFilter('all')}
+                        aria-pressed={filter === 'all'}
+                        onClick={() => { setFilter('all'); setOpened(null); }}
                     >
                         Tout voir
                     </button>
@@ -46,7 +51,8 @@ export default function GalleryClient() {
                             key={category.id}
                             type="button"
                             className={`${styles.filterBtn} ${filter === category.id ? styles.active : ''}`}
-                            onClick={() => setFilter(category.id)}
+                            aria-pressed={filter === category.id}
+                            onClick={() => { setFilter(category.id); setOpened(null); }}
                         >
                             {category.label}
                         </button>
@@ -59,19 +65,35 @@ export default function GalleryClient() {
                     </p>
                 ) : (
                     <div className={styles.galleryGrid}>
-                        {filteredImages.map((image) => (
-                            <div key={image.src} className={styles.galleryItem}>
+                        {filteredImages.map((image, position) => (
+                            <button
+                                key={image.src}
+                                type="button"
+                                className={styles.galleryItem}
+                                onClick={() => setOpened(position)}
+                                aria-label={`Agrandir : ${image.alt}`}
+                            >
                                 <img src={image.src} alt={image.alt} loading="lazy" />
                                 <div className={styles.overlay}>
                                     <span className={styles.itemCategory}>
                                         {getCategoryLabel(image.category)}
                                     </span>
                                 </div>
-                            </div>
+                            </button>
                         ))}
                     </div>
                 )}
             </section>
+
+            {opened !== null && filteredImages[opened] && (
+                <Lightbox
+                    images={filteredImages}
+                    index={opened}
+                    categoryLabel={getCategoryLabel(filteredImages[opened].category)}
+                    onClose={() => setOpened(null)}
+                    onNavigate={setOpened}
+                />
+            )}
         </main>
     );
 }

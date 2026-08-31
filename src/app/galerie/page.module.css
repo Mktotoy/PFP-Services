@@ -79,6 +79,15 @@
 }
 
 .galleryItem {
+    /* La vignette est un <button> pour etre activable au clavier : il faut
+       donc neutraliser l'apparence native du controle. */
+    appearance: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    text-align: inherit;
+    display: block;
+    width: 100%;
     position: relative;
     border-radius: var(--radius-md);
     overflow: hidden;
@@ -92,6 +101,32 @@
 .galleryItem:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
+}
+
+.galleryItem:focus-visible {
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 3px;
+}
+
+/* Au clavier, l'etiquette de categorie doit apparaitre comme au survol. */
+.galleryItem:focus-visible .overlay {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .galleryItem,
+    .galleryItem img,
+    .overlay {
+        transition: none;
+    }
+
+    .galleryItem:hover {
+        transform: none;
+    }
+
+    .galleryItem:hover img {
+        transform: none;
+    }
 }
 
 .galleryItem img {
