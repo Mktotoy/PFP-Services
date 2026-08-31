@@ -72,7 +72,9 @@ export default function Home() {
         </div>
       </section>
 
-      <LocalReviews category="toiture" title="Avis de nos clients toiture" />
+      {/* Sans filtre de categorie : l'accueil presente les sept prestations,
+          restreindre a la toiture y masquait six avis sur huit. */}
+      <LocalReviews title="Avis de nos clients" />
 
       <section className="section container">
         <h2 className={styles.sectionTitle}>Nos points forts et engagements</h2>
