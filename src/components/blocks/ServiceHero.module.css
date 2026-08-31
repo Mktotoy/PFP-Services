@@ -11,6 +11,8 @@
     margin-bottom: var(--spacing-sm);
     color: var(--white);
     font-weight: 800;
+    /* Detache le texte des zones claires de la photo (carrosserie, ciel). */
+    text-shadow: 0 2px 12px rgba(0, 30, 6, 0.55);
 }
 
 .subtitle {
@@ -20,6 +22,7 @@
     margin-bottom: var(--spacing-md);
     max-width: 800px;
     margin: 0 auto;
+    text-shadow: 0 1px 8px rgba(0, 30, 6, 0.6);
 }
 
 .heroActions {

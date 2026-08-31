@@ -17,6 +17,8 @@ export default function ContactPage() {
                 <ServiceHero
                     title="Contactez-nous"
                     subtitle="Devis gratuit, réponse rapide, 7j/7 en Seine-et-Marne et départements limitrophes."
+                    image="/images/contact/camionnette-pfp-services-profil-livree.jpg"
+                    overlay="linear-gradient(rgba(4, 109, 23, 0.30) 0%, rgba(3, 74, 16, 0.55) 42%, rgba(4, 109, 23, 0.28) 100%)"
                     ctaLabel="Appeler le 06 29 95 32 62"
                     ctaHref="tel:0629953262"
                 />
