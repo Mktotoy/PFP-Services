@@ -96,33 +96,35 @@ export default function Lightbox({
                 aria-label={`Photo ${index + 1} sur ${total} : ${image.alt}`}
                 onClick={(e) => e.stopPropagation()}
             >
-                <button ref={closeRef} type="button" className={styles.close} onClick={onClose} aria-label="Fermer">
-                    <X size={22} />
-                </button>
-
-                {total > 1 && (
-                    <button type="button" className={`${styles.nav} ${styles.prev}`}
-                        onClick={() => goTo(index - 1)} aria-label="Photo précédente">
-                        <ChevronLeft size={28} />
+                {/* Barre haute : la fermeture est isolee au-dessus de la photo,
+                    elle ne recouvre donc jamais l'image. */}
+                <div className={styles.topBar}>
+                    <button ref={closeRef} type="button" className={styles.close} onClick={onClose} aria-label="Fermer">
+                        <X size={20} />
                     </button>
-                )}
+                </div>
 
-                <figure className={styles.figure}>
-                    {/* key force le remplacement du noeud : sans lui, le navigateur
-                        garde la photo precedente affichee pendant le chargement. */}
-                    <img key={image.src} src={image.src} alt={image.alt} className={styles.image} />
-                    <figcaption className={styles.caption}>
+                {/* key force le remplacement du noeud : sans lui, le navigateur
+                    garde la photo precedente affichee pendant le chargement. */}
+                <img key={image.src} src={image.src} alt={image.alt} className={styles.image} />
+
+                {/* Barre basse : navigation et reperes, hors du cadre de la photo. */}
+                <div className={styles.bottomBar}>
+                    <button type="button" className={styles.nav} onClick={() => goTo(index - 1)}
+                        disabled={total < 2} aria-label="Photo précédente">
+                        <ChevronLeft size={24} />
+                    </button>
+
+                    <span className={styles.meta}>
                         <span className={styles.category}>{categoryLabel}</span>
                         <span className={styles.counter}>{index + 1} / {total}</span>
-                    </figcaption>
-                </figure>
+                    </span>
 
-                {total > 1 && (
-                    <button type="button" className={`${styles.nav} ${styles.next}`}
-                        onClick={() => goTo(index + 1)} aria-label="Photo suivante">
-                        <ChevronRight size={28} />
+                    <button type="button" className={styles.nav} onClick={() => goTo(index + 1)}
+                        disabled={total < 2} aria-label="Photo suivante">
+                        <ChevronRight size={24} />
                     </button>
-                )}
+                </div>
             </div>
         </div>,
         document.body,
