@@ -87,7 +87,8 @@ export default function RamonagePage() {
             <ServiceHero
                 title="Ramonage & débistrage"
                 subtitle={<>Entretien de vos conduits de cheminée, poêles et inserts.<br /><strong>Sécurité - Conformité assurance</strong></>}
-                image="/images/services/ramonage/ramonage-poele-allume.jpg"
+                image="/images/services/ramonage/poele-suspendu-sejour-pierre-hero.jpg"
+                overlay="linear-gradient(rgba(4, 109, 23, 0.30) 0%, rgba(3, 74, 16, 0.55) 42%, rgba(4, 109, 23, 0.28) 100%)"
             />
 
             <section className="container section">
