@@ -44,7 +44,8 @@ export default function DemoussagePage() {
             <ServiceHero
                 title="Nettoyage & démoussage toiture"
                 subtitle={<>Un toit propre, c'est une maison saine et durable.<br />Redonnez de l'éclat à votre couverture et protégez-la contre les infiltrations.</>}
-                image="/images/services/demoussage/perche-telescopique-manoir.jpg"
+                image="/images/services/demoussage/toiture-avant-apres-hero.jpg"
+                overlay="linear-gradient(rgba(4, 109, 23, 0.18) 0%, rgba(3, 74, 16, 0.34) 42%, rgba(4, 109, 23, 0.16) 100%)"
             />
 
             <section className="container section">
@@ -90,13 +91,6 @@ export default function DemoussagePage() {
                         <p>
                             Chaque toiture étant différente, nous adaptons nos méthodes et produits en fonction de la nature de la tuile (ardoise, tuiles de pays, tuiles plates, tuiles mécaniques ondulées…), de la quantité de mousse et lichens présents et de l'accessibilité.
                         </p>
-
-                        <img
-                            src="/images/services/demoussage/toiture-avant-apres-photo.jpg"
-                            alt="Toiture avant et après nettoyage et démoussage"
-                            className={styles.contentImage}
-                            style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
-                        />
 
                         <h2 className={styles.heading}>Gouttières, façades & panneaux photovoltaïques</h2>
                         <p>
