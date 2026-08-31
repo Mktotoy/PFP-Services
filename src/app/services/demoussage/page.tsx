@@ -53,8 +53,8 @@ export default function DemoussagePage() {
                     <div className={styles.content}>
                         <h2 className={styles.heading}>Pourquoi démousser sa toiture ?</h2>
                         <img
-                            src="/images/services/demoussage/perche-telescopique-manoir.jpg"
-                            alt="Nettoyage à la perche télescopique sur une grande demeure"
+                            src="/images/services/demoussage/toiture-avant-apres-photo.jpg"
+                            alt="Toiture avant et après nettoyage et démoussage"
                             className={styles.contentImage}
                             style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
                         />
@@ -91,6 +91,13 @@ export default function DemoussagePage() {
                         <p>
                             Chaque toiture étant différente, nous adaptons nos méthodes et produits en fonction de la nature de la tuile (ardoise, tuiles de pays, tuiles plates, tuiles mécaniques ondulées…), de la quantité de mousse et lichens présents et de l'accessibilité.
                         </p>
+
+                        <img
+                            src="/images/services/demoussage/perche-telescopique-manoir.jpg"
+                            alt="Nettoyage à la perche télescopique sur une grande demeure"
+                            className={styles.contentImage}
+                            style={{ width: '100%', borderRadius: 'var(--radius-md)' }}
+                        />
 
                         <h2 className={styles.heading}>Gouttières, façades & panneaux photovoltaïques</h2>
                         <p>
